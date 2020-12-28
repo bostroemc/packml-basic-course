@@ -1,0 +1,545 @@
+@import (less) "bootstrap.css";
+@omac-guidance-orange: #FF6600;
+@omac-logo-blue: #009EC4;
+@omac-table-blue: #7598D9;
+@omac-text-blue: #3667C3;
+@omac-table-grey: #BFBFBF;
+@omac-white: #FFFFFF;
+@omac-black: #000000;
+@grey60: #666666;
+@grey13: #dddddd;
+
+@max-width: 1200px;
+
+@century-book: 'Century Schoolbook', serif;
+@century-book-bold: 'Century Schoolbook Bold', serif;
+@calibri: 'Calibri', 'Arial', sans-serif;
+@calibri-bold: 'Calibri Bold', 'Arial Bold', sans-serif;
+
+a {
+    text-decoration: none;
+    color: @omac-text-blue;
+
+    &:hover {
+        color: @omac-text-blue;
+        text-decoration: underline;
+    }
+}
+
+footer a {
+    color: @omac-white;
+
+    &:hover {
+        color: @omac-white;
+        text-decoration: underline;
+    }
+}
+
+@page{
+    size: auto;
+    margin-right: 6mm !important;
+    margin-left: 6mm !important;
+    margin-top: 20mm !important;
+    margin-bottom: 35mm !important;
+}
+
+body {
+    font-size: 100%;
+    font-family: @century-book;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media print {
+        margin: 0px;
+        background: #fff !important;
+        color: #000;        
+    }
+}
+
+.full-width {
+    .container-fluid;
+    .no-gutters;
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: hidden;
+    clear: both;
+    font-family: @century-book;
+    background-color: @grey60;
+    color: white;
+}
+
+h1 {
+    padding-top: 4em;
+    font-size: 3.8416em;
+    line-height: 100%;
+    color: @omac-guidance-orange;
+
+    a {
+        color: white;
+        font-family: @century-book;
+    }
+
+    @media screen {
+        @media (max-width: 575px) {
+            padding-top: 1em;
+            font-size: 1.4em;
+            line-height: 100%;
+            white-space: nowrap;
+        }
+    }
+
+    @media print {
+        padding-top: 3em;
+        font-size: 2.74em;        
+    }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: @century-book;
+    color: @omac-black;
+}
+
+h2 {
+    font-size: 2.74em;
+    padding-top: 2em;
+    margin-bottom: 0.6em;
+    line-height: 120%;
+    color: @omac-guidance-orange;
+
+    &.first {
+        padding-top: 1em !important;
+    }
+
+    @media screen {
+        @media (max-width: 575px) {
+            padding-left: 0.6em;
+        }
+
+    }
+
+    @media print {
+        padding-top: 1em;
+        font-size: 1.96em;        
+    }
+}
+
+h3 {
+    font-size: 1.96em;
+    margin: auto;
+    display: block;
+    padding-top: 1.4em;
+    padding-bottom: 0.5em;
+
+    @media print {
+        padding-top: 1.4em;
+        font-size: 1.4em;        
+    }
+}
+
+h4 {
+    font-size: 1.4em;
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+    text-align: left;
+    font-style: italic;
+    color: @grey60;
+
+    &.date {
+        font-size: 0.55em;
+        padding-top: 0px;
+        padding-bottom: 0.1em;
+        text-align: left;
+    }
+
+    &.summary {
+        padding-top: 5em;        
+        color: @omac-text-blue;
+    }
+
+    @media screen {
+        @media (max-width: 768px) {
+            font-size: 1.4em;
+        }
+        @media (max-width: 992px) {
+            font-size: 1.4em;
+        }
+        @media (max-width: 1200px) {
+            padding-top: 1.4em;
+        }
+    }
+
+    @media print {
+        &.summary {
+            padding-top: 45mm;
+        }        
+    }
+}
+
+h5 {
+    padding-top: 2.0em;
+    font-size: 1.6em;
+    color: @omac-guidance-orange;
+
+    @media print {
+        padding-top: 10mm;
+        font-size: 1.2em;
+    }
+}
+
+#header-text {
+    float: left;
+}
+
+#omac-logo {
+    padding-top: 3em;
+    margin-left: 0;
+
+    @media print {
+        padding-top: 2em;
+        width: 101px;        
+    }
+}
+
+hr {
+    border: none;
+    display: block;
+    background: transparent;
+    height: 0.2em;
+    width: 100%;
+    margin: 0px;    
+
+    &.orange {
+        border-color: @omac-guidance-orange;
+        background-color: @omac-guidance-orange;
+    }
+
+    &.half {
+        width: 50%;
+        height: 0.15em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    &.black {
+        border-color: black;
+        background-color: black;
+        
+        @media print {
+            border-top: solid 2px black;
+        }
+    }
+}
+
+table {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: @calibri;
+    margin-top: 2em;
+    margin-bottom: 3em;    
+    
+    @media print {
+        font-size: 0.8em;        
+        page-break-before: always;
+    }
+}
+
+#version-log {
+    @media print {
+        page-break-before: avoid;
+    }
+}
+
+caption {
+    caption-side: top;
+    color: @omac-guidance-orange;
+    text-align: center;
+    font-family: @century-book;
+
+    @media print {
+        font-size: 0.8em;
+    }
+}
+
+figcaption {
+    margin: 2em;
+    margin-left: 20%;
+    margin-right: 20%;    
+    caption-side: bottom;
+    color: @omac-guidance-orange;
+    text-align: left;
+    font-family: @century-book;
+
+    @media print {
+        font-size: 0.8em;
+    }
+}
+
+th, td {
+    padding: 1em;
+    text-align: left;   
+} 
+
+td {
+    vertical-align: top;
+}
+
+th {
+    padding: 1em;
+    background-color: @omac-table-blue;
+    color: @omac-white;
+    border: 1px solid @omac-white;
+    font-family: @calibri-bold;    
+    -webkit-print-color-adjust: exact !important;
+
+    @media print {
+        background-color: @omac-table-grey;
+        color: @omac-black;
+        border: 1px solid @omac-table-grey;
+    }
+}
+
+tr.grey th {
+    background-color: @omac-table-grey;
+    color: @omac-black;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 2em;
+    font-size: 1.2em;
+}
+
+.points {
+    margin-left: 2em;
+    font-size: 1.4em !important;
+}
+
+.points li {
+    margin-bottom: 0.5em;
+}
+
+.figure {
+    color: @omac-guidance-orange;
+    font-size: 1.2em;    
+}
+
+.match {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu {
+    margin-left: -14px;
+
+    @media screen {
+        @media (max-width: 575px) {
+            font-size: 1em;
+            margin-left: 0.4em;
+        }
+    }
+}
+
+#contents {
+    margin-top: 2em;
+}
+
+.section {    
+    font-size: 1.5em;
+    margin-top: 2em;
+}
+
+.subsection {
+    font-size: 1.0em;
+}
+
+.subsubsection {
+    font-size: 0.8em;
+}
+
+li.contributor {
+    font-size: 0.8em;
+}
+
+li.example {
+    font-size: 0.8em;
+    margin-left: -2.5em;
+    list-style-type: none;
+}
+
+#stacklight {
+    clear: both;
+    overflow: hidden;    
+}
+
+#stacklight_segment {    
+    width: 50%;
+    float: left;
+}
+
+#stacklight-image {
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure {
+    margin-top: 3em;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+nav {
+    background-color: @omac-black;
+    margin-bottom: 1em;
+
+    a {
+        font-size: 1.2em;
+        color: white;
+        font-family: @century-book;
+    }
+}
+
+img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media print {
+        max-width: 100%; 
+        height: auto;
+    }
+}
+
+p {
+    font-family: @century-book;
+    font-size: 1.4em;
+    color: black;
+    line-height: 1.68em;    
+
+    @media print {
+        font-size: 1.0em;        
+    }
+}
+
+// Region styling
+header {
+    .full-width;
+}
+
+#stack-lights {
+    @media print {
+        page-break-after: always;
+        width: 100%;
+    }
+}
+
+#print-dialog, #navigation-top-down-hierarchy {
+    width: 60%; 
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#packml_state_model {
+    width: 70%; 
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#green-red-diagram {
+    max-width: 100%; 
+    height: auto;
+}
+
+#green-red-completing-diagram {
+    max-height: 150mm;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#green-blue-diagram {
+    max-height: 150mm;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#green-amber-diagram {
+    max-height: 160mm;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#material-low-diagram {
+    max-height: 130mm;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    @media print {
+        page-break-before: always;
+    }
+}
+
+.reference {
+    padding-top: 1em;
+}
+
+.pending {
+    background: yellowgreen;
+}
+
+footer {
+    .full-width;
+    position: fixed;
+    bottom: 0;
+    font-family: @century-book;
+    padding-left: 3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    @media print {
+        display: none;  
+    }
+}
+
+@page :left :footer { 
+    content: string(doctitle);
+    font-family: @century-book;
+} 
+    
+
+@media print and (color) {
+    * {
+       -webkit-print-color-adjust: exact;
+       print-color-adjust: exact;
+    }
+ }
+
+.parent {
+    width: 201px;
+}

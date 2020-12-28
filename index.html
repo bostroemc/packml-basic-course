@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>PackML Learn: Basic Syllabus</title>
+
+    <meta name="author" content="Carl Bosrom">
+    <meta name="designer" content="Patrick Toohey">
+
+    <meta name="description" content="PackML HMI Guidance.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/paragraph.css">
+
+    <script src="https://kit.fontawesome.com/62d0ecf911.js" crossorigin="anonymous"></script>
+    <script src="js/packml.hmi.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> 
+        <![endif]-->
+
+</head>
+
+<body>
+    <div class="container">
+        <div><img id="omac-logo" src="images/OMAC.png" alt="OMAC" /></div>
+        <h1>PackML Learn</h1>
+        <hr class="black" />
+        <h4>Syllabus for course on PackML Basics</h4>
+        <div class="summary">
+            <h4 class="summary">Summary</h4>
+            <p class="para">
+                [0001] This document defines a minimal syllabus for a basic PackML course. It is meant as a resource
+                for instructors.
+            </p>
+            <p class="comment">
+                [0002] what are the objectives? Give an overview of the subjects covered.
+            </p>
+
+
+            <h5 class="author">Author: PackML Learn Committee</h5>
+        </div>
+
+
+
+        <div>
+            <h2 id="contents">Contents</h2>
+            <hr class="black" />
+            <ul id="contents">
+                <li>
+                    <a href="#ExecutiveSummary" class="section">2. Executive Summary</a>
+                    <ul>
+                        <li><a href="#Purpose" class="subsection">2.1 Purpose</a></li>
+                        <li><a href="#Goals" class="subsection">2.2 Goals</a></li>
+                        <li><a href="#GuidanceStructure" class="subsection">2.3 Guidance Structure</a></li>
+                        <li><a href="#Abstract" class="subsection">2.4 Standard Executive Summary</a></li>
+                        <ul>
+                            <li><a href="#AbstractStacklights" class="subsubsection">2.4.1 Stacklights and Control
+                                    Push-Buttons</a></li>
+                            <li><a href="#AbstractStateModel" class="subsubsection">2.4.2 PackML State-Diagram
+                                    Representations</a></li>
+                            <li><a href="#AbstractNavigation" class="subsubsection">2.4.3 Navigation Design</a></li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Use of this document-->
+        <div>
+            <!-- Executive Summary -->
+
+            <!-- Overview -->
+            <div>
+                <h2 id="Use">2. How to use this document</h2>
+                <hr class="black" />
+                <h3 id="Purpose">2.1 Conventions</h3>
+
+                <p class="para">
+                    Throughout this document we will use the following formatting convensions:
+                </p>
+
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                    <p class="comment">
+                        Special instructions for trainers will be given in italics and marked with an image of a teacher at
+                        a chalkboard.
+                    </p>
+                </div>
+
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
+                    <p class="para">
+                        The learning objectives for each section will be preceded by a bullseye.
+                    </p>
+                </div>
+
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                    <p class="para">
+                        Essential concepts are marked with a key.
+                    </p>
+                </div>
+
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                    <p class="para">
+                        Suggested questions for discussion are marked with a question mark.
+                    </p>
+                </div>
+
+
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                    <p class="tr88">
+                        Text excerpted from ANSI/ISA-TR88.00.02 will be shown in monospaced font and noted with the
+                        document icon. </p>
+                </div>
+
+                <h3 id="Purpose">2.2 Supplemental content</h3>    
+                
+                <p class="para">
+                    This document aims to describe a minimal set of topics to be covered by a basic course. Instructors
+                    are free to include additional information, including vendor-specific information, deemed necessary. 
+                </p>
+
+            </div>
+
+
+            <!-- Body syllabus-->
+            <div>
+                <!-- Executive Summary -->
+
+                <!-- Overview -->
+                <div>
+                    <h2 id="Overview">2. Overview</h2>
+                    <hr class="black" />
+                    <h3 id="Purpose">2.1 PackML Goals</h3>
+
+                    <p class="comment">
+                        [This section is intended to give students an overview of the basic concepts and developmet
+                        history
+                        of PackML.]
+                    </p>
+
+                    <p class="para">
+                        [0004] PackML, or Packaging Machine Language, is an effort by OMAC to standardize the interface
+                        between a packaging machine and its peers and supervisors.
+                    </p>
+                    <p class="para">
+                        [0005] Development timeline.
+                    </p>
+                    <p class="para">
+                        [0006] Current standard.
+                    </p>
+                    <p class="para">
+                        [0007] PackML as data interface between peers and supervisors.
+                    </p>
+                    <p class="para">
+                        [0008] Overview of PackTags.
+                    </p>
+                    <p class="para">
+                        [0009] Video resource: PackML PACK EXPO Demo.
+                    </p>
+                </div>
+
+                <!-- Terms -->
+                <div>
+                    <h2 id="Terms">3. Terms</h2>
+                    <hr class="black" />
+                    <h3 id="Purpose">3.1 Definitions and key concepts</h3>
+                    <p class="para">
+                        [0010] PackML:
+                    </p>
+                    <p class="para">
+                        [0005] Development timeline.
+                    </p>
+                    <p class="para">
+                        [0006] Current standard.
+                    </p>
+                    <p class="para">
+                        [0007] PackML as data interface between peers and supervisors.
+                    </p>
+                    <p class="para">
+                        [0008] Overview of PackTags.
+                    </p>
+                    <p class="para">
+                        [0008] Video resource: PackML PACK EXPO Demo.
+                    </p>
+                </div>
+
+
+                <!-- Modes -->
+                <div>
+                    <h2 id="Modes">5. PackML Modes</h2>
+                    <hr class="black" />
+                    <h3 id="Purpose">5.1 Definitions and key concepts</h3>
+                    <p class="para">
+                        [0010] PackML:
+                    </p>
+                </div>
+
+                <!-- State diagram -->
+                <div>
+                    <h2 id="State_diagram">4. PackML state diagram</h2>
+                    <hr class="black" />
+                    <h3 id="Purpose">4.1 Definitions and key concepts</h3>
+                    <p class="para">
+                        [0010] PackML:
+                    </p>
+                    <p class="para">
+                        [0010] General comments on the state machine. What does the box around states Idle..Completed
+                        mean? What does the box around all states but Aborting and Aborted mean?
+                    </p>
+                    <p class="para">
+                        [0010] PackML states are meant to convey information about the general status of the machine. It
+                        is common for any given state to have multiple substates...
+                    </p>
+                    <p class="para">
+                        [0010] Clarify difference between Hold and Suspend states, including autorestart for Suspend
+                        state.
+                    </p>
+                    <p class="para">
+                        [0010] Clarify difference between Stopped and Aborted states.
+                    </p>
+
+                    <p class="para">
+                        <i class="fas fa-key"></i> The PackML state diagram is meant to represent in a broad way the
+                        behaviour of a generic machine. It is meant to be more descriptive than proscriptive and, as
+                        such,
+                        should not be viewed as a programatic trick. States have specific meanings. For example, if
+                        machine processing has paused due to an upstream blockage, then the machine is in Suspended
+                        state,
+                        regardless of internal PLC logic (are any other messages to the contrary).
+                    </p>
+
+                    <p class="para">
+                        <i class="fas fa-question"></i> Processing on a given machine has paused due to a low glue tank.
+                        From a PackML perspective, what state is the machine in?
+                    </p>
+
+                    <p class="para">
+                        <i class="fas fa-question"></i> A machine has processed all units required for a given batch and
+                        has come to rest. From a PackML perspective, what state is the machine in?
+                    </p>
+
+
+                    <p class="para">
+                        <i class="fas fa-question"></i> A machine has come to rest due to an emergency stop. From a
+                        PackML perspective, what state is the machine in?
+                    </p>
+
+
+                </div>
+
+                <!-- Mode management, revisited -->
+                <div>
+                    <h2 id="Modes">5. PackML Modes</h2>
+                    <hr class="black" />
+                    <h3 id="Purpose">5.1 Definitions and key concepts</h3>
+                    <p class="para">
+                        [0010] PackML:
+                    </p>
+                </div>
+
+
+
+
+                <!-- PackTags -->
+                <div>
+                    <h2 id="PackTags">6. PackTags</h2>
+                    <hr class="black" />
+                    <h3 id="Purpose">6.1 Definitions and key concepts</h3>
+                    <p class="para">
+                        [0010] PackML:
+                    </p>
+                </div>
+
+                <!-- Event handling -->
+                <div>
+                    <h2 id="Event_handling">7. Event handling</h2>
+                    <hr class="black" />
+                    <h3 id="Purpose">7.1 Definitions and key concepts</h3>
+                    <p class="para">
+                        [0010] PackML:
+                    </p>
+                </div>
+
+                <!-- Implementation strategies -->
+                <div>
+                    <h2 id="State_Diagram">8. Implementation strategies</h2>
+                    <hr class="black" />
+                    <h3 id="Purpose">8.1 Definitions and key concepts</h3>
+                    <p class="para">
+                        [0010] PackML:
+                    </p>
+                </div>
+
+
+                <div>
+                    <h2 id="Reference">9. References</h2>
+                    <hr class="black" />
+                    <p class="reference" title="Update with 2021 reference when known">ANSI/ISA-TR88.00.02-2021, Machine
+                        and
+                        unit/machine States, An Implementation example of ANSI/ISA-88.00.01.</p>
+                </div>
+                <div>
+                    <h2 id="VersionHistory">10. Version History</h2>
+                    <hr class="black" />
+                    <table id="version-log">
+                        <caption>Table 4: Version Log</caption>
+                        <tr class="grey">
+                            <th width="20%">Date<br>[YYYY-MM-DD]</th>
+                            <th>Initials</th>
+                            <th>Description</th>
+                            <th>Version</th>
+                        </tr>
+                        <tr>
+                            <td>2020-11-16</td>
+                            <td>CPB</td>
+                            <td>Preliminary draft.</td>
+                            <td>0.0.1</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+
+            <footer><a href="#contents">PackML Learn, Basic Course Syllabus 0.0.1</a></footer>
+</body>
+
+</html>

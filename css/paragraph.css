@@ -1,0 +1,31 @@
+.para{
+    text-align: justify;
+}
+
+.comment{
+    text-align: justify;
+    font-style: italic;
+}
+
+.tr88{
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.key{
+    text-align: justify;
+    border: gray solid 1pt;
+    padding: 0 12pt 0 12pt;
+    margin-bottom: 28pt;
+}
+
+.key-highlight{
+    font-size: 22pt;
+    position: relative;
+    margin: -20px 0 0 20px;
+    background-color: white;
+    width: 32pt;
+    text-align: center;
+
+    
+}
