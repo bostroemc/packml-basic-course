@@ -231,32 +231,41 @@
                         [0010] Clarify difference between Stopped and Aborted states.
                     </p>
 
-                    <p class="para">
-                        <i class="fas fa-key"></i> The PackML state diagram is meant to represent in a broad way the
-                        behaviour of a generic machine. It is meant to be more descriptive than proscriptive and, as
-                        such,
-                        should not be viewed as a programatic trick. States have specific meanings. For example, if
-                        machine processing has paused due to an upstream blockage, then the machine is in Suspended
-                        state,
-                        regardless of internal PLC logic (are any other messages to the contrary).
-                    </p>
-
-                    <p class="para">
-                        <i class="fas fa-question"></i> Processing on a given machine has paused due to a low glue tank.
-                        From a PackML perspective, what state is the machine in?
-                    </p>
-
-                    <p class="para">
-                        <i class="fas fa-question"></i> A machine has processed all units required for a given batch and
-                        has come to rest. From a PackML perspective, what state is the machine in?
-                    </p>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            The PackML state diagram is meant to represent in a broad way the
+                            behaviour of a generic machine. It is meant to be more descriptive than proscriptive and, as
+                            such, should not be viewed as a programatic trick. States have specific meanings. For example, if
+                            machine processing has paused due to an upstream blockage, then the machine is in Suspended
+                            state, regardless of internal PLC logic (are any other messages to the contrary).
+                        </p>
+                    </div>
 
 
-                    <p class="para">
-                        <i class="fas fa-question"></i> A machine has come to rest due to an emergency stop. From a
-                        PackML perspective, what state is the machine in?
-                    </p>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            Processing on a given machine has paused due to a low level fault on a glue tank.  From a PackML perspective, 
+                            what state is the machine in?
+                        </p>
 
+                        <p class="para">
+                            A machine has processed all units required for a given batch and has come to rest. From a 
+                            PackML perspective, what state is the machine in?
+                        </p>
+
+                        <p class="para">
+                            A machine has come to rest due to an emergency stop. From a
+                            PackML perspective, what state is the machine in?
+                        </p>
+
+                        <p class="para">
+                            Give an example of a machine which might not implement the Suspended state in Production mode.
+                        </p>
+
+
+                    </div>
 
                 </div>
 
