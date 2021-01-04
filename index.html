@@ -176,24 +176,70 @@
                     <h2 id="Terms">3. Terms</h2>
                     <hr class="black" />
                     <h3 id="Purpose">3.1 Definitions and key concepts</h3>
-                    <p class="para">
-                        [0010] PackML:
-                    </p>
-                    <p class="para">
-                        [0005] Development timeline.
-                    </p>
-                    <p class="para">
-                        [0006] Current standard.
-                    </p>
-                    <p class="para">
-                        [0007] PackML as data interface between peers and supervisors.
-                    </p>
-                    <p class="para">
-                        [0008] Overview of PackTags.
-                    </p>
-                    <p class="para">
-                        [0008] Video resource: PackML PACK EXPO Demo.
-                    </p>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            PackML: a communication interface for discrete manufacturing 
+                            (e.g. packaging machinery) described by ISA-TR88.00.02-2015; sometimes 
+                            used to describe additional methods of standardizing machine “look and 
+                            feel” or PLC coding design patterns.
+                        </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            State or machine state:  the current status or condition of the system in consideration.
+                        </p>
+
+                        <p class="para">
+                            State model: an abstract model or machine that can be in exactly one of a finite number 
+                            of states at any given time.  The model may change or transition from one state to another 
+                            in response to some input.
+                        </p>                        
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            ISA-88 physical model: a hierarchy describing the physical assets of a commercial enterprise.  
+                            See ANSI/ISA-S88.01-1995.  In this model, a Process Cell comprises one or more Units 
+                            responsible for producing a specific commodity. 
+                        </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            Mode (general): a way or manner in which something occurs or is experienced, expressed or done.
+                        </p>
+                        <p class="para">
+                            Unit/machine control mode: a way or manner in which a manufacturing machine is used.
+                        </p>            
+                        
+                        <p class="para">
+                            Mode manager: software that governs the transition from one machine mode to another.
+                        </p>  
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            PackTags: a set of naming conventions for software variables associated to data elements of 
+                            the unit/machine.
+                        </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            Alarm handler: software responsible for logging alarms or events occurring on the unit/machine.  
+                            Functionality for sorting or filtering the alarm history may also be present.
+                        </p>
+                    </div>
+
+
                 </div>
 
 
@@ -231,6 +277,7 @@
                         [0010] Clarify difference between Stopped and Aborted states.
                     </p>
 
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
@@ -241,6 +288,212 @@
                             state, regardless of internal PLC logic (are any other messages to the contrary).
                         </p>
                     </div>
+
+                    <h3 id="Purpose">4.1 EXECUTE state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                        <p class="tr88">
+                            Once the machine is processing materials it is in the EXECUTE state.  Different machine modes will 
+                            result in specific types of EXECUTE activities.  For example, if the machine is in the “Production” 
+                            mode, the EXECUTE will result in products being produced, while in “Clean Out” mode the EXECUTE 
+                            state refers to the action of cleaning the machine.
+                         </p>
+                    </div>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            If the unit/machine is actively carrying out the behavior or activity defined by the selected  
+                            mode, then the machine is in EXECUTE state.  If the unit/machine is in PRODUCTION mode, for 
+                            example, this means that the machine is producing product.  
+                        </p>
+                    </div>
+
+                    <h3 id="Purpose">4.1 HELD state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                        <p class="tr88">
+                            Refer to HOLDING for when this state is used. In this state the machine shall not produce product. 
+                            It will either stop running or continue to dry cycle. A transition to the UNHOLDING state will 
+                            occur when INTERNAL machine conditions change or an UNHOLD command is initiated by an operator.
+                         </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            The unit/machine is paused, waiting for internal process conditions to clear.   In this state, 
+                            the unit/machine shall not produce product, though it may, if required, dry-cycle.  A transition 
+                            to UNHOLDING will occur once internal machine conditions have cleared or if the UNHOLD command 
+                            is initiated by an operator.
+                        </p>
+                    </div>
+
+                    <h3 id="Purpose">4.1 SUSPENDED state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                        <p class="tr88">
+                            Refer to SUSPENDING for when this state is used. In this state the machine shall not produce 
+                            product. It will either stop running or continue to cycle without producing until external process 
+                            conditions return to normal, at which time, the SUSPENDED state will transition to the UNSUSPENDING 
+                            state, typically without any operator intervention.
+                         </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            The unit/machine is paused, waiting for external process conditions to clear.   In this sate, 
+                            the unit/machine shall not produce product, but may, if required, dry-cycle.  Once external conditions 
+                            have returned to normal, the unit/machine will transition to UNSUSPENDING, typically without operator 
+                            intervention.
+                        </p>
+                    </div>
+
+                    <h3 id="Purpose">4.1 COMPLETE state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                        <p class="tr88">
+                            The machine has finished the COMPLETING state and is now waiting for a RESET command before 
+                            transitioning to the RESETTING state.
+                         </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            COMPLETE indicates the process associated with the active mode has come to its defined end.  
+                            The unit/machine will wait in this state until a RESET command is issued (in which case it will transition 
+                            to RESETTING), or until the process is STOPPED or ABORTED.
+                        </p>
+                    </div>
+
+                    <h3 id="Purpose">4.1 IDLE state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                        <p class="tr88">
+                            This is the state which indicates that RESETTING is complete. The machine will maintain the conditions which 
+                            were achieved during the RESETTING state, and perform operations required when the machine is in IDLE.
+                         </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            The unit/machine is in an error-free state, waiting to start.  The unit/machine transitions automatically 
+                            to IDLE after all steps necessary for RESETTING have been completed.  All conditions achieved during 
+                            RESETTING are maintained.  A START command will transition the unit/machine from IDLE to STARTING.
+                        </p>
+                    </div>
+
+                    <h3 id="Purpose">4.1 STOPPED state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                        <p class="tr88">
+                            The machine is powered and stationary after completing the STOPPING state. All communications with other 
+                            systems are functioning ( if applicable). A RESET command will cause an exit from STOPPED to the RESETTING 
+                            state.
+                         </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            The unit/machine is powered and stationary after either STOPPING or CLEARING.  All communication with 
+                            supervisory, user interface, peer or other systems is active and functioning.  A RESET command will 
+                            cause the unit/machine to transition from STOPPED to the RESETTING state.
+                        </p>
+                    </div>
+
+                    <h3 id="Purpose">4.1 ABORTED state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                        <p class="tr88">
+                            The machine maintains status information relevant to the ABORT condition.  The machine can only exit the 
+                            ABORTED state after an explicit CLEAR command, subsequently to manual intervention to correct and reset 
+                            the detected machine faults.
+                         </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            The unit/machine remains in its ABORTED state until a CLEAR command is explicitly issued.  Note that 
+                            operators may be required to take manual, corrective action in this state.  The unit/machine must 
+                            maintain all status or fault information related to the cause of the current ABORT condition.
+                        </p>
+                    </div>
+
+                    <h3 id="Purpose">4.1 HELD vs SUSPENDED</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            The unit/machine will transition from EXECUTE to HOLDING if conditions internal to the unit/machine 
+                            require a pause in production.  Such conditions would include low levels on materials required for 
+                            production or other minor issues requiring operator service, for example.   The decision to HOLD 
+                            may be made automatically by the  unit/machine itself or by an operator. 
+                        </p>
+
+                        <p class="para">
+                            The unit/machine will transition from EXECUTE to SUSPENDING if conditions external to the unit/machine 
+                            require a pause in production.  Such conditions include faults to upstream or downstream equipment.   
+                            The decision to SUSPEND may be made be a supervisory system monitoring the production line conditions 
+                            or by unit/machine sensors detecting downstream blockages or upstream product scarcity.  (In the 
+                            former case, the unit/machine is 'blocked”; in the latter case, the unit/machine is “starved”.)
+                        </p>
+                    </div>
+
+                    <h3 id="Purpose">4.1 STOPPED vs ABORTED</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            The unit/machine transitions to STOPPING in response to a STOP command.  In this state the unit/machine 
+                            performs all steps required to bring itself to a controlled stop.  
+                        </p>
+
+                        <p class="para">
+                            The unit/machine transitions to ABORTING in response to an ABORT command or an internal machine fault.  
+                            In this state the unit/machine performs all steps required to bring itself to a rapid, safe stop.  
+                        </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            In which states may the Abort command be called?
+                        </p>
+
+                        <p class="para">
+                            In which states may the Stop command be called?
+                        </p>
+
+                        <p class="para">
+                            Which PackML commands are available in the Execute state?
+                        </p>
+
+                        <p class="para">
+                            What is the relationship between PackML commands and the acting states?
+                        </p>
+
+                        <p class="para">
+                            Each PackML state is assigned a unique fixed number.  List these.
+                        </p>
+
+                        <p class="para">
+                            Identify at least two ways in which this interface is unrealistic as a user interface.
+                        </p>
+
+
+                    </div>
+
 
 
                     <div class="key">
@@ -263,7 +516,6 @@
                         <p class="para">
                             Give an example of a machine which might not implement the Suspended state in Production mode.
                         </p>
-
 
                     </div>
 
