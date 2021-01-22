@@ -7886,7 +7886,7 @@ figcaption {
   margin-right: 20%;
   caption-side: bottom;
   color: #FF6600;
-  text-align: left;
+  text-align: justify;
   font-family: 'Century Schoolbook', serif;
 }
 @media print {

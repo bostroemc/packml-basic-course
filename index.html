@@ -37,11 +37,11 @@
         <div class="summary">
             <h4 class="summary">Summary</h4>
             <p class="para">
-                [0001] This document defines a minimal syllabus for a basic PackML course. It is meant as a resource
+                This document defines a minimal syllabus for a basic PackML course. It is meant as a resource
                 for instructors.
             </p>
             <p class="comment">
-                [0002] what are the objectives? Give an overview of the subjects covered.
+                what are the objectives? Give an overview of the subjects covered.
             </p>
 
 
@@ -51,27 +51,39 @@
 
 
         <div>
-            <h2 id="contents">Contents</h2>
+            <h2 id="contents">Course outline</h2>
             <hr class="black" />
             <ul id="contents">
                 <li>
-                    <a href="#ExecutiveSummary" class="section">2. Executive Summary</a>
+                    <a href="#Introduction" class="section">1. Introduction</a>
                     <ul>
-                        <li><a href="#Purpose" class="subsection">2.1 Purpose</a></li>
-                        <li><a href="#Goals" class="subsection">2.2 Goals</a></li>
-                        <li><a href="#GuidanceStructure" class="subsection">2.3 Guidance Structure</a></li>
-                        <li><a href="#Abstract" class="subsection">2.4 Standard Executive Summary</a></li>
-                        <ul>
-                            <li><a href="#AbstractStacklights" class="subsubsection">2.4.1 Stacklights and Control
-                                    Push-Buttons</a></li>
-                            <li><a href="#AbstractStateModel" class="subsubsection">2.4.2 PackML State-Diagram
-                                    Representations</a></li>
-                            <li><a href="#AbstractNavigation" class="subsubsection">2.4.3 Navigation Design</a></li>
-                        </ul>
+                        <li><a href="#Goals" class="subsection">1.1 PackML goals</a></li>
+                        <li><a href="#Timeline" class="subsection">1.2 Development timeline</a></li>
+                        <li><a href="#CurrentStandard" class="subsection">1.3 Current standard</a></li>
+                        <li><a href="#DataInterface" class="subsection">1.4 Data interface</a></li>
+                        <li><a href="#PackTags" class="subsection">1.5 PackTags</a></li>
+                        <li><a href="#StateMachine" class="subsection">1.6 State machine</a></li>
                     </ul>
                 </li>
+
+                <li>
+                    <a href="#Introduction" class="section">2. Terms and key concepts</a>
+                    <ul>
+                        <li><a href="#PackML" class="subsection">2.1 PackML</a></li>
+                        <li><a href="#State" class="subsection">2.2 State or machine state</a></li>
+                        <li><a href="#StateModel" class="subsection">2.3 State model</a></li>
+                        <li><a href="#ISAPhysicalModel" class="subsection">2.4 ISA-88 physical model</a></li>
+                        <li><a href="#Mode" class="subsection">2.5 Mode or machine mode</a></li>
+                        <li><a href="#PackTags" class="subsection">2.6 PackTags</a></li>
+                        <li><a href="#AlarmHandler" class="subsection">2.7 Alarm handler</a></li>
+                    </ul>
+                </li>
+
+
             </ul>
         </div>
+
+
 
         <!-- Use of this document-->
         <div>
@@ -79,9 +91,9 @@
 
             <!-- Overview -->
             <div>
-                <h2 id="Use">2. How to use this document</h2>
+                <h2 id="Use">How to use this document</h2>
                 <hr class="black" />
-                <h3 id="Purpose">2.1 Conventions</h3>
+                <h3 id="Purpose">Conventions</h3>
 
                 <p class="para">
                     Throughout this document we will use the following formatting convensions:
@@ -90,7 +102,7 @@
                 <div class="key">
                     <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                     <p class="comment">
-                        Special instructions for trainers will be given in italics and marked with an image of a teacher at
+                        Special instructions for trainers are given in italics and marked with an image of a teacher at
                         a chalkboard.
                     </p>
                 </div>
@@ -98,7 +110,7 @@
                 <div class="key">
                     <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
                     <p class="para">
-                        The learning objectives for each section will be preceded by a bullseye.
+                        Learning objectives for each section are marked with a bullseye.
                     </p>
                 </div>
 
@@ -112,7 +124,7 @@
                 <div class="key">
                     <div class='key-highlight'><i class="fas fa-question"></i> </div>
                     <p class="para">
-                        Suggested questions for discussion are marked with a question mark.
+                        Suggesions for classroom discussion are marked with a question mark.
                     </p>
                 </div>
 
@@ -124,11 +136,21 @@
                         document icon. </p>
                 </div>
 
-                <h3 id="Purpose">2.2 Supplemental content</h3>    
-                
+                <h3 id="Purpose">Supplemental content</h3>
+
                 <p class="para">
-                    This document aims to describe a minimal set of topics to be covered by a basic course. Instructors
-                    are free to include additional information, including vendor-specific information, deemed necessary. 
+                    This document describes a minimal set of topics to be covered by a basic introduction to PackML.
+                    Instructors
+                    are free to include any additional information, including vendor-specific information, deemed
+                    necessary.
+                </p>
+
+                <h3 id="Purpose">Content order</h3>
+
+                <p class="para">
+                    Topics are given in what the authors feel is a natural order, but instructors may rearrange the
+                    ordering where
+                    required, especially with respect to the vendor-specific material.
                 </p>
 
             </div>
@@ -140,34 +162,74 @@
 
                 <!-- Overview -->
                 <div>
-                    <h2 id="Overview">2. Overview</h2>
+                    <h2 id="Indroduction">1. Introduction</h2>
                     <hr class="black" />
-                    <h3 id="Purpose">2.1 PackML Goals</h3>
 
-                    <p class="comment">
-                        [This section is intended to give students an overview of the basic concepts and developmet
-                        history
-                        of PackML.]
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
+                        <p class="para">
+                            This section is intended to give students an overview of the basic concepts and developmet
+                            history of PackML.
+                        </p>
+                        <p class="para">
+                            After completing the section, students should have an understanding of what motivated the
+                            development of PackML and some of its benefits.
+                        </p>
+
+                    </div>
+
+                    <h3 id="Purpose">1.1 PackML goals</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Present an overview of the goals and benefits of PackML.  Some ideas are listed below. 
+                        </p>
+                    </div>
+
+                    <p class="para">
+                        PackML, or Packaging Machine Language, is an effort by OMAC to standardize the interface
+                        between a packaging machine and its peers and supervisors.  Primary objectives include
+                        bringing common "look and feel" and operational consistency to all machines that make up
+                        a packaging line.
                     </p>
 
                     <p class="para">
-                        [0004] PackML, or Packaging Machine Language, is an effort by OMAC to standardize the interface
-                        between a packaging machine and its peers and supervisors.
+                    PackML provides:    
+                    <ul class="list">
+                        <li>Overall equipment effectiveness or OEE data</li>
+                        <li>Root cause analysis or RCA data</li>
+                        <li>Recipe management</li>
+                        <li>Standard defined machine states and operational flow</li>
+                    </ul>
+                    </p>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            What does it mean that machines should have a common "look and feel"?  
+                        </p>
+
+                        <p class="para">
+                            Give an example of operational consistency.
+                        </p>
+                    </div>
+
+
+                    <p class="para">
+                        Development timeline.
                     </p>
                     <p class="para">
-                        [0005] Development timeline.
+                        Current standard.
                     </p>
                     <p class="para">
-                        [0006] Current standard.
+                        PackML as data interface between peers and supervisors.
                     </p>
                     <p class="para">
-                        [0007] PackML as data interface between peers and supervisors.
+                        Overview of PackTags.
                     </p>
                     <p class="para">
-                        [0008] Overview of PackTags.
-                    </p>
-                    <p class="para">
-                        [0009] Video resource: PackML PACK EXPO Demo.
+                        Video resource: PackML PACK EXPO Demo.
                     </p>
                 </div>
 
@@ -180,9 +242,9 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            PackML: a communication interface for discrete manufacturing 
-                            (e.g. packaging machinery) described by ISA-TR88.00.02-2015; sometimes 
-                            used to describe additional methods of standardizing machine “look and 
+                            PackML: a communication interface for discrete manufacturing
+                            (e.g. packaging machinery) described by ISA-TR88.00.02-2015; sometimes
+                            used to describe additional methods of standardizing machine “look and
                             feel” or PLC coding design patterns.
                         </p>
                     </div>
@@ -190,43 +252,45 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            State or machine state:  the current status or condition of the system in consideration.
+                            State or machine state: the current status or condition of the system in consideration.
                         </p>
 
                         <p class="para">
-                            State model: an abstract model or machine that can be in exactly one of a finite number 
-                            of states at any given time.  The model may change or transition from one state to another 
+                            State model: an abstract model or machine that can be in exactly one of a finite number
+                            of states at any given time. The model may change or transition from one state to another
                             in response to some input.
-                        </p>                        
-                    </div>
-
-                    <div class="key">
-                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
-                        <p class="para">
-                            ISA-88 physical model: a hierarchy describing the physical assets of a commercial enterprise.  
-                            See ANSI/ISA-S88.01-1995.  In this model, a Process Cell comprises one or more Units 
-                            responsible for producing a specific commodity. 
                         </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            Mode (general): a way or manner in which something occurs or is experienced, expressed or done.
+                            ISA-88 physical model: a hierarchy describing the physical assets of a commercial
+                            enterprise.
+                            See ANSI/ISA-S88.01-1995. In this model, a Process Cell comprises one or more Units
+                            responsible for producing a specific commodity.
+                        </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            Mode (general): a way or manner in which something occurs or is experienced, expressed or
+                            done.
                         </p>
                         <p class="para">
                             Unit/machine control mode: a way or manner in which a manufacturing machine is used.
-                        </p>            
-                        
+                        </p>
+
                         <p class="para">
                             Mode manager: software that governs the transition from one machine mode to another.
-                        </p>  
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            PackTags: a set of naming conventions for software variables associated to data elements of 
+                            PackTags: a set of naming conventions for software variables associated to data elements of
                             the unit/machine.
                         </p>
                     </div>
@@ -234,7 +298,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            Alarm handler: software responsible for logging alarms or events occurring on the unit/machine.  
+                            Alarm handler: software responsible for logging alarms or events occurring on the
+                            unit/machine.
                             Functionality for sorting or filtering the alarm history may also be present.
                         </p>
                     </div>
@@ -242,16 +307,6 @@
 
                 </div>
 
-
-                <!-- Modes -->
-                <div>
-                    <h2 id="Modes">5. PackML Modes</h2>
-                    <hr class="black" />
-                    <h3 id="Purpose">5.1 Definitions and key concepts</h3>
-                    <p class="para">
-                        [0010] PackML:
-                    </p>
-                </div>
 
                 <!-- State diagram -->
                 <div>
@@ -283,7 +338,8 @@
                         <p class="para">
                             The PackML state diagram is meant to represent in a broad way the
                             behaviour of a generic machine. It is meant to be more descriptive than proscriptive and, as
-                            such, should not be viewed as a programatic trick. States have specific meanings. For example, if
+                            such, should not be viewed as a programatic trick. States have specific meanings. For
+                            example, if
                             machine processing has paused due to an upstream blockage, then the machine is in Suspended
                             state, regardless of internal PLC logic (are any other messages to the contrary).
                         </p>
@@ -291,142 +347,247 @@
 
                     <h3 id="Purpose">4.1 EXECUTE state</h3>
 
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_execute.png" />
+                        <figcaption>
+                            Figure X. In the Held state, unit/machine production has paused due to an internal process
+                            issue (e.g. low glue tank).
+                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
+                            Stopping or Aborting are
+                            also permitted.
+                        </figcaption>
+                    </figure>
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Once the machine is processing materials it is in the EXECUTE state.  Different machine modes will 
-                            result in specific types of EXECUTE activities.  For example, if the machine is in the “Production” 
-                            mode, the EXECUTE will result in products being produced, while in “Clean Out” mode the EXECUTE 
+                            Once the machine is processing materials it is in the EXECUTE state. Different machine modes
+                            will
+                            result in specific types of EXECUTE activities. For example, if the machine is in the
+                            “Production”
+                            mode, the EXECUTE will result in products being produced, while in “Clean Out” mode the
+                            EXECUTE
                             state refers to the action of cleaning the machine.
-                         </p>
+                        </p>
                     </div>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            If the unit/machine is actively carrying out the behavior or activity defined by the selected  
-                            mode, then the machine is in EXECUTE state.  If the unit/machine is in PRODUCTION mode, for 
-                            example, this means that the machine is producing product.  
+                            If the unit/machine is actively carrying out the behavior or activity defined by the
+                            selected
+                            mode, then the machine is in EXECUTE state. If the unit/machine is in PRODUCTION mode, for
+                            example, this means that the machine is producing product.
                         </p>
                     </div>
 
                     <h3 id="Purpose">4.1 HELD state</h3>
 
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_held.png" />
+                        <figcaption>
+                            Figure X. In the Held state, unit/machine production has paused due to an internal process
+                            issue (e.g. low glue tank).
+                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
+                            Stopping or Aborting are
+                            also permitted.
+                        </figcaption>
+                    </figure>
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Refer to HOLDING for when this state is used. In this state the machine shall not produce product. 
-                            It will either stop running or continue to dry cycle. A transition to the UNHOLDING state will 
-                            occur when INTERNAL machine conditions change or an UNHOLD command is initiated by an operator.
-                         </p>
+                            Refer to HOLDING for when this state is used. In this state the machine shall not produce
+                            product.
+                            It will either stop running or continue to dry cycle. A transition to the UNHOLDING state
+                            will
+                            occur when INTERNAL machine conditions change or an UNHOLD command is initiated by an
+                            operator.
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            The unit/machine is paused, waiting for internal process conditions to clear.   In this state, 
-                            the unit/machine shall not produce product, though it may, if required, dry-cycle.  A transition 
-                            to UNHOLDING will occur once internal machine conditions have cleared or if the UNHOLD command 
+                            The unit/machine is paused, waiting for internal process conditions to clear. In this state,
+                            the unit/machine shall not produce product, though it may, if required, dry-cycle. A
+                            transition
+                            to UNHOLDING will occur once internal machine conditions have cleared or if the UNHOLD
+                            command
                             is initiated by an operator.
                         </p>
                     </div>
 
                     <h3 id="Purpose">4.1 SUSPENDED state</h3>
 
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_suspended.png" />
+                        <figcaption>
+                            Figure X. In the Held state, unit/machine production has paused due to an internal process
+                            issue (e.g. low glue tank).
+                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
+                            Stopping or Aborting are
+                            also permitted.
+                        </figcaption>
+                    </figure>
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Refer to SUSPENDING for when this state is used. In this state the machine shall not produce 
-                            product. It will either stop running or continue to cycle without producing until external process 
-                            conditions return to normal, at which time, the SUSPENDED state will transition to the UNSUSPENDING 
+                            Refer to SUSPENDING for when this state is used. In this state the machine shall not produce
+                            product. It will either stop running or continue to cycle without producing until external
+                            process
+                            conditions return to normal, at which time, the SUSPENDED state will transition to the
+                            UNSUSPENDING
                             state, typically without any operator intervention.
-                         </p>
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            The unit/machine is paused, waiting for external process conditions to clear.   In this sate, 
-                            the unit/machine shall not produce product, but may, if required, dry-cycle.  Once external conditions 
-                            have returned to normal, the unit/machine will transition to UNSUSPENDING, typically without operator 
+                            The unit/machine is paused, waiting for external process conditions to clear. In this sate,
+                            the unit/machine shall not produce product, but may, if required, dry-cycle. Once external
+                            conditions
+                            have returned to normal, the unit/machine will transition to UNSUSPENDING, typically without
+                            operator
                             intervention.
                         </p>
                     </div>
 
                     <h3 id="Purpose">4.1 COMPLETE state</h3>
 
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_complete.png" />
+                        <figcaption>
+                            Figure X. In the Held state, unit/machine production has paused due to an internal process
+                            issue (e.g. low glue tank).
+                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
+                            Stopping or Aborting are
+                            also permitted.
+                        </figcaption>
+                    </figure>
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            The machine has finished the COMPLETING state and is now waiting for a RESET command before 
+                            The machine has finished the COMPLETING state and is now waiting for a RESET command before
                             transitioning to the RESETTING state.
-                         </p>
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            COMPLETE indicates the process associated with the active mode has come to its defined end.  
-                            The unit/machine will wait in this state until a RESET command is issued (in which case it will transition 
+                            COMPLETE indicates the process associated with the active mode has come to its defined end.
+                            The unit/machine will wait in this state until a RESET command is issued (in which case it
+                            will transition
                             to RESETTING), or until the process is STOPPED or ABORTED.
                         </p>
                     </div>
 
                     <h3 id="Purpose">4.1 IDLE state</h3>
 
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_idle.png" />
+                        <figcaption>
+                            Figure X. In the Held state, unit/machine production has paused due to an internal process
+                            issue (e.g. low glue tank).
+                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
+                            Stopping or Aborting are
+                            also permitted.
+                        </figcaption>
+                    </figure>
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            This is the state which indicates that RESETTING is complete. The machine will maintain the conditions which 
-                            were achieved during the RESETTING state, and perform operations required when the machine is in IDLE.
-                         </p>
+                            This is the state which indicates that RESETTING is complete. The machine will maintain the
+                            conditions which
+                            were achieved during the RESETTING state, and perform operations required when the machine
+                            is in IDLE.
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            The unit/machine is in an error-free state, waiting to start.  The unit/machine transitions automatically 
-                            to IDLE after all steps necessary for RESETTING have been completed.  All conditions achieved during 
-                            RESETTING are maintained.  A START command will transition the unit/machine from IDLE to STARTING.
+                            The unit/machine is in an error-free state, waiting to start. The unit/machine transitions
+                            automatically
+                            to IDLE after all steps necessary for RESETTING have been completed. All conditions achieved
+                            during
+                            RESETTING are maintained. A START command will transition the unit/machine from IDLE to
+                            STARTING.
                         </p>
                     </div>
 
                     <h3 id="Purpose">4.1 STOPPED state</h3>
 
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_stopped.png" />
+                        <figcaption>
+                            Figure X. In the Held state, unit/machine production has paused due to an internal process
+                            issue (e.g. low glue tank).
+                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
+                            Stopping or Aborting are
+                            also permitted.
+                        </figcaption>
+                    </figure>
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            The machine is powered and stationary after completing the STOPPING state. All communications with other 
-                            systems are functioning ( if applicable). A RESET command will cause an exit from STOPPED to the RESETTING 
+                            The machine is powered and stationary after completing the STOPPING state. All
+                            communications with other
+                            systems are functioning ( if applicable). A RESET command will cause an exit from STOPPED to
+                            the RESETTING
                             state.
-                         </p>
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            The unit/machine is powered and stationary after either STOPPING or CLEARING.  All communication with 
-                            supervisory, user interface, peer or other systems is active and functioning.  A RESET command will 
+                            The unit/machine is powered and stationary after either STOPPING or CLEARING. All
+                            communication with
+                            supervisory, user interface, peer or other systems is active and functioning. A RESET
+                            command will
                             cause the unit/machine to transition from STOPPED to the RESETTING state.
                         </p>
                     </div>
 
                     <h3 id="Purpose">4.1 ABORTED state</h3>
 
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_aborted.png" />
+                        <figcaption>
+                            Figure X. In the Held state, unit/machine production has paused due to an internal process
+                            issue (e.g. low glue tank).
+                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
+                            Stopping or Aborting are
+                            also permitted.
+                        </figcaption>
+                    </figure>
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            The machine maintains status information relevant to the ABORT condition.  The machine can only exit the 
-                            ABORTED state after an explicit CLEAR command, subsequently to manual intervention to correct and reset 
+                            The machine maintains status information relevant to the ABORT condition. The machine can
+                            only exit the
+                            ABORTED state after an explicit CLEAR command, subsequently to manual intervention to
+                            correct and reset
                             the detected machine faults.
-                         </p>
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            The unit/machine remains in its ABORTED state until a CLEAR command is explicitly issued.  Note that 
-                            operators may be required to take manual, corrective action in this state.  The unit/machine must 
-                            maintain all status or fault information related to the cause of the current ABORT condition.
+                            The unit/machine remains in its ABORTED state until a CLEAR command is explicitly issued.
+                            Note that
+                            operators may be required to take manual, corrective action in this state. The unit/machine
+                            must
+                            maintain all status or fault information related to the cause of the current ABORT
+                            condition.
                         </p>
                     </div>
 
@@ -435,18 +596,26 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            The unit/machine will transition from EXECUTE to HOLDING if conditions internal to the unit/machine 
-                            require a pause in production.  Such conditions would include low levels on materials required for 
-                            production or other minor issues requiring operator service, for example.   The decision to HOLD 
-                            may be made automatically by the  unit/machine itself or by an operator. 
+                            The unit/machine will transition from EXECUTE to HOLDING if conditions internal to the
+                            unit/machine
+                            require a pause in production. Such conditions would include low levels on materials
+                            required for
+                            production or other minor issues requiring operator service, for example. The decision to
+                            HOLD
+                            may be made automatically by the unit/machine itself or by an operator.
                         </p>
 
                         <p class="para">
-                            The unit/machine will transition from EXECUTE to SUSPENDING if conditions external to the unit/machine 
-                            require a pause in production.  Such conditions include faults to upstream or downstream equipment.   
-                            The decision to SUSPEND may be made be a supervisory system monitoring the production line conditions 
-                            or by unit/machine sensors detecting downstream blockages or upstream product scarcity.  (In the 
-                            former case, the unit/machine is 'blocked”; in the latter case, the unit/machine is “starved”.)
+                            The unit/machine will transition from EXECUTE to SUSPENDING if conditions external to the
+                            unit/machine
+                            require a pause in production. Such conditions include faults to upstream or downstream
+                            equipment.
+                            The decision to SUSPEND may be made be a supervisory system monitoring the production line
+                            conditions
+                            or by unit/machine sensors detecting downstream blockages or upstream product scarcity. (In
+                            the
+                            former case, the unit/machine is 'blocked”; in the latter case, the unit/machine is
+                            “starved”.)
                         </p>
                     </div>
 
@@ -455,13 +624,16 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            The unit/machine transitions to STOPPING in response to a STOP command.  In this state the unit/machine 
-                            performs all steps required to bring itself to a controlled stop.  
+                            The unit/machine transitions to STOPPING in response to a STOP command. In this state the
+                            unit/machine
+                            performs all steps required to bring itself to a controlled stop.
                         </p>
 
                         <p class="para">
-                            The unit/machine transitions to ABORTING in response to an ABORT command or an internal machine fault.  
-                            In this state the unit/machine performs all steps required to bring itself to a rapid, safe stop.  
+                            The unit/machine transitions to ABORTING in response to an ABORT command or an internal
+                            machine fault.
+                            In this state the unit/machine performs all steps required to bring itself to a rapid, safe
+                            stop.
                         </p>
                     </div>
 
@@ -484,7 +656,7 @@
                         </p>
 
                         <p class="para">
-                            Each PackML state is assigned a unique fixed number.  List these.
+                            Each PackML state is assigned a unique fixed number. List these.
                         </p>
 
                         <p class="para">
@@ -499,12 +671,13 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Processing on a given machine has paused due to a low level fault on a glue tank.  From a PackML perspective, 
+                            Processing on a given machine has paused due to a low level fault on a glue tank. From a
+                            PackML perspective,
                             what state is the machine in?
                         </p>
 
                         <p class="para">
-                            A machine has processed all units required for a given batch and has come to rest. From a 
+                            A machine has processed all units required for a given batch and has come to rest. From a
                             PackML perspective, what state is the machine in?
                         </p>
 
@@ -514,7 +687,8 @@
                         </p>
 
                         <p class="para">
-                            Give an example of a machine which might not implement the Suspended state in Production mode.
+                            Give an example of a machine which might not implement the Suspended state in Production
+                            mode.
                         </p>
 
                     </div>
