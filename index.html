@@ -79,7 +79,21 @@
                     </ul>
                 </li>
 
-
+                <li>
+                    <a href="#Introduction" class="section">3. PackML states</a>
+                    <ul>
+                        <li><a href="#PackML" class="subsection">3.1 EXECUTE state</a></li>
+                        <li><a href="#State" class="subsection">3.2 HELD state</a></li>
+                        <li><a href="#StateModel" class="subsection">3.3 SUSPENDED state></a></li>
+                        <li><a href="#ISAPhysicalModel" class="subsection">3.4 COMPLETE state</a></li>
+                        <li><a href="#Mode" class="subsection">3.5 IDLE state</a></li>
+                        <li><a href="#PackTags" class="subsection">3.6 STOPPED state</a></li>
+                        <li><a href="#AlarmHandler" class="subsection">3.7 ABORTED state</a></li>
+                        <li><a href="#AlarmHandler" class="subsection">3.8 HELD vs. SUSPENDED</a></li>
+                        <li><a href="#AlarmHandler" class="subsection">3.9 STOPPED vs. ABORTED</a></li>
+                        <li><a href="#AlarmHandler" class="subsection">3.10 Transition states</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
@@ -206,7 +220,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            What does it mean that machines should have a common "look and feel"?  
+                            What does it mean for machines to have a common "look and feel"?  
                         </p>
 
                         <p class="para">
@@ -265,27 +279,25 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_supervisor.png" />
                         <figcaption>
-                            Figure X. PackML is defined in technical report ANSI/ISA-TR88.00.02-2015.  Copies are 
-                            available for purchase at www.isa.org.
+                            Figure X. PackML provides a data interface between a machine and its supervisor.
                         </figcaption>
                     </figure>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_between_peers.png" />
                         <figcaption>
-                            Figure X. PackML is defined in technical report ANSI/ISA-TR88.00.02-2015.  Copies are 
-                            available for purchase at www.isa.org.
+                            Figure X. PackML provides a data interface between a machine and its peers.
                         </figcaption>
                     </figure>                    
  
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Gives examples of data that might be passed from a machine to its supervisor.
+                            Give examples of data that might be passed from a machine to its supervisor.
                         </p>
 
                         <p class="para">
-                            Gives examples of data that might be passed between machine peers.
+                            Give examples of data that might be passed between machine peers.
                         </p>
                     </div>
 
@@ -342,6 +354,18 @@
                     <h2 id="Terms">2. Terms and key concepts</h2>
                     <hr class="black" />
  
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
+                        <p class="para">
+                            This section introduces key terms and concepts that will be used later.  
+                        </p>
+                        <p class="para">
+                            After completing the section, students - in addition to understanding the terms themselves - should
+                            have a clearer understanding of the scope of the course.
+                        </p>
+
+                    </div>
+
                     <h3 id="Purpose">2.1 PackML</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
@@ -428,77 +452,83 @@
 
                 <!-- State diagram -->
                 <div>
-                    <h2 id="State_diagram">4. PackML state diagram</h2>
+                    <h2 id="State_diagram">3. PackML states</h2>
                     <hr class="black" />
-                    <h3 id="Purpose">4.1 Definitions and key concepts</h3>
-                    <p class="para">
-                        [0010] PackML:
-                    </p>
-                    <p class="para">
-                        [0010] General comments on the state machine. What does the box around states Idle..Completed
-                        mean? What does the box around all states but Aborting and Aborted mean?
-                    </p>
-                    <p class="para">
-                        [0010] PackML states are meant to convey information about the general status of the machine. It
-                        is common for any given state to have multiple substates...
-                    </p>
-                    <p class="para">
-                        [0010] Clarify difference between Hold and Suspend states, including autorestart for Suspend
-                        state.
-                    </p>
-                    <p class="para">
-                        [0010] Clarify difference between Stopped and Aborted states.
-                    </p>
 
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
+                        <p class="para">
+                            This chapter covers the PackML state model, describing in detail each of the states, as well as 
+                            the overall workflow.
+                        </p>
+                        <p class="para">
+                            After completing the chapter, students should have a clear understanding of the PackML state model.
+                             
+                        </p>
+
+                    </div>
+
+                     <h3 id="Purpose">3.1 EXECUTE state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the EXECUTE state.  Stress the idea that if the machine is running and producing
+                            product, then from a PackML perspective it is in EXECUTE state. 
+                        </p>
+                        <p class="comment">
+                            Reinforce the notion that the PackML state is associated to specific machine behaviors.  
+                            It is not up to the programmer to decide whether a particular PackML state is used.  Rather, the machine's 
+                            operational behaviour determines what the PackML state must be.
+                        </p>
+                        <p class="comment">
+                            Throughout this chapter it is recommended to concentrate on the machine behaviour associated to each
+                            state in Production mode, as these are in a sense the most well defined.  PackML modes will be discussed 
+                            in the next chapter, but instructors may want to briefly introduce the concept of mode here.
+                        </p>                        
+                    </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            The PackML state diagram is meant to represent in a broad way the
-                            behaviour of a generic machine. It is meant to be more descriptive than proscriptive and, as
-                            such, should not be viewed as a programatic trick. States have specific meanings. For
-                            example, if
-                            machine processing has paused due to an upstream blockage, then the machine is in Suspended
-                            state, regardless of internal PLC logic (are any other messages to the contrary).
+                            If the unit/machine is actively carrying out the behavior or activity defined by the
+                            selected mode, then the machine is in EXECUTE state. If the unit/machine is in PRODUCTION mode, for
+                            example, this means that the machine is producing product.
                         </p>
                     </div>
 
-                    <h3 id="Purpose">4.1 EXECUTE state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_execute.png" />
                         <figcaption>
-                            Figure X. In the Held state, unit/machine production has paused due to an internal process
-                            issue (e.g. low glue tank).
-                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
-                            Stopping or Aborting are
-                            also permitted.
+                            Figure X. In Production mode, Execute state indicates that the machine is running and producing product.
+                            From Execute, it is possible to Hold, Complete, Suspend, Stop or Abort.
                         </figcaption>
                     </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Once the machine is processing materials it is in the EXECUTE state. Different machine modes
+                            Table 1 (p. 17): Once the machine is processing materials it is in the EXECUTE state. Different machine modes
                             will
                             result in specific types of EXECUTE activities. For example, if the machine is in the
                             “Production”
-                            mode, the EXECUTE will result in products being produced, while in “Clean Out” mode the
+                            mode, the [sic] EXECUTE will result in products being produced, while in “Clean Out” mode the
                             EXECUTE
                             state refers to the action of cleaning the machine.
                         </p>
                     </div>
+
                     <div class="key">
-                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            If the unit/machine is actively carrying out the behavior or activity defined by the
-                            selected
-                            mode, then the machine is in EXECUTE state. If the unit/machine is in PRODUCTION mode, for
-                            example, this means that the machine is producing product.
+                            Respond to this description of the PackML state machine: The PackML state tells you whether the machine is running or
+                            not and if not, why not.
                         </p>
                     </div>
 
-                    <h3 id="Purpose">4.1 HELD state</h3>
+ 
+                    <h3 id="Purpose">3.2 HELD state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_held.png" />
@@ -535,7 +565,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">4.1 SUSPENDED state</h3>
+                    <h3 id="Purpose">3.3 SUSPENDED state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_suspended.png" />
@@ -572,7 +602,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">4.1 COMPLETE state</h3>
+                    <h3 id="Purpose">3.4 COMPLETE state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_complete.png" />
@@ -603,7 +633,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">4.1 IDLE state</h3>
+                    <h3 id="Purpose">3.5 IDLE state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_idle.png" />
@@ -638,7 +668,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">4.1 STOPPED state</h3>
+                    <h3 id="Purpose">3.6 STOPPED state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_stopped.png" />
@@ -673,7 +703,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">4.1 ABORTED state</h3>
+                    <h3 id="Purpose">3.7 ABORTED state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_aborted.png" />
@@ -709,7 +739,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">4.1 HELD vs SUSPENDED</h3>
+                    <h3 id="Purpose">3.8 HELD vs. SUSPENDED</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
@@ -737,7 +767,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">4.1 STOPPED vs ABORTED</h3>
+                    <h3 id="Purpose">3.9 STOPPED vs. ABORTED</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
@@ -754,6 +784,8 @@
                             stop.
                         </p>
                     </div>
+
+                    <h3 id="Purpose">3.10 Transition states</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
@@ -811,11 +843,28 @@
 
                     </div>
 
+
+                    <p class="para">
+                        [0010] General comments on the state machine. What does the box around states Idle..Completed
+                        mean? What does the box around all states but Aborting and Aborted mean?
+                    </p>
+                    <p class="para">
+                        [0010] PackML states are meant to convey information about the general status of the machine. It
+                        is common for any given state to have multiple substates...
+                    </p>
+                    <p class="para">
+                        [0010] Clarify difference between Hold and Suspend states, including autorestart for Suspend
+                        state.
+                    </p>
+                    <p class="para">
+                        [0010] Clarify difference between Stopped and Aborted states.
+                    </p>
+
                 </div>
 
                 <!-- Mode management, revisited -->
                 <div>
-                    <h2 id="Modes">5. PackML Modes</h2>
+                    <h2 id="Modes">5. PackML modes</h2>
                     <hr class="black" />
                     <h3 id="Purpose">5.1 Definitions and key concepts</h3>
                     <p class="para">
