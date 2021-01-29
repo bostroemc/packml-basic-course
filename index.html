@@ -8,15 +8,16 @@
 
     <title>PackML Learn: Basic Syllabus</title>
 
-    <meta name="author" content="Carl Bosrom">
+    <meta name="author" content="Carl Bostrom">
     <meta name="designer" content="Patrick Toohey">
 
-    <meta name="description" content="PackML HMI Guidance.">
+    <meta name="description" content="PackML Basic Syllabus">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link type="text/css" rel="stylesheet" href="css/reset.css" />
     <link type="text/css" rel="stylesheet" href="css/main.css">
     <link type="text/css" rel="stylesheet" href="css/paragraph.css">
+
 
     <script src="https://kit.fontawesome.com/62d0ecf911.js" crossorigin="anonymous"></script>
     <script src="js/packml.hmi.js"></script>
@@ -31,9 +32,9 @@
 <body>
     <div class="container">
         <div><img id="omac-logo" src="images/OMAC.png" alt="OMAC" /></div>
-        <h1>PackML Learn</h1>
+        <h1>PackML Implementation Guide</h1>
         <hr class="black" />
-        <h4>Syllabus for course on PackML Basics</h4>
+        <h4>Part X: Teaching PackML Basics</h4>
         <div class="summary">
             <h4 class="summary">Summary</h4>
             <p class="para">
@@ -41,59 +42,101 @@
                 for instructors.
             </p>
             <p class="comment">
-                what are the objectives? Give an overview of the subjects covered.
+                TODO: Discuss the the course objectives. Give an overview of the subjects covered.
             </p>
-
 
             <h5 class="author">Author: PackML Learn</h5>
         </div>
-
-
-
         <div>
             <h2 id="contents">Course outline</h2>
             <hr class="black" />
             <ul id="contents">
                 <li>
-                    <a href="#Introduction" class="section">1. Introduction</a>
+                    <a href="#1_introduction" class="section">1. Introduction</a>
                     <ul>
-                        <li><a href="#Goals" class="subsection">1.1 PackML goals</a></li>
-                        <li><a href="#Timeline" class="subsection">1.2 Development timeline</a></li>
-                        <li><a href="#CurrentStandard" class="subsection">1.3 Current standard</a></li>
-                        <li><a href="#DataInterface" class="subsection">1.4 Data interface</a></li>
-                        <li><a href="#PackTags" class="subsection">1.5 PackTags</a></li>
-                        <li><a href="#StateMachine" class="subsection">1.6 State machine</a></li>
+                        <li><a href="#1_1_goals" class="subsection">1.1 PackML goals</a></li>
+                        <li><a href="#1_2_timeline" class="subsection">1.2 Development timeline</a></li>
+                        <li><a href="#1_3_current_standard" class="subsection">1.3 Current standard</a></li>
+                        <li><a href="#1_4_data_interface" class="subsection">1.4 Data interface</a></li>
+                        <li><a href="#1_5_packtags" class="subsection">1.5 PackTags</a></li>
+                        <li><a href="#1_6_state_machine" class="subsection">1.6 State machine</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="#Introduction" class="section">2. Terms and key concepts</a>
+                    <a href="#2_terms" class="section">2. Terms and key concepts</a>
                     <ul>
-                        <li><a href="#PackML" class="subsection">2.1 PackML</a></li>
-                        <li><a href="#State" class="subsection">2.2 State or machine state</a></li>
-                        <li><a href="#StateModel" class="subsection">2.3 State model</a></li>
-                        <li><a href="#ISAPhysicalModel" class="subsection">2.4 ISA-88 physical model</a></li>
-                        <li><a href="#Mode" class="subsection">2.5 Mode or machine mode</a></li>
-                        <li><a href="#PackTags" class="subsection">2.6 PackTags</a></li>
-                        <li><a href="#AlarmHandler" class="subsection">2.7 Alarm handler</a></li>
+                        <li><a href="#2_1_packml" class="subsection">2.1 PackML</a></li>
+                        <li><a href="#2_2_machine_state" class="subsection">2.2 State or machine state</a></li>
+                        <li><a href="#2_3_state_model" class="subsection">2.3 State model</a></li>
+                        <li><a href="#2_4_isa88_physical_model" class="subsection">2.4 ISA-88 physical model</a></li>
+                        <li><a href="#2_5_machine_mode" class="subsection">2.5 Mode or machine mode</a></li>
+                        <li><a href="#2_6_packtags" class="subsection">2.6 PackTags</a></li>
+                        <li><a href="#2_7_alarm_handler" class="subsection">2.7 Alarm handler</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="#Introduction" class="section">3. PackML states</a>
+                    <a href="#3_packml_states" class="section">3. PackML states</a>
                     <ul>
-                        <li><a href="#PackML" class="subsection">3.1 EXECUTE state</a></li>
-                        <li><a href="#State" class="subsection">3.2 HELD state</a></li>
-                        <li><a href="#StateModel" class="subsection">3.3 SUSPENDED state></a></li>
-                        <li><a href="#ISAPhysicalModel" class="subsection">3.4 COMPLETE state</a></li>
-                        <li><a href="#Mode" class="subsection">3.5 IDLE state</a></li>
-                        <li><a href="#PackTags" class="subsection">3.6 STOPPED state</a></li>
-                        <li><a href="#AlarmHandler" class="subsection">3.7 ABORTED state</a></li>
-                        <li><a href="#AlarmHandler" class="subsection">3.8 HELD vs. SUSPENDED</a></li>
-                        <li><a href="#AlarmHandler" class="subsection">3.9 STOPPED vs. ABORTED</a></li>
-                        <li><a href="#AlarmHandler" class="subsection">3.10 Transition states</a></li>
+                        <li><a href="#3_1_execute" class="subsection">3.1 EXECUTE state</a></li>
+                        <li><a href="#3_2_held" class="subsection">3.2 HELD state</a></li>
+                        <li><a href="#3_3_suspended" class="subsection">3.3 SUSPENDED state</a></li>
+                        <li><a href="#3_4_complete" class="subsection">3.4 COMPLETE state</a></li>
+                        <li><a href="#3_5_idle" class="subsection">3.5 IDLE state</a></li>
+                        <li><a href="#3_6_stopped" class="subsection">3.6 STOPPED state</a></li>
+                        <li><a href="#3_7_aborted" class="subsection">3.7 ABORTED state</a></li>
+                        <li><a href="#3_8_held_suspended" class="subsection">3.8 HELD vs. SUSPENDED</a></li>
+                        <li><a href="#3_9_stopped_aborted" class="subsection">3.9 STOPPED vs. ABORTED</a></li>
+                        <li><a href="#3_10_transition_states" class="subsection">3.10 Transition states</a></li>
+                        <li><a href="#3_11_state_commands" class="subsection">3.11 State commands</a></li>
+                        <li><a href="#3_12_state_complete" class="subsection">3.12 State complete</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#4_packml_modes" class="section">4. PackML modes</a>
+                    <ul>
+                        <li><a href="#4_1_production" class="subsection">4.1 PRODUCTION mode</a></li>
+                        <li><a href="#4_2_maintenance" class="subsection">4.2 MAINTENANCE mode</a></li>
+                        <li><a href="#4_3_manual" class="subsection">4.3 MANUAL mode</a></li>
+                        <li><a href="#4_4_additional_modes" class="subsection">4.4 Additional modes</a></li>
+                        <li><a href="#4_5_mode_management" class="subsection">4.5 Mode management</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#5_packtags" class="section">5. PackTags</a>
+                    <ul>
+                        <li><a href="#5_1_command_tags" class="subsection">5.1 Command tags</a></li>
+                        <li><a href="#5_2_status_tags" class="subsection">5.2 Status tags</a></li>
+                        <li><a href="#5_3_admin_tags" class="subsection">5.3 Admin tags</a></li>
+                        <li><a href="#5_4_required_set" class="subsection">5.4 Required set</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#6_implementation" class="section">6. Implementation strategies</a>
+                    <ul>
+                        <li><a href="#6_1_event_handling" class="subsection">6.1 Event handling</a></li>
+
+                        <li><a href="#6_2_code_structure" class="subsection">6.2 Code structure</a></li>
+                        <ul>
+                            <li><a href="#6_2_1_gateway" class="subsubsection">6.2.1 Gateway approach</a></li>
+                            <li><a href="#6_2_2_full_integration" class="subsubsection">6.2.2 Full integration</a></li>
+                        </ul>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#7_references" class="section">7. References</a>
+                    <ul>
+                        <li><a href="#7_1_standards" class="subsection">7.1 Standards</a></li>
+                        <li><a href="#7_2_implementation_guides" class="subsection">7.2 Implementation guides</a></li>
+                        <li><a href="#7_3_videos" class="subsection">7.3 Instructional videos</a></li>
+                    </ul>
+                </li>
+
             </ul>
         </div>
 
@@ -162,7 +205,8 @@
                 <h3 id="Purpose">Content order</h3>
 
                 <p class="para">
-                    Topics are given in what the authors feel is a natural order, but the subject matter may be rearranged
+                    Topics are given in what the authors feel is a natural order, but the subject matter may be
+                    rearranged
                     where required, especially with respect to any additioanl vendor-specific material.
                 </p>
 
@@ -175,7 +219,7 @@
 
                 <!-- Overview -->
                 <div>
-                    <h2 id="Indroduction">1. Introduction</h2>
+                    <h2 id="1_introduction">1. Introduction</h2>
                     <hr class="black" />
 
                     <div class="key">
@@ -191,24 +235,25 @@
 
                     </div>
 
-                    <h3 id="Purpose">1.1 PackML goals</h3>
+                    <h3 id="1_1_goals">1.1 PackML goals</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Present an overview of the goals and benefits of PackML.  Some ideas are listed below. 
+                            Instructors: Present an overview of the goals and benefits of PackML. Some ideas are listed
+                            below.
                         </p>
                     </div>
 
                     <p class="para">
                         PackML, or Packaging Machine Language, is an effort by OMAC to standardize the interface
-                        between a packaging machine and its peers and supervisors.  Primary objectives include
+                        between a packaging machine and its peers and supervisors. Primary objectives include
                         bringing common "look and feel" and operational consistency to all machines that make up
                         a packaging line.
                     </p>
 
                     <p class="para">
-                    PackML provides:    
+                        PackML provides:
                     <ul class="list">
                         <li>Overall equipment effectiveness or OEE data</li>
                         <li>Root cause analysis or RCA data</li>
@@ -220,7 +265,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            What does it mean for machines to have a common "look and feel"?  
+                            What does it mean for machines to have a common "look and feel"?
                         </p>
 
                         <p class="para">
@@ -228,13 +273,13 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">1.2 Development timeline</h3>
+                    <h3 id="1_2_timeline">1.2 Development timeline</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: It may be helpful to review the developemnt history of PackML. The chart 
-                            below was adapted from https://en.wikipedia.org/wiki/PackML.  Further information is 
+                            Instructors: It may be helpful to review the developemnt history of PackML. The chart
+                            below was adapted from https://en.wikipedia.org/wiki/PackML. Further information is
                             available there.
                         </p>
                     </div>
@@ -242,18 +287,18 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_development_timeline.png" />
                         <figcaption>
-                            Figure X. PackML was released as an ANSI-ISA standard in 2008, but earlier versions 
-                            were in use ca. 2002.  The current version dates back to 2015.
+                            Figure X. PackML was released as an ANSI-ISA standard in 2008, but earlier versions
+                            were in use ca. 2002. The current version dates back to 2015.
                         </figcaption>
                     </figure>
 
 
-                    <h3 id="Purpose">1.3 Current standard</h3>
+                    <h3 id="1_3_current_standard">1.3 Current standard</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Stress the fact that PackML is defined by ANSI/ISA-TR88.00.02-2015. 
+                            Instructors: Stress the fact that PackML is defined by ANSI/ISA-TR88.00.02-2015.
                             Clarify how this document may be otained.
                         </p>
                     </div>
@@ -261,12 +306,12 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/TR88.00.02-2015.png" />
                         <figcaption>
-                            Figure X. PackML is defined in technical report ANSI/ISA-TR88.00.02-2015.  Copies are 
+                            Figure X. PackML is defined in technical report ANSI/ISA-TR88.00.02-2015. Copies are
                             available for purchase at www.isa.org.
                         </figcaption>
                     </figure>
 
-                    <h3 id="Purpose">1.4 Data interface</h3>
+                    <h3 id="1_4_data_interface">1.4 Data interface</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
@@ -288,8 +333,8 @@
                         <figcaption>
                             Figure X. PackML provides a data interface between a machine and its peers.
                         </figcaption>
-                    </figure>                    
- 
+                    </figure>
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
@@ -301,7 +346,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">1.5 PackTags</h3>
+                    <h3 id="1_5_packtags">1.5 PackTags</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
@@ -315,19 +360,25 @@
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
                             Why is it critical to have naming conventions for the data included in the PackML
-                            data interface?    
+                            data interface?
                         </p>
                     </div>
 
-                    <h3 id="Purpose">1.6 PackML state machine</h3>
+                    <h3 id="1_6_state_machine">1.6 PackML state machine</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Preview the PackML state machine.  Stress the idea that in order to have a 
-                            cohesive data interface, a common understanding of machine state is required.  Later sections 
+                            Instructors: Preview the PackML state machine. Stress the idea that in order to have a
+                            cohesive data interface, a common understanding of machine state is required. Later sections
                             will cover the indivual machine states in detail.
                         </p>
+                        <p class="comment">
+                            Clarify the state machine workflow, especially the meaning of the boxes connected to the
+                            Stop
+                            and Aborted commands.
+                        </p>
+
                     </div>
 
                     <figure>
@@ -335,12 +386,13 @@
                         <figcaption>
                             Figure X. PackML state model.
                         </figcaption>
-                    </figure>                     
+                    </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            In non-technical terms, give examples of common machine conditions or states (e.g. machine is 
+                            In non-technical terms, give examples of common machine conditions or states (e.g. machine
+                            is
                             running, error has occurred, etc.).
                         </p>
                     </div>
@@ -351,22 +403,21 @@
 
                 <!-- Terms -->
                 <div>
-                    <h2 id="Terms">2. Terms and key concepts</h2>
+                    <h2 id="2_terms">2. Terms and key concepts</h2>
                     <hr class="black" />
- 
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
                         <p class="para">
-                            This section introduces key terms and concepts that will be used later.  
+                            This section introduces key terms and concepts.
                         </p>
                         <p class="para">
-                            After completing the section, students - in addition to understanding the terms themselves - should
-                            have a clearer understanding of the scope of the course.
+                            After completing the section, students - in addition to understanding the terms themselves -
+                            should have a clearer understanding of the scope of the course.
                         </p>
-
                     </div>
 
-                    <h3 id="Purpose">2.1 PackML</h3>
+                    <h3 id="2_1_packml">2.1 PackML</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
@@ -377,7 +428,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">2.2 State or machine state</h3>
+                    <h3 id="2_2_machine_state">2.2 State or machine state</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
@@ -385,7 +436,14 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">2.3 State model</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            Choose a machine and describe its states.  For example, what are the states of an automobile?
+                        </p>
+                    </div>
+
+                    <h3 id="2_3_state_model">2.3 State model</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
@@ -395,8 +453,25 @@
                         </p>
                     </div>
 
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/state_machine_turnstile.png" />
+                        <figcaption>
+                            Figure X. A turnstile may be modeled by a simple state machine with two states: locked and unlocked.  
+                            If the turnstile is locked, inserting a coin will transition the turnstile to the unlocked state.  Once unlocked, pushing
+                            the barrier forward will return it to the locked state.
+                        </figcaption>
+                    </figure>                   
 
-                    <h3 id="Purpose">2.4 ISA-88 physical model</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            What happens if you push the turnstile barrier without inserting a coin?  How is this feature
+                            represented in the diagram above?
+                        </p>
+                    </div>
+
+
+                    <h3 id="2_4_isa88_physical_model">2.4 ISA-88 physical model</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
@@ -407,7 +482,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">2.5 Mode or machine mode</h3>
+                    <h3 id="2_5_machine_mode">2.5 Mode or machine mode</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
@@ -423,7 +498,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">2.6 PackTags</h3>
+                    <h3 id="2_6_packtags">2.6 PackTags</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
@@ -433,7 +508,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">2.7 Alarm handler</h3>
+                    <h3 id="2_7_alarm_handler">2.7 Alarm handler</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
@@ -452,47 +527,54 @@
 
                 <!-- State diagram -->
                 <div>
-                    <h2 id="State_diagram">3. PackML states</h2>
+                    <h2 id="3_packml_states">3. PackML states</h2>
                     <hr class="black" />
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
                         <p class="para">
-                            This chapter covers the PackML state model, describing in detail each of the states, as well as 
+                            This chapter covers the PackML state model, describing in detail each of the states, as well
+                            as
                             the overall workflow.
                         </p>
                         <p class="para">
-                            After completing the chapter, students should have a clear understanding of the PackML state model.
-                             
+                            After completing the chapter, students should have a clear understanding of the PackML state
+                            model.
+
                         </p>
 
                     </div>
 
-                     <h3 id="Purpose">3.1 EXECUTE state</h3>
+                    <h3 id="3_1_execute">3.1 EXECUTE state</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the EXECUTE state.  Stress the idea that if the machine is running and producing
-                            product, then from a PackML perspective it is in EXECUTE state. 
+                            Instructors: Introduce the EXECUTE state. Stress the idea that if the machine is running and
+                            producing
+                            product, then from a PackML perspective it is in EXECUTE state.
                         </p>
                         <p class="comment">
-                            Reinforce the notion that the PackML state is associated to specific machine behaviors.  
-                            It is not up to the programmer to decide whether a particular PackML state is used.  Rather, the machine's 
+                            Reinforce the notion that the PackML state is associated to specific machine behaviors.
+                            It is not up to the programmer to decide whether a particular PackML state is used. Rather,
+                            the machine's
                             operational behaviour determines what the PackML state must be.
                         </p>
                         <p class="comment">
-                            Throughout this chapter it is recommended to concentrate on the machine behaviour associated to each
-                            state in Production mode, as these are in a sense the most well defined.  PackML modes will be discussed 
+                            Throughout this chapter it is recommended to concentrate on the machine behaviour associated
+                            to each
+                            state in Production mode, as these are in a sense the most well defined. PackML modes will
+                            be discussed
                             in the next chapter, but instructors may want to briefly introduce the concept of mode here.
-                        </p>                        
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
                             If the unit/machine is actively carrying out the behavior or activity defined by the
-                            selected mode, then the machine is in EXECUTE state. If the unit/machine is in PRODUCTION mode, for
+                            selected mode, then the machine is in EXECUTE state. If the unit/machine is in PRODUCTION
+                            mode, for
                             example, this means that the machine is producing product.
                         </p>
                     </div>
@@ -501,7 +583,8 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_execute.png" />
                         <figcaption>
-                            Figure X. In Production mode, Execute state indicates that the machine is running and producing product.
+                            Figure X. In Production mode, Execute state indicates that the machine is running and
+                            producing product.
                             From Execute, it is possible to Hold, Complete, Suspend, Stop or Abort.
                         </figcaption>
                     </figure>
@@ -509,11 +592,13 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Table 1 (p. 17): Once the machine is processing materials it is in the EXECUTE state. Different machine modes
+                            Table 1 (p. 17): Once the machine is processing materials it is in the EXECUTE state.
+                            Different machine modes
                             will
                             result in specific types of EXECUTE activities. For example, if the machine is in the
                             “Production”
-                            mode, the [sic] EXECUTE will result in products being produced, while in “Clean Out” mode the
+                            mode, the [sic] EXECUTE will result in products being produced, while in “Clean Out” mode
+                            the
                             EXECUTE
                             state refers to the action of cleaning the machine.
                         </p>
@@ -522,13 +607,14 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Respond to this description of the PackML state machine: The PackML state tells you whether the machine is running or
+                            Respond to this description of the PackML state machine: The PackML state tells you whether
+                            the machine is running or
                             not and if not, why not.
                         </p>
                     </div>
 
- 
-                    <h3 id="Purpose">3.2 HELD state</h3>
+
+                    <h3 id="3_2_held">3.2 HELD state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_held.png" />
@@ -565,7 +651,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">3.3 SUSPENDED state</h3>
+                    <h3 id="3_3_suspended">3.3 SUSPENDED state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_suspended.png" />
@@ -602,7 +688,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">3.4 COMPLETE state</h3>
+                    <h3 id="3_4_complete">3.4 COMPLETE state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_complete.png" />
@@ -633,7 +719,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">3.5 IDLE state</h3>
+                    <h3 id="3_5_idle">3.5 IDLE state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_idle.png" />
@@ -668,7 +754,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">3.6 STOPPED state</h3>
+                    <h3 id="3_6_stopped">3.6 STOPPED state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_stopped.png" />
@@ -703,7 +789,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">3.7 ABORTED state</h3>
+                    <h3 id="3_7_aborted">3.7 ABORTED state</h3>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_aborted.png" />
@@ -739,7 +825,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">3.8 HELD vs. SUSPENDED</h3>
+                    <h3 id="3_8_held_suspended">3.8 HELD vs. SUSPENDED</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
@@ -767,7 +853,7 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">3.9 STOPPED vs. ABORTED</h3>
+                    <h3 id="3_9_stopped_aborted">3.9 STOPPED vs. ABORTED</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
@@ -785,7 +871,14 @@
                         </p>
                     </div>
 
-                    <h3 id="Purpose">3.10 Transition states</h3>
+                    <h3 id="3_10_transition_states">3.10 Transition states</h3>
+
+
+                    <h3 id="3_11_state_commands">3.11 State commands</h3>
+
+
+                    <h3 id="3_12_state_complete">3.12 State complete</h3>
+
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
@@ -864,57 +957,115 @@
 
                 <!-- Mode management, revisited -->
                 <div>
-                    <h2 id="Modes">5. PackML modes</h2>
+                    <h2 id="4_packml_modes">4 PackML modes</h2>
                     <hr class="black" />
-                    <h3 id="Purpose">5.1 Definitions and key concepts</h3>
+
+                    <h3 id="4_1_production">4.1 PRODUCTION mode</h3>
                     <p class="para">
-                        [0010] PackML:
+                        TODO: Add content here
+                    </p>
+
+                    <h3 id="4_2_maintenance">4.2 MAINTENANCE mode</h3>
+                    <p class="para">
+                        TODO: Add content here
+                    </p>
+
+                    <h3 id="4_3_manual">4.3 MANUAL mode</h3>
+                    <p class="para">
+                        TODO: Add content here
+                    </p>
+
+                    <h3 id="4_4_additional_modes">4.4 Additional modes</h3>
+                    <p class="para">
+                        TODO: Add content here
+                    </p>
+
+                    <h3 id="4_5_mode_management">4.5 Mode management</h3>
+                    <p class="para">
+                        TODO: Add content here
                     </p>
                 </div>
-
-
 
 
                 <!-- PackTags -->
                 <div>
-                    <h2 id="PackTags">6. PackTags</h2>
+                    <h2 id="5_packtags">5 PackTags</h2>
                     <hr class="black" />
-                    <h3 id="Purpose">6.1 Definitions and key concepts</h3>
+
+                    <h3 id="5_1_command_tags">5.1 Command tags</h3>
                     <p class="para">
-                        [0010] PackML:
-                    </p>
+                        TODO: Add content here
+                    </p>   
+
+                    <h3 id="5_2_status_tags">5.2 Status tags</h3>
+                    <p class="para">
+                        TODO: Add content here
+                    </p>   
+
+                    <h3 id="5_3_admin_tags">5.3 Admin tags</h3>
+                    <p class="para">
+                        TODO: Add content here
+                    </p>   
+
+                    <h3 id="5_4_required_set">5.4 Required subset</h3>
+                    <p class="para">
+                        TODO: Add content here
+                    </p>   
                 </div>
 
-                <!-- Event handling -->
-                <div>
-                    <h2 id="Event_handling">7. Event handling</h2>
-                    <hr class="black" />
-                    <h3 id="Purpose">7.1 Definitions and key concepts</h3>
-                    <p class="para">
-                        [0010] PackML:
-                    </p>
-                </div>
-
+   
                 <!-- Implementation strategies -->
                 <div>
-                    <h2 id="State_Diagram">8. Implementation strategies</h2>
+                    <h2 id="6_implementation">6. Implementation strategies</h2>
                     <hr class="black" />
-                    <h3 id="Purpose">8.1 Definitions and key concepts</h3>
+
+                    <h3 id="6_1_event_handling">6.1 Event handling</h3>
                     <p class="para">
-                        [0010] PackML:
+                        TODO: Add content here
+                    </p>
+
+
+                    <h3 id="6_2_code_structure">6.2 Code structure</h3>
+                    <p class="para">
+                        TODO: Add content here
+                    </p>
+
+
+                    <h3 id="6_2_1_gateway">6.2.1 Gateway approach</h3>
+                    <p class="para">
+                        TODO: Add content here
+                    </p>
+
+                    <h3 id="6_2_2_full_integration">6.2.2 Full integration</h3>
+                    <p class="para">
+                        TODO: Add content here
                     </p>
                 </div>
 
 
+                <!-- References -->
                 <div>
-                    <h2 id="Reference">9. References</h2>
+                    <h2 id="7_references">7. References</h2>
                     <hr class="black" />
-                    <p class="reference" title="Update with 2021 reference when known">ANSI/ISA-TR88.00.02-2021, Machine
-                        and
-                        unit/machine States, An Implementation example of ANSI/ISA-88.00.01.</p>
+
+                    <h3 id="7_1_standards">7.1 Standards</h3>
+                    <p class="para">
+                        TODO: Add content here
+                    </p>
+
+                    <h3 id="7_2_implementation_guides">7.2 Implementation guides</h3>
+                    <p class="para">
+                        TODO: Add content here
+                    </p>
+
+                    <h3 id="7_3_videos">7.3 Instructional videos</h3>
+                    <p class="para">
+                        TODO: Add content here
+                    </p>
                 </div>
+
                 <div>
-                    <h2 id="VersionHistory">10. Version History</h2>
+                    <h2 id="VersionHistory">Version History</h2>
                     <hr class="black" />
                     <table id="version-log">
                         <caption>Table 4: Version Log</caption>
@@ -934,8 +1085,9 @@
                     </table>
                 </div>
             </div>
-
-            <footer><a href="#contents">PackML Learn, Basic Course Syllabus 0.0.1</a></footer>
+        </div>
+    </div>
+    <footer><a href="#contents">PackML Learn, Basic Course Syllabus 0.0.1</a></footer>
 </body>
 
 </html>
