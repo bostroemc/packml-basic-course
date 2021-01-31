@@ -117,7 +117,7 @@
                 <li>
                     <a href="#6_implementation" class="section">6. Implementation strategies</a>
                     <ul>
-                        <li><a href="#6_1_event_handling" class="subsection">6.1 Event handling</a></li>
+                        <li><a href="#6_1_alarm_handling" class="subsection">6.1 Alarm handling</a></li>
 
                         <li><a href="#6_2_code_structure" class="subsection">6.2 Code structure</a></li>
                         <ul>
@@ -964,9 +964,23 @@
 
                 <!-- Mode management, revisited -->
                 <div>
-                    <h2 id="4_packml_modes">4 PackML modes</h2>
+                    <h2 id="4_packml_modes">4. PackML modes</h2>
                     <hr class="black" />
 
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
+                        <p class="para">
+                            This chapter discusses PackML modes and mode management.
+                        </p>
+                        <p class="para">
+                            After completing the chapter, students should be able to identify the modes
+                            of particular piece of equipment.  It should also be clear how the PackML 
+                            state machine may be redeployed in each mode.
+                        </p>
+
+                    </div>
+ 
+ 
                     <h3 id="4_1_production">4.1 PRODUCTION mode</h3>
                     <p class="para">
                         TODO: Add content here
@@ -996,8 +1010,22 @@
 
                 <!-- PackTags -->
                 <div>
-                    <h2 id="5_packtags">5 PackTags</h2>
+                    <h2 id="5_packtags">5. PackTags</h2>
                     <hr class="black" />
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
+                        <p class="para">
+                            This chapter focuses on the PackML data interface: PackTags.
+                        </p>
+                        <p class="para">
+                            After completing the chapter, students should be able to identify the 
+                            minimal subset of PackTags required for standard compliance.  They should
+                            understand how the three tag types (Command, Status and Admin) are classified
+                            and used.
+                        </p>
+
+                    </div>
 
                     <h3 id="5_1_command_tags">5.1 Command tags</h3>
                     <p class="para">
@@ -1026,16 +1054,48 @@
                     <h2 id="6_implementation">6. Implementation strategies</h2>
                     <hr class="black" />
 
-                    <h3 id="6_1_event_handling">6.1 Event handling</h3>
-                    <p class="para">
-                        TODO: Add content here
-                    </p>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
+                        <p class="para">
+                            The purpose of this chapter is to give students practical advice on
+                            how PackML may be implemented in code.
+                        </p>
+                        <p class="para">
+                            Vendors or technology provides are asked to provide details of their own
+                            libraries or toolsets, including a review of best practices.
+                        </p>
+
+                        <p class="para">
+                            Two specific subjects should be included.  The first, alarm handling,
+                            should include a description of how this handler interacts with the PackML state
+                            machinde.  The second, code structure, should include both gateway (adding 
+                            PackML to an existing code base) and full integration (PackML from the ground up)
+                            approaches.
+                        </p>
+                    </div>
+
+
+                    <h3 id="6_1_alarm_handling">6.1 Alarm handling</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Add content describing your system's alarm handler.  Describe in detail
+                            how the system triggers transitions to Aborted, Stopped, Held or Suspended states.
+                        </p>
+                    </div>
 
 
                     <h3 id="6_2_code_structure">6.2 Code structure</h3>
-                    <p class="para">
-                        TODO: Add content here
-                    </p>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the two basic approaches to PackML implementation.  The first, the 
+                            so-called gateway approach, adds a PackML interface layer to an existing code base.  The 
+                            second, full integration, builds PackML into the code from the ground up.  Recommend
+                            how to implement both approaches on your chosen platform.
+                        </p>
+                    </div>
 
 
                     <h3 id="6_2_1_gateway">6.2.1 Gateway approach</h3>
@@ -1088,7 +1148,12 @@
                             <td>Preliminary draft.</td>
                             <td>0.0.1</td>
                         </tr>
-
+                        <tr>
+                            <td>2021-01-29</td>
+                            <td>CPB</td>
+                            <td>Additional content (pre-release).</td>
+                            <td>0.0.2</td>
+                        </tr>
                     </table>
                 </div>
             </div>
