@@ -439,7 +439,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Choose a machine and describe its states.  For example, what are the states of an automobile?
+                            Choose a machine and describe its states. For example, what are the states of an automobile?
                         </p>
                     </div>
 
@@ -456,16 +456,18 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/state_machine_turnstile.png" />
                         <figcaption>
-                            Figure X. A turnstile may be modeled by a simple state machine with two states: locked and unlocked.  
-                            If the turnstile is locked, inserting a coin will transition the turnstile to the unlocked state.  Once unlocked, pushing
+                            Figure X. A turnstile may be modeled by a simple state machine with two states: locked and
+                            unlocked.
+                            If the turnstile is locked, inserting a coin will transition the turnstile to the unlocked
+                            state. Once unlocked, pushing
                             the barrier forward will return it to the locked state.
                         </figcaption>
-                    </figure>                   
+                    </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            What happens if you push the turnstile barrier without inserting a coin?  How is this feature
+                            What happens if you push the turnstile barrier without inserting a coin? How is this feature
                             represented in the diagram above?
                         </p>
                     </div>
@@ -944,22 +946,6 @@
                     </div>
 
 
-                    <p class="para">
-                        [0010] General comments on the state machine. What does the box around states Idle..Completed
-                        mean? What does the box around all states but Aborting and Aborted mean?
-                    </p>
-                    <p class="para">
-                        [0010] PackML states are meant to convey information about the general status of the machine. It
-                        is common for any given state to have multiple substates...
-                    </p>
-                    <p class="para">
-                        [0010] Clarify difference between Hold and Suspend states, including autorestart for Suspend
-                        state.
-                    </p>
-                    <p class="para">
-                        [0010] Clarify difference between Stopped and Aborted states.
-                    </p>
-
                 </div>
 
                 <!-- Mode management, revisited -->
@@ -974,13 +960,13 @@
                         </p>
                         <p class="para">
                             After completing the chapter, students should be able to identify the modes
-                            of particular piece of equipment.  It should also be clear how the PackML 
+                            of particular piece of equipment. It should also be clear how the PackML
                             state machine may be redeployed in each mode.
                         </p>
 
                     </div>
- 
- 
+
+
                     <h3 id="4_1_production">4.1 PRODUCTION mode</h3>
                     <p class="para">
                         TODO: Add content here
@@ -1007,6 +993,12 @@
                     </p>
                 </div>
 
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                    <p class="para">
+                        Why is Suspended state rarely implemented in Manual mode?
+                    </p>
+                </div>
 
                 <!-- PackTags -->
                 <div>
@@ -1019,8 +1011,8 @@
                             This chapter focuses on the PackML data interface: PackTags.
                         </p>
                         <p class="para">
-                            After completing the chapter, students should be able to identify the 
-                            minimal subset of PackTags required for standard compliance.  They should
+                            After completing the chapter, students should be able to identify the
+                            minimal subset of PackTags required for standard compliance. They should
                             understand how the three tag types (Command, Status and Admin) are classified
                             and used.
                         </p>
@@ -1030,25 +1022,25 @@
                     <h3 id="5_1_command_tags">5.1 Command tags</h3>
                     <p class="para">
                         TODO: Add content here
-                    </p>   
+                    </p>
 
                     <h3 id="5_2_status_tags">5.2 Status tags</h3>
                     <p class="para">
                         TODO: Add content here
-                    </p>   
+                    </p>
 
                     <h3 id="5_3_admin_tags">5.3 Admin tags</h3>
                     <p class="para">
                         TODO: Add content here
-                    </p>   
+                    </p>
 
                     <h3 id="5_4_required_set">5.4 Required subset</h3>
                     <p class="para">
                         TODO: Add content here
-                    </p>   
+                    </p>
                 </div>
 
-   
+
                 <!-- Implementation strategies -->
                 <div>
                     <h2 id="6_implementation">6. Implementation strategies</h2>
@@ -1067,11 +1059,11 @@
                         </p>
 
                         <p class="para">
-                            Two specific subjects should be included.  The first, alarm handling,
+                            Two specific subjects should be included. The first, alarm handling,
                             should include a description of how this handler interacts with the PackML state
-                            machinde.  The second, code structure, should include both gateway (adding 
-                            PackML to an existing code base) and full integration (PackML from the ground up)
-                            approaches.
+                            machine. The second, code structure, should include instruction on both gateway
+                            (adding PackML to an existing code base) and full integration (PackML from the
+                            ground up) approaches.
                         </p>
                     </div>
 
@@ -1080,7 +1072,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Add content describing your system's alarm handler.  Describe in detail
+                            Instructors: Add content describing your system's alarm handler. Describe in detail
                             how the system triggers transitions to Aborted, Stopped, Held or Suspended states.
                         </p>
                     </div>
@@ -1090,22 +1082,28 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the two basic approaches to PackML implementation.  The first, the 
-                            so-called gateway approach, adds a PackML interface layer to an existing code base.  The 
-                            second, full integration, builds PackML into the code from the ground up.  Recommend
+                            Instructors: Introduce the two basic approaches to PackML implementation. The first, the
+                            so-called gateway approach, adds a PackML interface layer to an existing code base. The
+                            second, full integration, builds PackML into the code from the ground up. Recommend
                             how to implement both approaches on your chosen platform.
                         </p>
                     </div>
 
 
                     <h3 id="6_2_1_gateway">6.2.1 Gateway approach</h3>
-                    <p class="para">
-                        TODO: Add content here
-                    </p>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Add vendor-specific content here.
+                        </p>
+                    </div>
+                </div>
 
-                    <h3 id="6_2_2_full_integration">6.2.2 Full integration</h3>
-                    <p class="para">
-                        TODO: Add content here
+                <h3 id="6_2_2_full_integration">6.2.2 Full integration</h3>
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                    <p class="comment">
+                        Instructors: Add vendor-specific content here.
                     </p>
                 </div>
 
@@ -1117,18 +1115,33 @@
 
                     <h3 id="7_1_standards">7.1 Standards</h3>
                     <p class="para">
-                        TODO: Add content here
+                        PackML is specified by standard ANSI/ISA-TR88.00.02-2015.  It is available for purchase 
+                        at <a href="www.isa.org">www.isa.org</a>. 
+                        
                     </p>
 
                     <h3 id="7_2_implementation_guides">7.2 Implementation guides</h3>
                     <p class="para">
-                        TODO: Add content here
+                        The OMAC Packaging Workgroup is an ongoing effort to maximize the value of PackML.  In
+                        addition to maintaining the standard itself, they have sponsored a number of implementation
+                        guides and whitepapers available here: <a href="https://omac.org/workgroups/packaging-workgroup/">
+                        omac.org/workgroups/packaging-workgroup/</a>.  
                     </p>
+                    <p class="para">
+                        In particular, for general advice on PackML implementation, see PackML Unit/Machine Implementation
+                        Guide. 
+                    </p>
+ 
 
                     <h3 id="7_3_videos">7.3 Instructional videos</h3>
                     <p class="para">
-                        TODO: Add content here
+                        For a quick overview of the subject, see 
+                        <a href="https://www.youtube.com/watch?v=CQS-R5COOLw">What is PackML?</a> 
                     </p>
+                    <p class="para">
+                        Individual technology providers or consultants may provide additional resources. 
+                    </p>
+
                 </div>
 
                 <div>
