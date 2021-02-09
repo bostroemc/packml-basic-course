@@ -566,18 +566,17 @@
                         <p class="comment">
                             Instructors: Introduce the EXECUTE state. Stress the idea that if the machine is running and
                             producing
-                            product, then from a PackML perspective it is in EXECUTE state.
+                            product, then from a PackML perspective, it is in EXECUTE state.
                         </p>
                         <p class="comment">
-                            Reinforce the notion that the PackML state is associated to specific machine behaviors.
-                            It is not up to the programmer to decide whether a particular PackML state is used. Rather,
-                            the machine's
-                            operational behaviour determines what the PackML state must be.
+                            Reinforce the notion that the PackML state is associated to specific machine behaviors;
+                            the machine's operational behaviour (and not the programmer's whim) determines what the 
+                            PackML state must be.
                         </p>
                         <p class="comment">
                             Throughout this chapter it is recommended to concentrate on the machine behaviour associated
                             to each
-                            state in Production mode, as these are in a sense the most well defined. PackML modes will
+                            state in Production mode, as these are in a sense the most well-defined. PackML modes will
                             be discussed
                             in the next chapter, but instructors may want to briefly introduce the concept of mode here.
                         </p>
@@ -738,11 +737,8 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_idle.png" />
                         <figcaption>
-                            Figure X. In the Held state, unit/machine production has paused due to an internal process
-                            issue (e.g. low glue tank).
-                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
-                            Stopping or Aborting are
-                            also permitted.
+                            Figure X. In the Idle state, the unit/machine is typically in an error-free state and is 
+                            waiting to start.
                         </figcaption>
                     </figure>
 
@@ -887,11 +883,26 @@
 
                     <h3 id="3_10_transition_states">3.10 Transition states</h3>
 
+                    <p class="para">
+                        TODO: Add content here.  Consider covering one or two transition states in some detail (e.g. 
+                        Aborting, Starting).  
+                    </p>
+
 
                     <h3 id="3_11_state_commands">3.11 State commands</h3>
 
+                    <p class="para">
+                        TODO: Add content here.  Make the point that there is a one-to-one correspondence between 
+                        the state commands and the transition states.
+                    </p>
+
 
                     <h3 id="3_12_state_complete">3.12 State complete</h3>
+
+                    <p class="para">
+                        TODO: Add content here.  Stress that state complete is a logical condition - once state
+                        complete, transition to the next state automatically occurs.
+                    </p>
 
 
                     <div class="key">
