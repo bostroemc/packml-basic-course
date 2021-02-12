@@ -50,6 +50,10 @@
                 vendors are encouraged to add content specific to their own technologies. 
             </p>
 
+            <p class="para">
+                TODO: Consider adding content specific to a non-technical audience (e.g end-users).
+            </p>
+
             <h5 class="author">Author: PackML Learn</h5>
         </div>
         <div>
@@ -293,7 +297,8 @@
                         <img id="summary-packml-state-model" src="images/packml_development_timeline.png" />
                         <figcaption>
                             Figure X. PackML was released as an ANSI-ISA standard in 2008, but earlier versions
-                            were in use ca. 2002. The current version dates back to 2015.
+                            were in use ca. 2002. The current version dates back to 2015.  The next release 
+                            expected in 2021.
                         </figcaption>
                     </figure>
 
@@ -303,7 +308,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Stress the fact that PackML is defined by ANSI/ISA-TR88.00.02-2015.
+                            Instructors: Stress the idea that PackML is defined by ANSI/ISA-TR88.00.02-2015.
                             Clarify how this document may be otained.
                         </p>
                     </div>
@@ -322,7 +327,8 @@
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
                             Instructors: Introduce the idea that one of PackML's central roles is to function
-                            as a data interface between the machine and its supervisors and peers.
+                            as a data interface between the machine and its supervisors and peers.  Clarify the 
+                            terms <b>peer</b> and <b>supervisor</b>.
                         </p>
                     </div>
 
@@ -336,7 +342,7 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_between_peers.png" />
                         <figcaption>
-                            Figure X. PackML provides a data interface between a machine and its peers.
+                            Figure X. PackML provides a data interface between machine peers.
                         </figcaption>
                     </figure>
 
@@ -376,12 +382,11 @@
                         <p class="comment">
                             Instructors: Preview the PackML state machine. Stress the idea that in order to have a
                             cohesive data interface, a common understanding of machine state is required. Later sections
-                            will cover the indivual machine states in detail.
+                            will cover the individual machine states in detail.
                         </p>
                         <p class="comment">
                             Clarify the state machine workflow, especially the meaning of the boxes connected to the
-                            Stop
-                            and Aborted commands.
+                            Stop and Aborted commands.
                         </p>
 
                     </div>
@@ -444,7 +449,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Choose a machine and describe its states. For example, what are the states of an automobile?
+                            Choose a machine and describe its states. For example, what are some states of an automobile?
                         </p>
                     </div>
 
@@ -452,7 +457,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            State model: an abstract model or machine that can be in exactly one of a finite number
+                            State model (finite): an abstract model or machine that can be in exactly one of a finite number
                             of states at any given time. The model may change or transition from one state to another
                             in response to some input.
                         </p>
@@ -496,11 +501,23 @@
                         </figcaption>
                     </figure>
 
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            Give an example of a equipment or control module.  
+                        </p>
+
+                        <p class="para">
+                            In the ISA-88 physical model, do the Enteprise and Site levels ever effectively coincide?
+                        </p>
+                    </div>
+
+
                     <h3 id="2_5_machine_mode">2.5 Mode or machine mode</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            Mode (general): a way or manner in which something occurs or is experienced, expressed or
+                            Mode (common meaning): a way or manner in which something occurs or is experienced, expressed or
                             done.
                         </p>
                         <p class="para">
@@ -511,6 +528,14 @@
                             Mode manager: software that governs the transition from one machine mode to another.
                         </p>
                     </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            Give some examples of modes of a packaging machine.  In addition to packaging (or producing)
+                            product, what other intended uses for a packaging machine ae there?
+                        </p>
+                    </div>                    
 
                     <h3 id="2_6_packtags">2.6 PackTags</h3>
 
@@ -587,8 +612,7 @@
                         <p class="para">
                             If the unit/machine is actively carrying out the behavior or activity defined by the
                             selected mode, then the machine is in EXECUTE state. If the unit/machine is in PRODUCTION
-                            mode, for
-                            example, this means that the machine is producing product.
+                            mode, for example, this means that the machine is producing product.
                         </p>
                     </div>
 
@@ -598,8 +622,16 @@
                         <figcaption>
                             Figure X. In Production mode, Execute state indicates that the machine is running and
                             producing product.
-                            From Execute, it is possible to Hold, Complete, Suspend, Stop or Abort.
+                            From Execute, it is possible to Hold, Complete, Suspend, Stop or Abort.  In this figure and 
+                            the subsequent figures in this chapter, the active state is shown in yellow.  Possible transition
+                            states are shown in gray with black lettering.
+                            <br> <br> 
+                            In this figure and 
+                            the subsequent figures in this chapter, the active state is shown in yellow.  Possible transition
+                            states are shown in gray with black lettering.
                         </figcaption>
+
+
                     </figure>
 
                     <div class="key">
@@ -643,7 +675,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Refer to HOLDING for when this state is used. In this state the machine shall not produce
+                            Table 1 (p. 17): Refer to HOLDING for when this state is used. In this state the machine shall not produce
                             product.
                             It will either stop running or continue to dry cycle. A transition to the UNHOLDING state
                             will
@@ -680,7 +712,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Refer to SUSPENDING for when this state is used. In this state the machine shall not produce
+                            Table 1 (p. 17): Refer to SUSPENDING for when this state is used. In this state the machine shall not produce
                             product. It will either stop running or continue to cycle without producing until external
                             process
                             conditions return to normal, at which time, the SUSPENDED state will transition to the
