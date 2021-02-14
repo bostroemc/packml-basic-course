@@ -234,12 +234,12 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
                         <p class="para">
-                            This section is intended to give students an overview of the basic concepts and development
+                            Chapter 1 is intended to give students an overview of the basic concepts and development
                             history of PackML.
                         </p>
                         <p class="para">
-                            After completing the section, students should have an understanding of what motivated the
-                            development of PackML and some of its benefits.
+                            After completing the chapter, students should have an understanding of what motivated the
+                            development of PackML and its main benefits.
                         </p>
 
                     </div>
@@ -287,10 +287,14 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: It may be helpful to review the development history of PackML. The chart
+                            Instructors: Briefly review the development history of PackML. The chart
                             below was adapted from https://en.wikipedia.org/wiki/PackML. Further information is
                             available there.
                         </p>
+
+                        <p class="comment">
+                            Stress that PackML is both well-established and currently active.
+                        </p>                       
                     </div>
 
                     <figure>
@@ -308,7 +312,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Stress the idea that PackML is defined by ANSI/ISA-TR88.00.02-2015.
+                            Instructors: Make the point that PackML is defined by ANSI/ISA-TR88.00.02-2015.
                             Clarify how this document may be otained.
                         </p>
                     </div>
@@ -405,6 +409,11 @@
                             is
                             running, error has occurred, etc.).
                         </p>
+                        <p class="para">
+                            How does having a common understanding of machine state facilitate the creation of a standardized
+                            calculation for overall equipment effectiveness (OEE)?
+                        </p>
+                        
                     </div>
 
 
@@ -419,11 +428,12 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
                         <p class="para">
-                            This section introduces key terms and concepts.
+                            Chapter 2 introduces key terms and concepts.
                         </p>
                         <p class="para">
-                            After completing the section, students - in addition to understanding the terms themselves -
-                            should have a clearer understanding of the scope of the course.
+                            After completing the chapter, students - in addition to understanding the terms themselves -
+                            should have a clearer understanding of the scope of the course and, by extension, the scope
+                            of PackML itself.
                         </p>
                     </div>
 
@@ -497,14 +507,17 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/isa88_physical_model.png" />
                         <figcaption>
-                            Figure X. TODO: add caption.
+                            Figure X. The ISA-88 physical model describes the hierarchy of physical assets of a 
+                            commercial enterprise.  PackML essentially "lives" at the unit level and describes 
+                            the overall status of the unit/machine (and its submodules). 
                         </figcaption>
                     </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Give an example of a equipment or control module.  
+                            One of the units shown in the figure above is the Filler.  Give an example of one of its 
+                            (possible) equipment modules.  Given an example of one of its control modules.  
                         </p>
 
                         <p class="para">
@@ -533,7 +546,7 @@
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
                             Give some examples of modes of a packaging machine.  In addition to packaging (or producing)
-                            product, what other intended uses for a packaging machine ae there?
+                            product, what other intended uses for a packaging machine are there?
                         </p>
                     </div>                    
 
@@ -572,7 +585,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
                         <p class="para">
-                            This chapter covers the PackML state model, describing in detail each of the states, as well
+                            Chapter 3 covers the PackML state model, describing in detail each of the states, as well
                             as
                             the overall workflow.
                         </p>
@@ -594,16 +607,16 @@
                             product, then from a PackML perspective, it is in EXECUTE state.
                         </p>
                         <p class="comment">
-                            Reinforce the notion that the PackML state is associated to specific machine behaviors;
+                            Reinforce the notion that PackML state is associated to specific machine behaviors;
                             the machine's operational behaviour (and not the programmer's whim) determines what the 
                             PackML state must be.
                         </p>
                         <p class="comment">
                             Throughout this chapter it is recommended to concentrate on the machine behaviour associated
                             to each
-                            state in Production mode, as these are in a sense the most well-defined. PackML modes will
+                            state in Production mode, as these are in some sense the most well-defined. PackML modes will
                             be discussed
-                            in the next chapter, but instructors may want to briefly introduce the concept of mode here.
+                            in the next chapter, but instructors may want to briefly review the concept of mode here.
                         </p>
                     </div>
 
@@ -642,7 +655,7 @@
                             will
                             result in specific types of EXECUTE activities. For example, if the machine is in the
                             “Production”
-                            mode, the [sic] EXECUTE will result in products being produced, while in “Clean Out” mode
+                            mode, the EXECUTE will result in products being produced, while in “Clean Out” mode
                             the
                             EXECUTE
                             state refers to the action of cleaning the machine.
@@ -654,12 +667,34 @@
                         <p class="para">
                             Respond to this description of the PackML state machine: The PackML state tells you whether
                             the machine is running or
-                            not and if not, why not.
+                            not and, if not, why not.
                         </p>
                     </div>
 
 
                     <h3 id="3_2_held">3.2 HELD state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the HELD state. Stress that in HELD state, the machine has paused due to 
+                            internal or local process conditions, typically requiring immediate operator intervention.  
+                            "Low glue tank" or "Carton tray empty" would be process conditions typically associated with 
+                            HELD state.
+                        </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            The unit/machine is paused, waiting for internal process conditions to clear. In this state,
+                            the unit/machine shall not produce product, though it may, if required, dry-cycle. A
+                            transition
+                            to UNHOLDING will occur once internal machine conditions have cleared or if the UNHOLD
+                            command
+                            is initiated by an operator.
+                        </p>
+                    </div>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_held.png" />
@@ -684,28 +719,47 @@
                         </p>
                     </div>
 
+
                     <div class="key">
-                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            The unit/machine is paused, waiting for internal process conditions to clear. In this state,
-                            the unit/machine shall not produce product, though it may, if required, dry-cycle. A
-                            transition
-                            to UNHOLDING will occur once internal machine conditions have cleared or if the UNHOLD
-                            command
-                            is initiated by an operator.
+                            If a plant manager observes that a particular unit/machine is spending an excessive amount of time 
+                            in HELD state, what should be his or her response?
                         </p>
                     </div>
 
+
                     <h3 id="3_3_suspended">3.3 SUSPENDED state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the SUSPENDED state. Stress that in SUSPENDED state, the machine has paused due to 
+                            external process conditions, typically requiring immediate operator intervention elsewhere (i.e. upstream 
+                            or downstream) in the process cell.  "Downstream blockage" or "Infeed conveyor empty" would be process 
+                            conditions typically associated with SUSPENDED state.
+                         </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            The unit/machine is paused, waiting for external process conditions to clear. In this sate,
+                            the unit/machine shall not produce product, but may, if required, dry-cycle. Once external
+                            conditions
+                            have returned to normal, the unit/machine will transition to UNSUSPENDING, typically without
+                            operator
+                            intervention.
+                        </p>
+                    </div>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_suspended.png" />
                         <figcaption>
-                            Figure X. In the Held state, unit/machine production has paused due to an internal process
-                            issue (e.g. low glue tank).
-                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
-                            Stopping or Aborting are
-                            also permitted.
+                            Figure X. In the Suspended state, unit/machine production has paused due to an external process
+                            issue (e.g. downstream blockage).
+                            After the issue is addressed, unit/machine may transition to Unsuspended state. Transitions to
+                            Stopping or Aborting are also permitted.
                         </figcaption>
                     </figure>
 
@@ -722,35 +776,26 @@
                     </div>
 
                     <div class="key">
-                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            The unit/machine is paused, waiting for external process conditions to clear. In this sate,
-                            the unit/machine shall not produce product, but may, if required, dry-cycle. Once external
-                            conditions
-                            have returned to normal, the unit/machine will transition to UNSUSPENDING, typically without
-                            operator
-                            intervention.
+                            If a plant manager observes that a particular unit/machine is spending an excessive amount of time 
+                            in SUSPENDED state, what should be his or her response?
+                        </p>
+
+                        <p class="para">
+                            Give an example of a machine which might not implement the Suspended state in Production
+                            mode.
                         </p>
                     </div>
 
                     <h3 id="3_4_complete">3.4 COMPLETE state</h3>
 
-                    <figure>
-                        <img id="summary-packml-state-model" src="images/packml_state_model_complete.png" />
-                        <figcaption>
-                            Figure X. In the Held state, unit/machine production has paused due to an internal process
-                            issue (e.g. low glue tank).
-                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
-                            Stopping or Aborting are
-                            also permitted.
-                        </figcaption>
-                    </figure>
-
                     <div class="key">
-                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
-                        <p class="tr88">
-                            The machine has finished the COMPLETING state and is now waiting for a RESET command before
-                            transitioning to the RESETTING state.
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the COMPLETE state. Stress that in COMPLETE state, the machine behaviour specific
+                            to the given mode has come to its logical or assigned conclusion.  In production mode, COMPLETE  state 
+                            typically indicates that for a given batch, the required number of products has been produced.
                         </p>
                     </div>
 
@@ -764,23 +809,38 @@
                         </p>
                     </div>
 
-                    <h3 id="3_5_idle">3.5 IDLE state</h3>
-
                     <figure>
-                        <img id="summary-packml-state-model" src="images/packml_state_model_idle.png" />
+                        <img id="summary-packml-state-model" src="images/packml_state_model_complete.png" />
                         <figcaption>
-                            Figure X. In the Idle state, the unit/machine is typically in an error-free state and is 
-                            waiting to start.
+                            Figure X. In the Complete state, unit/machine production has ended, awaiting its next batch assignment.
                         </figcaption>
                     </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            This is the state which indicates that RESETTING is complete. The machine will maintain the
-                            conditions which
-                            were achieved during the RESETTING state, and perform operations required when the machine
-                            is in IDLE.
+                            Table 1 (p. 17): The machine has finished the COMPLETING state and is now waiting for a RESET command before
+                            transitioning to the RESETTING state.
+                        </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            If an operator observes that the unit/machine is at rest in COMPLETE state, what should be his or her 
+                            response?
+                        </p>
+                    </div>
+
+
+
+                    <h3 id="3_5_idle">3.5 IDLE state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the IDLE state. Stress that in IDLE state, the unit/machine is ready to be 
+                            started.
                         </p>
                     </div>
 
@@ -796,29 +856,43 @@
                         </p>
                     </div>
 
-                    <h3 id="3_6_stopped">3.6 STOPPED state</h3>
-
                     <figure>
-                        <img id="summary-packml-state-model" src="images/packml_state_model_stopped.png" />
+                        <img id="summary-packml-state-model" src="images/packml_state_model_idle.png" />
                         <figcaption>
-                            Figure X. In the Held state, unit/machine production has paused due to an internal process
-                            issue (e.g. low glue tank).
-                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
-                            Stopping or Aborting are
-                            also permitted.
+                            Figure X. In the Idle state, the unit/machine is typically in an error-free state and is 
+                            waiting to start.
                         </figcaption>
                     </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            The machine is powered and stationary after completing the STOPPING state. All
-                            communications with other
-                            systems are functioning ( if applicable). A RESET command will cause an exit from STOPPED to
-                            the RESETTING
-                            state.
+                            Table 1 (p. 17): This is the state which indicates that RESETTING is complete. The machine will maintain the
+                            conditions which
+                            were achieved during the RESETTING state, and perform operations required when the machine
+                            is in IDLE.
                         </p>
                     </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            What should an operator do if he or she finds the unit/machine in IDLE state?
+                        </p>
+                    </div>
+
+
+                    <h3 id="3_6_stopped">3.6 STOPPED state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the STOPPED state. Stress that in STOPPED state, unit/machine operation has stopped,
+                            typically due to a decision by an operator or supervisory system, or due to internal machine logic.  Point out
+                            that the STOPPED state is also reached after CLEARING.   
+                        </p>
+                    </div>
+
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
@@ -831,27 +905,41 @@
                         </p>
                     </div>
 
-                    <h3 id="3_7_aborted">3.7 ABORTED state</h3>
-
                     <figure>
-                        <img id="summary-packml-state-model" src="images/packml_state_model_aborted.png" />
+                        <img id="summary-packml-state-model" src="images/packml_state_model_stopped.png" />
                         <figcaption>
-                            Figure X. In the Held state, unit/machine production has paused due to an internal process
-                            issue (e.g. low glue tank).
-                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
-                            Stopping or Aborting are
-                            also permitted.
+                            Figure X. In the STOPPED state, unit/machine operation has stopped due to a decision by an operator or 
+                            supervisory system, or due to internal machine logic.  The STOPPED state is also reached after the machine is   
+                            cleared.
                         </figcaption>
                     </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            The machine maintains status information relevant to the ABORT condition. The machine can
-                            only exit the
-                            ABORTED state after an explicit CLEAR command, subsequently to manual intervention to
-                            correct and reset
-                            the detected machine faults.
+                            Table 1 (p. 17): The machine is powered and stationary after completing the STOPPING state. All
+                            communications with other
+                            systems are functioning (if applicable). A RESET command will cause an exit from STOPPED to
+                            the RESETTING
+                            state.
+                        </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            What should an operator do if he or she finds the unit/machine in STOPPED state?
+                        </p>
+                    </div>
+
+
+                    <h3 id="3_7_aborted">3.7 ABORTED state</h3>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the ABORTED state. Associate the ABORTED state with emergency stop, major hardware failures
+                            or other severe errors.  
                         </p>
                     </div>
 
@@ -865,10 +953,44 @@
                             maintain all status or fault information related to the cause of the current ABORT
                             condition.
                         </p>
+                    </div>                    
+
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_aborted.png" />
+                        <figcaption>
+                            Figure X. The ABORTED state indicates that a major fault has occurred.
+                        </figcaption>
+                    </figure>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                        <p class="tr88">
+                            Table 1 (p. 17): The machine maintains status information relevant to the ABORT condition. The machine can
+                            only exit the
+                            ABORTED state after an explicit CLEAR command, subsequently to manual intervention to
+                            correct and reset
+                            the detected machine faults.
+                        </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            What should an operator do if he or she finds the unit/machine in ABORTED state?
+                        </p>
                     </div>
 
                     <h3 id="3_8_held_suspended">3.8 HELD vs. SUSPENDED</h3>
 
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Clarify or review the differences between HELD and SUSPENDED states.  The distinction between 
+                            internal versus external process conditions is key here.  Point out that the process of unsuspending is 
+                            typically done automatically, whereas the process of unholding may (or may not) require operator intervention.   
+                        </p>
+                    </div>
+ 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
@@ -898,6 +1020,16 @@
                     <h3 id="3_9_stopped_aborted">3.9 STOPPED vs. ABORTED</h3>
 
                     <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Clarify or review the differences between STOPPED and ABORTED states.  Many view the difference
+                            as one of error or event severity, with the ABORTED state being reserved for the most severe errors (e.g. 
+                            emergency stop, major hardware failure, etc.)  One clear distinction provided by the standard is the stopping 
+                            action required in STOPPING versus ABORTING states: "controlled stop" versus "rapid, safe stop."
+                        </p>
+                    </div>
+
+                    <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
                             The unit/machine transitions to STOPPING in response to a STOP command. In this state the
@@ -915,12 +1047,30 @@
 
                     <h3 id="3_10_transition_states">3.10 Transition states</h3>
 
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Enumerate the transition states: ABORTING, STOPPING, CLEARING, etc.  It is suggested to describe 
+                            them first in a generic or open-ended way: "all actions required to bridge from one stationary state to another 
+                            occur."  Consider covering one or two transition states in some detail (e.g. Aborting, Starting).
+                        </p>
+                    </div>
+
                     <p class="para">
-                        TODO: Add content here.  Consider covering one or two transition states in some detail (e.g. 
-                        Aborting, Starting).  
+                        TODO: Add figure here that highlights the transition states.
                     </p>
 
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            Describe internal machine functions that might occur in Starting state.
+                        </p>
 
+                        <p class="para">
+                            Describe internal machine functions that might occur in Aborting state.
+                        </p>
+                    </div>
+ 
                     <h3 id="3_11_state_commands">3.11 State commands</h3>
 
                     <p class="para">
@@ -958,11 +1108,6 @@
                         <p class="para">
                             Each PackML state is assigned a unique fixed number. List these.
                         </p>
-
-                        <p class="para">
-                            Identify at least two ways in which this interface is unrealistic as a user interface.
-                        </p>
-
 
                     </div>
 
@@ -1004,7 +1149,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
                         <p class="para">
-                            This chapter discusses PackML modes and mode management.
+                            Chapter 4 discusses PackML modes and mode management.
                         </p>
                         <p class="para">
                             After completing the chapter, students should be able to identify the modes
@@ -1056,7 +1201,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
                         <p class="para">
-                            This chapter focuses on the PackML data interface: PackTags.
+                            Chapter 5 focuses on the PackML data interface: PackTags.
                         </p>
                         <p class="para">
                             After completing the chapter, students should be able to identify the
@@ -1098,7 +1243,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
                         <p class="para">
-                            The purpose of this chapter is to give students practical advice on
+                            The purpose of Chapter 6 is to give students practical advice on
                             how PackML may be implemented in code.
                         </p>
                         <p class="para">
