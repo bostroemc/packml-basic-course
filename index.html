@@ -38,8 +38,8 @@
         <div class="summary">
             <h4 class="summary">Summary</h4>
             <p class="para">
-                This document defines a syllabus for a basic PackML course. It is meant as a resource
-                for instructors and a means to help harmonize courses currently being offered by various
+                This document provides a framework for a basic course on PackML. It is meant as a resource
+                for instructors and aims to help harmonize courses currently being offered by various
                 technology providers.
             </p>
 
@@ -119,7 +119,8 @@
                         <li><a href="#5_1_command_tags" class="subsection">5.1 Command tags</a></li>
                         <li><a href="#5_2_status_tags" class="subsection">5.2 Status tags</a></li>
                         <li><a href="#5_3_admin_tags" class="subsection">5.3 Admin tags</a></li>
-                        <li><a href="#5_4_required_set" class="subsection">5.4 Required set</a></li>
+                        <li><a href="#5_4_required_set" class="subsection">5.4 Required PackTags</a></li>
+                        <li><a href="#5_5_vendor_specific_tools" class="subsection">5.5 Vendor-specific tools</a></li>
                     </ul>
                 </li>
 
@@ -216,7 +217,7 @@
                 <p class="para">
                     Topics are given in what the authors feel is a natural order, but the subject matter may be
                     rearranged
-                    where required, especially with respect to any additioanl vendor-specific material.
+                    where required, especially with respect to any additional vendor-specific material.
                 </p>
 
             </div>
@@ -249,7 +250,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Present an overview of the goals and benefits of PackML. Some ideas are listed
+                            Instructors: Present an overview of the goals and benefits of PackML. Some key ideas are listed
                             below.
                         </p>
                     </div>
@@ -280,6 +281,11 @@
                         <p class="para">
                             Give an example of operational consistency.
                         </p>
+
+                        <p class="para">
+                            PackML has found application beyond packaging to discrete manufacturing generally.  What is 
+                            discrete manufacturing? 
+                        </p>                        
                     </div>
 
                     <h3 id="1_2_timeline">1.2 Development timeline</h3>
@@ -367,9 +373,17 @@
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
                             Instructors: Introduce the term "PackTags" and relate this term to the previous section:
-                            the set of PackTags form the complete data interface.
+                            the set of PackTags form the complete data interface.  Preview the overall scope of the data set.
                         </p>
                     </div>
+
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_general_scope.png" />
+                        <figcaption>
+                            Figure X. PackTags form the data interface described in the previous section.  A partial listing 
+                            of the type of data included in the interface is shown. 
+                        </figcaption>
+                    </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
@@ -379,7 +393,7 @@
                         </p>
 
                         <p class="para">
-                            What other convenions regarding the data interface are required?
+                            What other conventions regarding the data interface are required?
                         </p>                        
                     </div>
 
@@ -646,8 +660,6 @@
                             the subsequent figures in this chapter, the active state is shown in yellow.  Possible transition
                             states are shown in gray with black lettering.
                         </figcaption>
-
-
                     </figure>
 
                     <div class="key">
@@ -1195,43 +1207,116 @@
                         </p>
                     </div>
 
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_production.png" />
+                        <figcaption>
+                            Figure X. Production mode is used when the user is intending to produce product.  Often, all 
+                            PackML states are supported in this mode.
+                        </figcaption>
+                    </figure>
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            TR88.00.02-2015 stipulates that PRODUCTION mode always be implemented.  Why is this stipulation 
-                            natural and/or justified?
+                            TR88.00.02-2015 stipulates that PRODUCTION mode always be supported in any PackML implementation.
+                            Why is this stipulation natural and/or justified?
                         </p>
+                    </div>
 
+                    <h3 id="4_2_maintenance">4.2 MAINTENANCE mode</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce MAINTENANCE mode. Indicate that MAINTENANCE is an optional mode, used to 
+                            allow authorized personnel to run the machine independent of other machines in the process cell.
+                        </p>
+                        <p class="comment">
+                            Reiterate that while the machine is actively carrying out the behavior specified by MAINTENANCE 
+                            mode, the machine is in EXECUTE state.
+                        </p>
+                    </div>
+
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_maintenance.png" />
+                        <figcaption>
+                            Figure X. Maintenance mode may be used for trouble-shooting or to test operatitional improvements.  
+                            Because Maintenance mode allows the unit/machine to be run independent of the other machines in 
+                            the process cell, SUSPENDED state is often not implemented.
+                            <br></br>
+                            TR88.00.02-2015 suggests that the state model shown would be typical for Maintenence mode, but this is not 
+                            a requirement.
+                        </figcaption>
+                    </figure>
+
+                    <h3 id="4_3_manual">4.3 MANUAL mode</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce MANUAL mode. Indicate that MANUAL is an optional mode, used to 
+                            provide direct control of individual machine modules.
+                        </p>
+                        <p class="comment">
+                            Reiterate that while the machine is actively carrying out the behavior specified by MANUAL 
+                            mode, the machine is in EXECUTE state.
+                        </p>
                     </div>
 
 
-                    <h3 id="4_2_maintenance">4.2 MAINTENANCE mode</h3>
-                    <p class="para">
-                        TODO: Add content here
-                    </p>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_manual.png" />
+                        <figcaption>
+                            Figure X. Manual mode may be used for the commissioning of individual drives, verifying
+                            the operation of machine sub-systems, or similar.  Typically direct operator control over 
+                            the active module is used (e.g. via jog button).
+                            <br></br>
+                            TR88.00.02-2015 suggests that the state model shown would be typical for Manual mode, but this is not 
+                            a requirement.
+                        </figcaption>
+                    </figure>
 
-                    <h3 id="4_3_manual">4.3 MANUAL mode</h3>
-                    <p class="para">
-                        TODO: Add content here
-                    </p>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            A capping machine includes functionality to manually test the cap feed system.  Would it 
+                            make sense to include the HELD state in Manual mode in this case?
+                        </p>
+                    </div>
 
                     <h3 id="4_4_additional_modes">4.4 Additional modes</h3>
-                    <p class="para">
-                        TODO: Add content here
-                    </p>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Provide examples of additional modes that might be present on a packaging machine.  In each
+                            case, describe the associated PackML state model (or subset thereof) and justify why this set of sub-states 
+                            was implemented.
+                        </p>
+                    </div>
 
                     <h3 id="4_5_mode_management">4.5 Mode management</h3>
-                    <p class="para">
-                        TODO: Add content here
-                    </p>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the concept of Mode management, the software or logical rules that control the 
+                            transition from one mode to another.
+                        </p>
+                        <p class="comment">
+                            Stress that when transitioning from one mode to another, PackML stipulates that a simultaneous state 
+                            change may not occur.  A consequence of this rule is that a mode change is only allowed while the machine
+                            is in a state common to both modes.
+                        </p>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            A packaging machine includes a Cleaning mode cycle that should be executed automatically once per hour during
+                            a production run. How would you suggest managing this mode transition?  Would it make sense to allow such a 
+                            mode transition to occur while in Execute state?
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="key">
-                    <div class='key-highlight'><i class="fas fa-question"></i> </div>
-                    <p class="para">
-                        Why is Suspended state rarely implemented in Manual mode?
-                    </p>
-                </div>
 
                 <!-- PackTags -->
                 <div>
@@ -1267,10 +1352,20 @@
                         TODO: Add content here
                     </p>
 
-                    <h3 id="5_4_required_set">5.4 Required subset</h3>
+                    <h3 id="5_4_required_set">5.4 Required PackTags</h3>
                     <p class="para">
                         TODO: Add content here
                     </p>
+
+                    <h3 id="5_5_vendor_specific_tools">5.5 Vendor-specific tools</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: If the vendor provides software that may aid the student in declaring the set of 
+                            PackTags in his or her code, introduce it here.
+                        </p>
+
+                    </div>                 
                 </div>
 
 
