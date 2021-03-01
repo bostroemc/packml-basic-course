@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="css/reset.css" />
     <link type="text/css" rel="stylesheet" href="css/main.css">
     <link type="text/css" rel="stylesheet" href="css/paragraph.css">
-
+ 
 
     <script src="https://kit.fontawesome.com/62d0ecf911.js" crossorigin="anonymous"></script>
     <script src="js/packml.hmi.js"></script>
@@ -39,8 +39,8 @@
             <h4 class="summary">Summary</h4>
             <p class="para">
                 This document provides a framework for a basic course on PackML. It is meant as a resource
-                for instructors and aims to help harmonize courses currently being offered by various
-                technology providers.
+                for instructors and aims to help harmonize courses on this topic currently being offered by 
+                various technology providers.
             </p>
 
             <p class="para">
@@ -116,11 +116,27 @@
                 <li>
                     <a href="#5_packtags" class="section">5. PackTags</a>
                     <ul>
-                        <li><a href="#5_1_command_tags" class="subsection">5.1 Command tags</a></li>
-                        <li><a href="#5_2_status_tags" class="subsection">5.2 Status tags</a></li>
-                        <li><a href="#5_3_admin_tags" class="subsection">5.3 Admin tags</a></li>
-                        <li><a href="#5_4_required_set" class="subsection">5.4 Required PackTags</a></li>
-                        <li><a href="#5_5_vendor_specific_tools" class="subsection">5.5 Vendor-specific tools</a></li>
+                        <li><a href="#5_1_packtag_types" class="subsection">5.1 PackTag types</a></li>
+                        <ul>
+                            <li><a href="#5_1_1_command_tags" class="subsubsection">5.1.1 Command tags</a></li>
+                            <li><a href="#5_1_2_status_tags" class="subsubsection">5.1.2 Status tags</a></li>
+                            <li><a href="#5_1_3_admin_tags" class="subsubsection">5.1.3 Admin tags</a></li>
+                        </ul>
+                        <li><a href="#5_2_base_type" class="subsection">5.2 Base type</a></li>
+                        <li><a href="#5_3_elementary_types" class="subsection">5.3 Elementary types</a></li>
+                        <li><a href="#5_4_subtypes" class="subsection">5.4 Subtypes</a></li>
+                        <ul>
+                            <li><a href="#5_4_1_interface" class="subsubsection">5.4.1 Interface</a></li>
+                            <li><a href="#5_4_2_descriptor" class="subsubsection">5.4.2 Descriptor</a></li>
+                            <li><a href="#5_4_3_product" class="subsubsection">5.4.3 Product</a></li>
+                            <li><a href="#5_4_4_ingredient" class="subsubsection">5.4.4 Ingredient</a></li>
+                            <li><a href="#5_4_5_alarm" class="subsubsection">5.4.5 Alarm</a></li>
+                            <li><a href="#5_4_6_count" class="subsubsection">5.4.6 Count</a></li>
+                            <li><a href="#5_4_7_equipment_interlock" class="subsubsection">5.4.7 Equipment interlock</a></li>
+                        </ul>
+                        <li><a href="#5_5_required_set" class="subsection">5.5 Required PackTags</a></li>
+                        <li><a href="#5_6_vendor_specific_tools" class="subsection">5.6 Vendor-specific tools</a></li>
+ 
                     </ul>
                 </li>
 
@@ -1306,6 +1322,10 @@
                         </p>
                     </div>
 
+                    <p class="para">
+                        TODO: Add image here
+                    </p>
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
@@ -1316,7 +1336,7 @@
                     </div>
 
                 </div>
-
+  
 
                 <!-- PackTags -->
                 <div>
@@ -1332,40 +1352,253 @@
                             After completing the chapter, students should be able to identify the
                             minimal subset of PackTags required for standard compliance. They should
                             understand how the three tag types (Command, Status and Admin) are classified
-                            and used.
+                            and used.  In this basic course, the intention is not to examine each tag in 
+                            detail, but rather to give a broad overview of the type of information 
+                            available.
                         </p>
 
                     </div>
+                    <h3 id="5_1_packtag_types">5.1 PackTag types</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the three basic PackTag types: Command, Status and Admin.
+                        </p>
+                    </div>
 
-                    <h3 id="5_1_command_tags">5.1 Command tags</h3>
-                    <p class="para">
-                        TODO: Add content here
-                    </p>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_basic_types.png" />
+                        <figcaption>
+                            Figure X. PackTags are grouped into three basic types: Command, Status and Admin.
+                        </figcaption>
+                    </figure>
 
-                    <h3 id="5_2_status_tags">5.2 Status tags</h3>
-                    <p class="para">
-                        TODO: Add content here
-                    </p>
+                    <h3 id="5_1_1_command_tags">5.1.1 Command tags</h3>
 
-                    <h3 id="5_3_admin_tags">5.3 Admin tags</h3>
-                    <p class="para">
-                        TODO: Add content here
-                    </p>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_command.png" />
+                        <figcaption>
+                            Figure X.  TODO: Add caption.
+                        </figcaption>
+                    </figure>
 
-                    <h3 id="5_4_required_set">5.4 Required PackTags</h3>
-                    <p class="para">
-                        TODO: Add content here
-                    </p>
+                    <h3 id="5_1_2_status_tags">5.1.2 Status tags</h3>
 
-                    <h3 id="5_5_vendor_specific_tools">5.5 Vendor-specific tools</h3>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_status.png" />
+                        <figcaption>
+                            Figure X. TODO: Add caption.
+                        </figcaption>
+                    </figure>
+
+                    <h3 id="5_1_3_admin_tags">5.1.3 Admin tags</h3>
+
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_admin.png" />
+                        <figcaption>
+                            Figure X. TODO: Add caption.
+                        </figcaption>
+                    </figure>
+
+
+                    <h3 id="5_2_base_type">5.2 Base type</h3>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_packmlv30.png" />
+                        <figcaption>
+                            Figure X. TODO: Add caption.
+                        </figcaption>
+                    </figure>
+
+                    <h3 id="5_3_elementary_types">5.3 Elementary types</h3>
+                    <table id="table-summary-navigation-contexts">
+                        <tr>
+                            <th>Type</th>
+                            <th>IEC 61161-3</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Boolean</td>
+                            <td>BOOL</td>                    
+                            <td>1-bit (1 byte memory typical)</td>
+                        </tr>                        
+                        <tr>
+                            <td>Integer</td>
+                            <td>DINT</td>                    
+                            <td>32-bit, signed decimal format</td>
+                        </tr>
+                        <tr>
+                            <td>Real</td>
+                            <td>REAL</td>                    
+                            <td>32-bit IEEE 754 standard floating point format</td>
+                        </tr>
+                        <tr>
+                            <td>String</td>
+                            <td>STRING</td>                    
+                            <td>null-terminated ASCII, 80 characters maximum</td>
+                        </tr>
+                        <tr>
+                            <td>Date and time</td>
+                            <td>DINT[0..6]</td>                    
+                            <td>[year, month, day, hour, min, sec, &mu;sec]</td>
+                        </tr>                                              
+                    </table>
+
+                    <h3 id="5_4_subtypes">5.4 Subtypes</h3>
+ 
+                    <h3 id="5_4_1_interface">5.4.1 Interface</h3>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_interface_type.png" />
+                        <figcaption>
+                            Figure X. TODO: Add caption.
+                        </figcaption>
+                    </figure>
+
+                    <h3 id="5_4_2_descriptor">5.4.2 Descriptor</h3>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_descriptor_type.png" />
+                        <figcaption>
+                            Figure X. TODO: Add caption.
+                        </figcaption>
+                    </figure>
+ 
+                    <h3 id="5_4_3_product">5.4.3 Product</h3>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_product_type.png" />
+                        <figcaption>
+                            Figure X. TODO: Add caption.
+                        </figcaption>
+                    </figure>
+
+                    <h3 id="5_4_4_ingredient">5.4.4 Ingredient</h3>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_ingredient_type.png" />
+                        <figcaption>
+                            Figure X. TODO: Add caption.
+                        </figcaption>
+                    </figure>
+
+
+                    <h3 id="5_4_5_alarm">5.4.5 Alarm</h3>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_alarm_type.png" />
+                        <figcaption>
+                            Figure X. TODO: Add caption.
+                        </figcaption>
+                    </figure>
+
+                    <h3 id="5_4_6_count">5.4.6 Count</h3>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_count_type.png" />
+                        <figcaption>
+                            Figure X. TODO: Add caption.
+                        </figcaption>
+                    </figure>
+
+                    <h3 id="5_4_7_equipment_interlock">5.4.7 Equipment interlock</h3>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packtags_equipmentinterlock_type.png" />
+                        <figcaption>
+                            Figure X. TODO: Add caption.
+                        </figcaption>
+                    </figure>
+
+
+
+                    <h3 id="5_5_required_set">5.5 Required PackTags</h3>
+                    <table id="table-summary-navigation-contexts">
+                        <tr>
+                            <th>Tag</th>
+                            <th>IEC 61161-3</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Status.UnitModeCurrent</b></td>
+                            <td>DINT</td>                    
+                            <td>0 Invalid, 1 Production, 2 Maintenance, 3 Manual, 4-31 User-defined</td>
+                        </tr>                        
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Status.StateCurrent</b></td>
+                            <td>DINT</td>                    
+                            <td>0 Undefined, 1 Clearing, 2 Stopped, 3 Starting, 4 Idle, 5 Suspended, 
+                                6 Execute, 7 Stopping, 8 Aborting, 9 Aborted, 10 Holding, 11 Held, 
+                                12 Unholding, 13 Suspending, 14 Unsuspending, 15 Resetting, 16 completing,
+                                17 Complete
+                            </td>
+                        </tr>   
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Status.MachSeed</b></td>
+                            <td>REAL</td>                    
+                            <td>Current set speed [prim. pkg/min]</td>
+                        </tr>    
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Status.CurMachSeed</b></td>
+                            <td>REAL</td>                    
+                            <td>Current actual speed [prim. pkg/min]</td>
+                        </tr>       
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Status.EquipmentInterlock.Blocked</b></td>
+                            <td>BOOL</td>                    
+                            <td>Indicates downstream blocked condition</td>
+                        </tr>   
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Status.EquipmentInterlock.Starved</b></td>
+                            <td>BOOL</td>                    
+                            <td>Indicates upstream starved condition</td>
+                        </tr>                                                                             
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Admin.StopReason.ID</b></td>
+                            <td>DINT</td>                    
+                            <td>Unique value assigned to stop reason</td>
+                        </tr> 
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Admin.ProdProcessedCount[#].Count</b></td>
+                            <td>DINT</td>                    
+                            <td>Total processed count</td>
+                        </tr> 
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Admin.ProdDefectiveCount[#].Count</b></td>
+                            <td>DINT</td>                    
+                            <td>Total bad count</td>
+                        </tr> 
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Command.MachSpeed</b></td>
+                            <td>REAL</td>                    
+                            <td>Machine throughput set point [prim. pkg/min]</td>
+                        </tr> 
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Command.UnitMode</b></td>
+                            <td>DINT</td>                    
+                            <td>Integer value associated to commanded unit mode</td>
+                        </tr>   
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Command.UnitModeChangeRequest</b></td>
+                            <td>BOOL</td>                    
+                            <td>Unit mode change request trigger</td>
+                        </tr>   
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Command.CntrlCmd</b></td>
+                            <td>DINT</td>                    
+                            <td>Integer value associated to state commnand: 1 Reset, 2 Start, 3 Stop, 
+                                etc.</td>
+                        </tr>   
+                        <tr>
+                            <td> <em>UnitName.</em><br/><b>Command.CmdChangeRequest</b></td>
+                            <td>BOOL</td>                    
+                            <td>State change request trigger</td>
+                        </tr>                                                                    
+                    </table>
+
+                    <h3 id="5_6_vendor_specific_tools">5.6 Vendor-specific tools</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
                             Instructors: If the vendor provides software that may aid the student in declaring the set of 
                             PackTags in his or her code, introduce it here.
                         </p>
-
                     </div>                 
+
+
+ 
                 </div>
 
 
