@@ -68,7 +68,7 @@
                         <li><a href="#1_3_current_standard" class="subsection">1.3 Current standard</a></li>
                         <li><a href="#1_4_data_interface" class="subsection">1.4 Data interface</a></li>
                         <li><a href="#1_5_packtags" class="subsection">1.5 PackTags</a></li>
-                        <li><a href="#1_6_state_machine" class="subsection">1.6 State machine</a></li>
+                        <li><a href="#1_6_state_machine" class="subsection">1.6 PackML state machine</a></li>
                     </ul>
                 </li>
 
@@ -86,7 +86,7 @@
                 </li>
 
                 <li>
-                    <a href="#3_packml_states" class="section">3. PackML states</a>
+                    <a href="#3_packml_states" class="section">3. PackML States</a>
                     <ul>
                         <li><a href="#3_1_execute" class="subsection">3.1 EXECUTE state</a></li>
                         <li><a href="#3_2_held" class="subsection">3.2 HELD state</a></li>
@@ -97,7 +97,7 @@
                         <li><a href="#3_7_aborted" class="subsection">3.7 ABORTED state</a></li>
                         <li><a href="#3_8_held_suspended" class="subsection">3.8 HELD vs. SUSPENDED</a></li>
                         <li><a href="#3_9_stopped_aborted" class="subsection">3.9 STOPPED vs. ABORTED</a></li>
-                        <li><a href="#3_10_transition_states" class="subsection">3.10 Transition states</a></li>
+                        <li><a href="#3_10_transition_states" class="subsection">3.10 Acting or transition states</a></li>
                         <li><a href="#3_11_state_commands" class="subsection">3.11 State commands</a></li>
                         <li><a href="#3_12_state_complete" class="subsection">3.12 State complete</a></li>
                     </ul>
@@ -590,7 +590,7 @@
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
                             PackTags: a set of naming conventions for software variables associated to data elements of
-                            the unit/machine.  Where appropritate, the unit of measurement associated with an individual
+                            the unit/machine.  Where appropriate, the unit of measurement associated with an individual
                             data element is specified.
                         </p>
                     </div>
@@ -1077,30 +1077,35 @@
                         </p>
                     </div>
 
-                    <h3 id="3_10_transition_states">3.10 Transition states</h3>
+                    <h3 id="3_10_transition_states">3.10 Acting or transition states</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Enumerate the transition states: ABORTING, STOPPING, CLEARING, etc.  It is suggested to describe 
-                            them first in a generic or open-ended way: a transition state comprises all actions required to bridge from 
-                            one stationary state to another.  Consider covering one or two transition states in some detail (e.g. 
-                            Aborting, Starting).
+                            Instructors: Enumerate the acting or transition states: ABORTING, STOPPING, CLEARING, etc.  It is suggested 
+                            to describe them first in a generic or open-ended way: a transition state comprises all actions required 
+                            to bridge from one wait or stationary state to another.  Consider covering one or two transition states in 
+                            some detail (e.g. Aborting, Starting).
                         </p>
                     </div>
 
-                    <p class="para">
-                        TODO: Add figure here that highlights the transition states.
-                    </p>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_transition.png" />
+                        <figcaption>
+                            Figure X. PackML states are divided into two types.  The wait states (EXECUTE, HELD, SUSPENDED,
+                            COMPLETE, IDLE, STOPPED, ABORTED) have been discussed in the preceding sections.  The remaining states (shown) are known
+                            as acting or transition states.
+                        </figcaption>
+                    </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Describe internal machine functions that might occur in Starting state.
+                            Describe internal machine functions that might occur during Starting state.
                         </p>
 
                         <p class="para">
-                            Describe internal machine functions that might occur in Aborting state.
+                            Describe internal machine functions that might occur during Aborting state.
                         </p>
                     </div>
  
@@ -1129,10 +1134,31 @@
 
                     <h3 id="3_12_state_complete">3.12 State complete</h3>
 
-                    <p class="para">
-                        TODO: Add content here.  Stress that state complete is a logical condition - once state
-                        complete, transition to the next state automatically occurs.
-                    </p>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: In the PackML state diagram, indicate how each the transition from an active state to the 
+                            subsequent wait state is governed by SC or state complete.  Stress that state complete is a logical condition - once state
+                            complete, transition to the next state automatically occurs.
+                        </p>
+                     </div>
+
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_complete.png" />
+                        <figcaption>
+                            Figure X. Transition from an active state (here STARTING) to the subsequent wait state (here EXECUTE) is governed
+                            by an internal, logical condition known as state complete.  State complete simply means that all functional requirements 
+                            required for the given acting state have been met, so that transition to the next state may automatically occur.
+                        </figcaption>
+                    </figure>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-question"></i> </div>
+                        <p class="para">
+                            On a given machine it is determined that while in STARTING state all servo axes should synchonize with the master axis 
+                            and all conveyors should begin to run.  In general terms, what would the associated state complete condition look like? 
+                        </p>
+                    </div>
 
 
                     <div class="key">
