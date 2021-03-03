@@ -54,7 +54,7 @@
                 TODO: Consider adding content specific to a non-technical audience (e.g end-users).
             </p>
 
-            <h5 class="author">Author: PackML Learn</h5>
+            <h5 class="author">Author: Pack<em>Learn</em></h5>
         </div>
         <div>
             <h2 id="contents">Course outline</h2>
@@ -124,7 +124,7 @@
                         </ul>
                         <li><a href="#5_2_base_type" class="subsection">5.2 Base type</a></li>
                         <li><a href="#5_3_elementary_types" class="subsection">5.3 Elementary types</a></li>
-                        <li><a href="#5_4_subtypes" class="subsection">5.4 Subtypes</a></li>
+                        <li><a href="#5_4_subtypes" class="subsection">5.4 Structured data types</a></li>
                         <ul>
                             <li><a href="#5_4_1_interface" class="subsubsection">5.4.1 Interface</a></li>
                             <li><a href="#5_4_2_descriptor" class="subsubsection">5.4.2 Descriptor</a></li>
@@ -1400,15 +1400,39 @@
                     </figure>
 
                     <h3 id="5_1_1_command_tags">5.1.1 Command tags</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the top-level Command tags.  Note that, where appropriate, a specific
+                            unit of measure (e.g. primary packages/min) is assumed.  Clarify that the Command tags are 
+                            grouped into a structured data type named PLMc.
+                        </p>
+                        <p class="comment">
+                            Supervisors and peers may write to the Command tags.
+                        </p>
+                    </div>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_command.png" />
                         <figcaption>
-                            Figure X.  TODO: Add caption.
+                            Figure X.  The top-level Command tags are listed.  Note that the associated structured data type 
+                            is PMLc.  (The STRUCT notation shown is specified in IEC 61131-3; structured data types in non-PLC
+                            languages are defined similarly.)
                         </figcaption>
                     </figure>
 
                     <h3 id="5_1_2_status_tags">5.1.2 Status tags</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the top-level Status tags.  Note that, where appropriate, a specific
+                            unit of measure (e.g. primary packages/min) is assumed.  Clarify that the Status tags are 
+                            grouped into a structured data type named PLMs.
+                        </p>
+                        <p class="comment">
+                            Supervisors and peers may read the Status tags.
+                        </p>
+                    </div>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_status.png" />
@@ -1418,7 +1442,17 @@
                     </figure>
 
                     <h3 id="5_1_3_admin_tags">5.1.3 Admin tags</h3>
-
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Introduce the top-level Admin tags.  Note that, where appropriate, a specific
+                            unit of measure (e.g. primary packages/min) is assumed.  Clarify that the Admin tags are 
+                            grouped into a structured data type named PLMa.
+                        </p>
+                        <p class="comment">
+                            Supervisors and peers may read the Admin tags.
+                        </p>
+                    </div>
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_admin.png" />
                         <figcaption>
@@ -1428,6 +1462,17 @@
 
 
                     <h3 id="5_2_base_type">5.2 Base type</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Structured data type PACKMLV30 comprises the Command, Status and Admin types described
+                            previously. Note that TR88.00.02-2015 does not specify the name associated the instance of this type.
+                        </p>
+                        <p class="comment">
+                            Throughout this document we will use UnitName as a placeholder for the actual instance name.  
+                        </p>
+                    </div>
+
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_packmlv30.png" />
                         <figcaption>
@@ -1469,7 +1514,7 @@
                         </tr>                                              
                     </table>
 
-                    <h3 id="5_4_subtypes">5.4 Subtypes</h3>
+                    <h3 id="5_4_subtypes">5.4  Structured data types</h3>
  
                     <h3 id="5_4_1_interface">5.4.1 Interface</h3>
                     <figure>
