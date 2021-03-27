@@ -1115,7 +1115,7 @@
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
                             Instructors: Enumerate the PackML state commands: Abort, Stop, Clear, etc.  Point out the obvious 
-                            correspondence between the transition states and transition commands.
+                            correspondence between the acting states and the associated state commands.
                         </p>
   
                         <p class="comment">
@@ -1126,10 +1126,15 @@
 
                      </div>
 
-                     <p class="para">
-                        TODO: Add figure here that highlights the correspondence between the transition states and the transition 
-                        commands.
-                    </p>
+                     <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_command.png" />
+                        <figcaption>
+                            Figure X. Transition from a wait state to an acting state is initiated by an associated PackML state command.  
+                            Here the PackML state command "Start" is used to transition to state Starting. The same relationship exists 
+                            between Hold and Holding, Complete and Completing, Abort and Aborting, etc.
+                            
+                        </figcaption>
+                    </figure>
  
 
                     <h3 id="3_12_state_complete">3.12 State complete</h3>
