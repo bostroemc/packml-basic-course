@@ -10,5 +10,3 @@ overarching goals and development history should serve to motivate students.  Th
 vendors are encouraged to add content specific to their own technologies.
 
 For more information, please contact the project's sponsor, OMAC, at www.omac.org.
-
-Test
