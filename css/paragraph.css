@@ -12,6 +12,13 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+.tr88-ref{
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 100%;
+}
+
 .key{
     text-align: justify;
     border: gray solid 1pt;
