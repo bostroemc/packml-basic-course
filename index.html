@@ -44,7 +44,7 @@
             </p>
 
             <p class="para">
-                The course outline covers the major points found in TR88.00.02-2015, including the PackML 
+                The course outline covers the major points found in ANSI/ISA-TR88.00.02-2015, including the PackML 
                 state machine, PackML modes and PackTags.  Additional sections describing PackML's 
                 overarching goals and development history should serve to motivate students.  Throughout, 
                 vendors are encouraged to add content specific to their own technologies. 
@@ -53,6 +53,10 @@
             <p class="para">
                 TODO: Consider adding content specific to a non-technical audience (e.g end-users).
             </p>
+
+            <p class="para">
+                TODO: Describe the intended audience and any prerequisites.
+            </p>            
 
             <h5 class="author">Author: Pack<em>Learn</em></h5>
         </div>
@@ -150,7 +154,7 @@
                             <li><a href="#6_2_1_gateway" class="subsubsection">6.2.1 Gateway approach</a></li>
                             <li><a href="#6_2_2_full_integration" class="subsubsection">6.2.2 Full integration</a></li>
                         </ul>
-
+                        <li><a href="#6_3_modularity" class="subsection">6.3 Modularity</a></li>
                     </ul>
                 </li>
 
@@ -179,7 +183,7 @@
                 <h3 id="Purpose">Conventions</h3>
 
                 <p class="para">
-                    Throughout this document we will use the following formatting convensions:
+                    Throughout this document we will use the following formatting conventions:
                 </p>
 
                 <div class="key">
@@ -200,22 +204,22 @@
                 <div class="key">
                     <div class='key-highlight'><i class="fas fa-key"></i> </div>
                     <p class="para">
-                        Essential concepts are marked with a key.
+                        Essential concepts or definitions are marked with a key.
                     </p>
                 </div>
 
                 <div class="key">
                     <div class='key-highlight'><i class="fas fa-question"></i> </div>
                     <p class="para">
-                        Suggesions for classroom discussion are marked with a question mark.
+                        Suggestions for classroom discussion are marked with a question mark.
                     </p>
                 </div>
 
 
                 <div class="key">
-                    <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                    <div class='key-highlight'><i class="fas fa-file"></i></div>
                     <p class="tr88">
-                        Text excerpted from ANSI/ISA-TR88.00.02 will be shown in monospaced font and noted with the
+                        Text excerpted from ANSI/ISA-TR88.00.02-2015 will be shown in monospaced font and noted with the
                         document icon. </p>
                 </div>
 
@@ -259,6 +263,11 @@
                             development of PackML and its main benefits.
                         </p>
 
+                        <p class="para">
+                            Chapter 1 is optional.  If students are sufficiently familiar with the topics described 
+                            in this chapter, or at the discretion of the instructor, this material may be skipped.
+                        </p>                        
+
                     </div>
 
                     <h3 id="1_1_goals">1.1 PackML goals</h3>
@@ -291,15 +300,15 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            What does it mean for machines to have a common "look and feel"?
+                            a. What does it mean for machines to have a common "look and feel"?
                         </p>
 
                         <p class="para">
-                            Give an example of operational consistency.
+                            b. Give an example of operational consistency.
                         </p>
 
                         <p class="para">
-                            PackML has found application beyond packaging to discrete manufacturing generally.  What is 
+                            c. PackML has found application beyond packaging to discrete manufacturing generally.  What is 
                             discrete manufacturing? 
                         </p>                        
                     </div>
@@ -375,11 +384,11 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Give examples of data that might be passed from a machine to its supervisor.
+                            a. Give examples of data that might be passed from a machine to its supervisor.
                         </p>
 
                         <p class="para">
-                            Give examples of data that might be passed between machine peers.
+                            b. Give examples of data that might be passed between machine peers.
                         </p>
                     </div>
 
@@ -404,12 +413,12 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Why is it critical to have naming conventions for the data included in the PackML
+                            a. Why is it critical to have naming conventions for the data included in the PackML
                             data interface?
                         </p>
 
                         <p class="para">
-                            What other conventions regarding the data interface are required?
+                            b. What other conventions regarding the data interface are required?
                         </p>                        
                     </div>
 
@@ -439,18 +448,15 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            In non-technical terms, give examples of common machine conditions or states (e.g. machine
-                            is
-                            running, error has occurred, etc.).
+                            a. In non-technical terms, give examples of common machine conditions or states (e.g. machine
+                            is running, error has occurred, etc.).
                         </p>
                         <p class="para">
-                            How does having a common understanding of machine state facilitate the creation of a standardized
+                            b. How does having a common understanding of machine state facilitate the creation of a standardized
                             calculation for overall equipment effectiveness (OEE)?
                         </p>
                         
                     </div>
-
-
 
                 </div>
 
@@ -476,7 +482,7 @@
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
                             PackML: a communication interface for discrete manufacturing
-                            (e.g. packaging machinery) described by ISA-TR88.00.02-2015; sometimes
+                            (e.g. packaging machinery) described by ANSI/ISA-TR88.00.02-2015; sometimes
                             used to describe additional methods of standardizing machine “look and
                             feel” or PLC coding design patterns.
                         </p>
@@ -493,7 +499,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Choose a machine and describe its states. For example, what are some states of an automobile?
+                            a. Choose a machine and describe its states. For example, what are some states of an automobile?
                         </p>
                     </div>
 
@@ -521,7 +527,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            What happens if you push the turnstile barrier without inserting a coin? How is this feature
+                            a. What happens if you push the turnstile barrier without inserting a coin? How is this feature
                             represented in the diagram above?
                         </p>
                     </div>
@@ -550,12 +556,12 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            One of the units shown in the figure above is the Filler.  Give an example of one of its 
+                            a. One of the units shown in the figure above is the Filler.  Give an example of one of its 
                             (possible) equipment modules.  Given an example of one of its control modules.  
                         </p>
 
                         <p class="para">
-                            In the ISA-88 physical model, do the Enteprise and Site levels ever effectively coincide?
+                            b. In the ISA-88 physical model, do the Enterprise and Site levels ever effectively coincide?
                         </p>
                     </div>
 
@@ -579,7 +585,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Give some examples of modes of a packaging machine.  In addition to packaging (or producing)
+                            a. Give some examples of modes of a packaging machine.  In addition to packaging (or producing)
                             product, what other intended uses for a packaging machine are there?
                         </p>
                     </div>                    
@@ -601,8 +607,7 @@
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
                             Alarm handler: software responsible for logging alarms or events occurring on the
-                            unit/machine.
-                            Functionality for sorting or filtering the alarm history may also be present.
+                            unit/machine.  Functionality for sorting or filtering the alarm history may also be present.
 
                             Some prefer the more general term event handler.
                         </p>
@@ -696,7 +701,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Respond to this description of the PackML state machine: The PackML state tells you whether
+                            a. Respond to this description of the PackML state machine: The PackML state tells you whether
                             the machine is running (i.e. producing product) or not and, if not, why not.  (Alternative:
                             The main function of the PackML state machine is to characterize what the machine is doing when
                             it is not producing product.)
@@ -733,7 +738,7 @@
                         <figcaption>
                             Figure X. In the Held state, unit/machine production has paused due to an internal process
                             issue (e.g. low glue tank).
-                            After the issue is addressed, unit/machine may transition to Unholding state. Transitions to
+                            After the issue is addressed, unit/machine may transition to UNHOLDING state. Transitions to
                             Stopping or Aborting are
                             also permitted.
                         </figcaption>
@@ -755,7 +760,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            If a plant manager observes that a particular unit/machine is spending an excessive amount of time 
+                            a. If a plant manager observes that a particular unit/machine is spending an excessive amount of time 
                             in HELD state, what should be his or her response?
                         </p>
                     </div>
@@ -780,8 +785,7 @@
                             the unit/machine shall not produce product, but may, if required, dry-cycle. Once external
                             conditions
                             have returned to normal, the unit/machine will transition to UNSUSPENDING, typically without
-                            operator
-                            intervention.
+                            operator intervention.
                         </p>
                     </div>
 
@@ -790,7 +794,7 @@
                         <figcaption>
                             Figure X. In the Suspended state, unit/machine production has paused due to an external process
                             issue (e.g. downstream blockage).
-                            After the issue is addressed, unit/machine may transition to Unsuspended state. Transitions to
+                            After the issue is addressed, unit/machine may transition to UNSUSPENDED state. Transitions to
                             Stopping or Aborting are also permitted.
                         </figcaption>
                     </figure>
@@ -810,12 +814,12 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            If a plant manager observes that a particular unit/machine is spending an excessive amount of time 
+                            a. If a plant manager observes that a particular unit/machine is spending an excessive amount of time 
                             in SUSPENDED state, what should be his or her response?
                         </p>
 
                         <p class="para">
-                            Give an example of a machine which might not implement the Suspended state in Production
+                            b. Give an example of a machine which might not implement the Suspended state in Production
                             mode.
                         </p>
                     </div>
@@ -825,7 +829,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the COMPLETE state. Stress that in COMPLETE state, the machine behaviour specific
+                            Instructors: Introduce the COMPLETE state. Stress that in COMPLETE state, the machine behavior specific
                             to the given mode has come to its logical or assigned conclusion.  In production mode, COMPLETE  state 
                             typically indicates that for a given batch, the required number of products has been produced.
                         </p>
@@ -859,7 +863,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            If an operator observes that the unit/machine is at rest in COMPLETE state, what should be his or her 
+                            a. If an operator observes that the unit/machine is at rest in COMPLETE state, what should be his or her 
                             response?
                         </p>
                     </div>
@@ -909,7 +913,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            What should an operator do if he or she finds the unit/machine in IDLE state?
+                            a. What should an operator do if he or she finds the unit/machine in IDLE state?
                         </p>
                     </div>
 
@@ -960,7 +964,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            What should an operator do if he or she finds the unit/machine in STOPPED state?
+                            a. What should an operator do if he or she finds the unit/machine in STOPPED state?
                         </p>
                     </div>
 
@@ -985,6 +989,9 @@
                             maintain all status or fault information related to the cause of the current ABORT
                             condition.
                         </p>
+                        <p>
+                            TODO: Describe the key points more succinctly.  (Applies throughout document.)
+                        </p>
                     </div>                    
 
                     <figure>
@@ -1008,7 +1015,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            What should an operator do if he or she finds the unit/machine in ABORTED state?
+                            a. What should an operator do if he or she finds the unit/machine in ABORTED state?
                         </p>
                     </div>
 
@@ -1044,8 +1051,8 @@
                             conditions
                             or by unit/machine sensors detecting downstream blockages or upstream product scarcity. (In
                             the
-                            former case, the unit/machine is 'blocked”; in the latter case, the unit/machine is
-                            “starved”.)
+                            former case, the unit/machine is "blocked"; in the latter case, the unit/machine is
+                            "starved".)
                         </p>
                     </div>
 
@@ -1101,11 +1108,11 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Describe internal machine functions that might occur during Starting state.
+                            a. Describe internal machine functions that might occur during Starting state.
                         </p>
 
                         <p class="para">
-                            Describe internal machine functions that might occur during Aborting state.
+                            b. Describe internal machine functions that might occur during Aborting state.
                         </p>
                     </div>
  
@@ -1119,8 +1126,8 @@
                         </p>
   
                         <p class="comment">
-                            Note: TR88.00.02-2021 introduces the Complete command, which initiates a transition from EXECUTE to 
-                            COMPLETING.  It is suggested to introduce this command now, as it is already in wide use and it completes
+                            Note: ANSI/ISA-TR88.00.02-2021 introduces the Complete command, which initiates a transition from EXECUTE to 
+                            COMPLETING.  It is suggested to introduce this command here, as it is already in wide use and it completes
                             the correspondence between the transition states and state commands.
                         </p>                        
 
@@ -1160,7 +1167,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            On a given machine it is determined that while in STARTING state all servo axes should synchonize with the master axis 
+                            a. On a given machine it is determined that while in STARTING state all servo axes should synchronize with the master axis 
                             and all conveyors should begin to run.  In general terms, what would the associated state complete condition look like? 
                         </p>
                     </div>
@@ -1169,23 +1176,23 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            In which states may the Abort command be called?
+                            a. In which states may the Abort command be called?
                         </p>
 
                         <p class="para">
-                            In which states may the Stop command be called?
+                            b. In which states may the Stop command be called?
                         </p>
 
                         <p class="para">
-                            Which PackML commands are available in the Execute state?
+                            c. Which PackML commands are available in the Execute state?
                         </p>
 
                         <p class="para">
-                            What is the relationship between PackML commands and the acting states?
+                            d. What is the relationship between PackML commands and the acting states?
                         </p>
 
                         <p class="para">
-                            Each PackML state is assigned a unique fixed number. List these.
+                            e. Each PackML state is assigned a unique fixed number. List these.
                         </p>
 
                     </div>
@@ -1195,23 +1202,23 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            Processing on a given machine has paused due to a low level fault on a glue tank. From a
+                            a. Processing on a given machine has paused due to a low level fault on a glue tank. From a
                             PackML perspective,
                             what state is the machine in?
                         </p>
 
                         <p class="para">
-                            A machine has processed all units required for a given batch and has come to rest. From a
+                            b. A machine has processed all units required for a given batch and has come to rest. From a
                             PackML perspective, what state is the machine in?
                         </p>
 
                         <p class="para">
-                            A machine has come to rest due to an emergency stop. From a
+                            c. A machine has come to rest due to an emergency stop. From a
                             PackML perspective, what state is the machine in?
                         </p>
 
                         <p class="para">
-                            Give an example of a machine which might not implement the Suspended state in Production
+                            d. Give an example of a machine which might not implement the Suspended state in Production
                             mode.
                         </p>
 
@@ -1249,7 +1256,7 @@
                         </p>
                         <p class="comment">
                             Reinforce the notion that, while not all PackML states need to be implemented in PRODUCTION 
-                            mode, the decision to include a particular state or not is determined soley by the machine's 
+                            mode, the decision to include a particular state or not is determined solely by the machine's 
                             operational behavior.
                         </p>
                     </div>
@@ -1265,7 +1272,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            TR88.00.02-2015 stipulates that PRODUCTION mode always be supported in any PackML implementation.
+                            a. ANSI/ISA-TR88.00.02-2015 stipulates that PRODUCTION mode always be supported in any PackML implementation.
                             Why is this stipulation natural and/or justified?
                         </p>
                     </div>
@@ -1286,11 +1293,11 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_maintenance.png" />
                         <figcaption>
-                            Figure X. Maintenance mode may be used for trouble-shooting or to test operatitional improvements.  
+                            Figure X. Maintenance mode may be used for trouble-shooting or to test operational improvements.  
                             Because Maintenance mode allows the unit/machine to be run independent of the other machines in 
                             the process cell, SUSPENDED state is often not implemented.
                             <br></br>
-                            TR88.00.02-2015 suggests that the state model shown would be typical for Maintenence mode, but this is not 
+                            ANSI/ISA-TR88.00.02-2015 suggests that the state model shown would be typical for Maintenance mode, but this is not 
                             a requirement.
                         </figcaption>
                     </figure>
@@ -1299,11 +1306,11 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce MANUAL mode. Indicate that MANUAL is an optional mode, used to 
+                            Instructors: Introduce Manual mode. Indicate that Manual is an optional mode, used to 
                             provide direct control of individual machine modules.
                         </p>
                         <p class="comment">
-                            Reiterate that while the machine is actively carrying out the behavior specified by MANUAL 
+                            Reiterate that while the machine is actively carrying out the behavior specified by Manual 
                             mode, the machine is in EXECUTE state.
                         </p>
                     </div>
@@ -1313,10 +1320,10 @@
                         <img id="summary-packml-state-model" src="images/packml_state_model_manual.png" />
                         <figcaption>
                             Figure X. Manual mode may be used for the commissioning of individual drives, verifying
-                            the operation of machine sub-systems, or similar.  Typically direct operator control over 
+                            the operation of machine subsystems, or similar.  Typically direct operator control over 
                             the active module is used (e.g. via jog button).
                             <br></br>
-                            TR88.00.02-2015 suggests that the state model shown would be typical for Manual mode, but this is not 
+                            ANSI/ISA-TR88.00.02-2015 suggests that the state model shown would be typical for Manual mode, but this is not 
                             a requirement.
                         </figcaption>
                     </figure>
@@ -1324,7 +1331,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            A capping machine includes functionality to manually test the cap feed system.  Would it 
+                            a. A capping machine includes functionality to manually test the cap feed system.  Would it 
                             make sense to include the HELD state in Manual mode in this case?
                         </p>
                     </div>
@@ -1360,7 +1367,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            A packaging machine includes a Cleaning mode cycle that should be executed automatically once per hour during
+                            a. A packaging machine includes a Cleaning mode cycle that should be executed automatically once per hour during
                             a production run. How would you suggest managing this mode transition?  Would it make sense to allow such a 
                             mode transition to occur while in Execute state?
                         </p>
@@ -1404,13 +1411,28 @@
                         </figcaption>
                     </figure>
 
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                        <p class="tr88">
+                            7.2 Tag types (p. 31) PackTags are broken out into three groups: command, status and administration. 
+                            Command and status tags contain data required for interfacing between machines 
+                            and line control for coordination, or for recipe/parameter download. Command 
+                            tags are "written" to and consumed by the machine program, as the “information 
+                            receiver”, while status tags are produced by and read from the machine program. 
+                            Administration tags contain data collected by higher level systems for machine 
+                            performance analysis, or operator information. Generally informational data 
+                            is passed using OPC on an Ethernet-based communication network.
+ 
+                        </p>
+                    </div>
+
                     <h3 id="5_1_1_command_tags">5.1.1 Command tags</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
                             Instructors: Introduce the top-level Command tags.  Note that, where appropriate, a specific
                             unit of measure (e.g. primary packages/min) is assumed.  Clarify that the Command tags are 
-                            grouped into a structured data type named PLMc.
+                            grouped into a structured data type named PMLc.
                         </p>
                         <p class="comment">
                             Supervisors and peers may write to the Command tags.
@@ -1432,7 +1454,7 @@
                         <p class="comment">
                             Instructors: Introduce the top-level Status tags.  Note that, where appropriate, a specific
                             unit of measure (e.g. primary packages/min) is assumed.  Clarify that the Status tags are 
-                            grouped into a structured data type named PLMs.
+                            grouped into a structured data type named PMLs.
                         </p>
                         <p class="comment">
                             Supervisors and peers may read the Status tags.
@@ -1452,7 +1474,7 @@
                         <p class="comment">
                             Instructors: Introduce the top-level Admin tags.  Note that, where appropriate, a specific
                             unit of measure (e.g. primary packages/min) is assumed.  Clarify that the Admin tags are 
-                            grouped into a structured data type named PLMa.
+                            grouped into a structured data type named PMLa.
                         </p>
                         <p class="comment">
                             Supervisors and peers may read the Admin tags.
@@ -1471,7 +1493,7 @@
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
                             Instructors: Structured data type PACKMLV30 comprises the Command, Status and Admin types described
-                            previously. Note that TR88.00.02-2015 does not specify the name associated the instance of this type.
+                            previously. Note that ANSI/ISA-TR88.00.02-2015 does not specify the name associated the instance of this type.
                         </p>
                         <p class="comment">
                             Throughout this document we will use UnitName as a placeholder for the actual instance name.  
@@ -1595,10 +1617,10 @@
                         <tr>
                             <td> <em>UnitName.</em><br/><b>Status.StateCurrent</b></td>
                             <td>DINT</td>                    
-                            <td>0 Undefined, 1 Clearing, 2 Stopped, 3 Starting, 4 Idle, 5 Suspended, 
-                                6 Execute, 7 Stopping, 8 Aborting, 9 Aborted, 10 Holding, 11 Held, 
-                                12 Unholding, 13 Suspending, 14 Unsuspending, 15 Resetting, 16 completing,
-                                17 Complete
+                            <td>0 Undefined, 1 Clearing, 2 Stopped, 3 Starting, 4 Idle, 5 Suspended,
+                            6 Execute, 7 Stopping, 8 Aborting, 9 Aborted, 10 Holding, 11 Held,
+                            12 Unholding, 13 Suspending, 14 Unsuspending, 15 Resetting, 16 Completing,
+                            17 Complete
                             </td>
                         </tr>   
                         <tr>
@@ -1654,8 +1676,8 @@
                         <tr>
                             <td> <em>UnitName.</em><br/><b>Command.CntrlCmd</b></td>
                             <td>DINT</td>                    
-                            <td>Integer value associated to state commnand: 1 Reset, 2 Start, 3 Stop, 
-                                etc.</td>
+                            <td>Integer value associated to state command: 1 Reset, 2 Start, 3 Stop, 
+                                4 Hold, 5 Unhold, 6 Suspend, 7 Unsuspend, 8 Abort, 9 Clear, 10 Complete</td>
                         </tr>   
                         <tr>
                             <td> <em>UnitName.</em><br/><b>Command.CmdChangeRequest</b></td>
@@ -1704,13 +1726,13 @@
                         </p>
                     </div>
 
-
                     <h3 id="6_1_alarm_handling">6.1 Alarm handling</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
                             Instructors: Add content describing your system's alarm handler. Describe in detail
-                            how the system triggers transitions to Aborted, Stopped, Held or Suspended states.
+                            how the alarm handler interfaces with the state machine and, in particular, how 
+                            transitions to Aborted, Stopped, Held or Suspended states are triggered.
                         </p>
                     </div>
 
@@ -1724,6 +1746,11 @@
                             second, full integration, builds PackML into the code from the ground up. Recommend
                             how to implement both approaches on your chosen platform.
                         </p>
+                        <p class="comment">
+                            For general information on these two approaches, see PackML Unit/Machine Implementation 
+                            Guide, Part 1: PackML Interface State Manager.
+                        </p>
+
                     </div>
 
 
@@ -1741,6 +1768,15 @@
                     <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                     <p class="comment">
                         Instructors: Add vendor-specific content here.
+                    </p>
+                </div>
+
+                <h3 id="6_3_modularity">6.3 Modularity</h3>
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                    <p class="comment">
+                        Instructors: If your system has a mechanism or toolset to support code modularity, introduce it here.  In
+                        particular, describe how each module reports to the unit/machine that it is state complete.
                     </p>
                 </div>
 
