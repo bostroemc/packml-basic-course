@@ -7696,7 +7696,7 @@ h1 {
   padding-top: 4em;
   font-size: 3.8416em;
   line-height: 100%;
-  color: #FF6600;
+  color: #0070C0;
 }
 h1 a {
   color: white;
@@ -7722,14 +7722,13 @@ h4,
 h5,
 h6 {
   font-family: 'Century Schoolbook', serif;
-  color: #000000;
+  color: #0070C0;
 }
 h2 {
   font-size: 2.74em;
   padding-top: 2em;
   margin-bottom: 0.6em;
   line-height: 120%;
-  color: #FF6600;
 }
 h2.first {
   padding-top: 1em !important;
@@ -7774,7 +7773,7 @@ h4.date {
 }
 h4.summary {
   padding-top: 5em;
-  color: #3667C3;
+  color: #000000;
 }
 @media screen and (max-width: 768px) {
   h4 {
@@ -7871,7 +7870,7 @@ table {
 }
 caption {
   caption-side: top;
-  color: #FF6600;
+  color: #0070C0;
   text-align: center;
   font-family: 'Century Schoolbook', serif;
 }
@@ -7885,7 +7884,7 @@ figcaption {
   margin-left: 20%;
   margin-right: 20%;
   caption-side: bottom;
-  color: #FF6600;
+  color: #0070C0;
   text-align: justify;
   font-family: 'Century Schoolbook', serif;
 }
