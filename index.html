@@ -76,7 +76,7 @@
                         <li><a href="#1_4_data_interface" class="subsection">1.4 Data interface</a></li>
                         <li><a href="#1_5_packtags" class="subsection">1.5 PackTags</a></li>
                         <li><a href="#1_6_state_machine" class="subsection">1.6 PackML state machine</a></li>
-                        <li><a href="#1_7_roi" class="subsection">1.7 Return on investment</a></li>
+                        <li><a href="#1_7_coi" class="subsection">1.7 Cost of investment</a></li>
 
                     </ul>
                 </li>
@@ -107,8 +107,9 @@
                         <li><a href="#3_8_held_suspended" class="subsection">3.8 HELD vs. SUSPENDED</a></li>
                         <li><a href="#3_9_stopped_aborted" class="subsection">3.9 STOPPED vs. ABORTED</a></li>
                         <li><a href="#3_10_transition_states" class="subsection">3.10 Acting or transition states</a></li>
-                        <li><a href="#3_11_state_commands" class="subsection">3.11 State commands</a></li>
-                        <li><a href="#3_12_state_complete" class="subsection">3.12 State complete</a></li>
+                        <li><a href="#3_11_clearing_resetting" class="subsection">3.11 CLEARING vs. RESETTING</a></li>
+                        <li><a href="#3_12_state_commands" class="subsection">3.12 State commands</a></li>
+                        <li><a href="#3_13_state_complete" class="subsection">3.13 State complete</a></li>
                     </ul>
                 </li>
                 <li>
@@ -446,6 +447,11 @@
                             Stop and Abort commands.
                         </p>
 
+                        <p class="comment">
+                            Instructors may find an animated model (e.g. PackML_Trainer) useful in clarifying the workflow of 
+                            the state model.
+                        </p>
+
                     </div>
 
                     <figure>
@@ -469,7 +475,7 @@
                     </div>
 
                     <!-- -->
-                    <h3 id="1_7_roi">1.7 Return on investment</h3>
+                    <h3 id="1_7_coi">1.7 Cost of investment</h3>
 
                     <p class="para">
                         TODO: Add content here.  Reference existing whitepapers from Arla, Automation Conference (John Kowal?), 
@@ -799,6 +805,10 @@
                             a. If a plant manager observes that a particular unit/machine is spending an excessive amount of time 
                             in HELD state, what should be his or her response?
                         </p>
+                        <p class="para">
+                            <em>Alt.</em>   What actions could be taken if it is observed that over the course of a month a particular unit/machine is
+                            too often in HELD state?
+                        </p>
                     </div>
 
                     <!-- -->
@@ -859,9 +869,12 @@
                             a. If a plant manager observes that a particular unit/machine is spending an excessive amount of time 
                             in SUSPENDED state, what should be his or her response?
                         </p>
-
                         <p class="para">
-                            b. Give an example of a machine which might not implement the Suspended state in Production
+                            <em>a. Alt.</em>   What actions could be taken if it is observed that over the course of a month a particular 
+                            unit/machine is too often in SUSPENDED state?
+                        </p>
+                        <p class="para">
+                            b. Give an example of a machine that might not implement the SUSPENDED state in Production
                             mode.
                         </p>
                     </div>
@@ -914,6 +927,9 @@
                             a. If an operator observes that the unit/machine is at rest in COMPLETE state, what should be his or her 
                             response?
                         </p>
+                        <p class="para">
+                            a. <em>Alt</em> If a unit/machine is in COMPLETE state, what steps must be taken next in the production cycle? 
+                        </p>                        
                     </div>
 
 
@@ -960,7 +976,10 @@
                         <p class="para">
                             a. What should an operator do if he or she finds the unit/machine in IDLE state?
                         </p>
-                    </div>
+                        <p class="para">
+                            a. <em>Alt</em> If a unit/machine is in IDLE state, what steps must be taken next in the production cycle? 
+                        </p>   
+                     </div>
 
                     <!-- -->
                     <h3 id="3_6_stopped">3.6 STOPPED state</h3>
@@ -1009,6 +1028,9 @@
                         <p class="para">
                             a. What should an operator do if he or she finds the unit/machine in STOPPED state?
                         </p>
+                        <p class="para">
+                            a. <em>Alt</em> If a unit/machine is in STOPPED state, what steps must be taken next in the production cycle? 
+                        </p>                           
                     </div>
 
                     <!-- -->
@@ -1054,6 +1076,10 @@
                         <p class="para">
                             a. What should an operator do if he or she finds the unit/machine in ABORTED state?
                         </p>
+                        <p class="para">
+                            a. <em>Alt.</em> Beyond clearing errors and restarting the machine, what additional steps might be required if a unit/machine 
+                            is in ABORTED state?
+                        </p>                        
                     </div>
 
                     <!-- -->
@@ -1123,6 +1149,7 @@
                         </p>
                     </div>
 
+
                     <!-- -->
                     <h3 id="3_10_transition_states">3.10 Acting states</h3>
 
@@ -1156,8 +1183,36 @@
                         </p>
                     </div>
  
+                   <!-- -->
+                   <h3 id="3_11_clearing_resetting">3.11 CLEARING vs. RESETTING</h3>
+
+                   <div class="key">
+                       <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                       <p class="comment">
+                           Instructors: Clarify or review the differences between CLEARING and RESETTING states.  
+                       </p>
+                   </div>
+
+                   <div class="key">
+                       <div class='key-highlight'><i class="fas fa-key"></i> </div>
+
+                       <p class="para">
+                            CLEARING is initiated by a state command to clear faults that may have occurred when
+                            ABORTING, and are present in the ABORTED state before proceeding to a
+                            STOPPED state.
+                       </p>
+
+                       <p class="para">
+                            RESETTING is the result of a RESET command from the STOPPED or
+                            COMPLETE state. Faults and stop causes are reset. RESETTING will
+                            typically cause safety devices to be energized and place the machine in the
+                            IDLE state where it will wait for a START command. No hazardous motion
+                            should happen in this state.
+                       </p>
+                   </div>
+
                     <!-- -->
-                    <h3 id="3_11_state_commands">3.11 State commands</h3>
+                    <h3 id="3_12_state_commands">3.12 State commands</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
@@ -1185,7 +1240,7 @@
                     </figure>
  
                     <!-- -->
-                    <h3 id="3_12_state_complete">3.12 State complete</h3>
+                    <h3 id="3_13_state_complete">3.13 State complete</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
@@ -2024,6 +2079,23 @@
                     </p>
 
                 </div>
+
+                <!-- Appendix -->
+                <div>
+                    <h2 id="8_appendix">Appendix</h2>
+                    <hr class="black" />
+
+                    <!-- -->
+                    <h3 id="7_1_standards">A.1 Color chart</h3>
+                    <figure>
+                        <img id="summary-packml-state-model" src="images/packml_state_model_color_chart.png" />
+                        <figcaption>
+                            Figure X. For reference the colors used in the figures from Chapter 3 are shown.  Colors not marked are
+                            black or white.  Note that the figures are non-normative.
+                        </figcaption>
+                    </figure>
+                </div>
+
 
                 <div>
                     <h2 id="VersionHistory">Version History</h2>
