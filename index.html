@@ -165,11 +165,22 @@
                 </li>
 
                 <li>
-                    <a href="#7_references" class="section">7. References</a>
+                    <a href="#7_minimum_requirements" class="section">7. Minimum requirements</a>
                     <ul>
-                        <li><a href="#7_1_standards" class="subsection">7.1 Standards</a></li>
-                        <li><a href="#7_2_implementation_guides" class="subsection">7.2 Implementation guides</a></li>
-                        <li><a href="#7_3_videos" class="subsection">7.3 Instructional videos</a></li>
+                        <li><a href="#7_1_minimum_mode" class="subsection">7.1 Minimum mode requirements</a></li>
+                        <li><a href="#7_2_minimum_state" class="subsection">7.2 Minimum state requirements</a></li>
+                        <li><a href="#7_3_minimum_tag" class="subsection">7.3 Minimum PackTag requirements</a></li>
+                        <li><a href="#7_4_minimum_use_case" class="subsection">7.4 Use case</a></li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#8_references" class="section">8. References</a>
+                    <ul>
+                        <li><a href="#8_1_standards" class="subsection">8.1 Standards</a></li>
+                        <li><a href="#8_2_implementation_guides" class="subsection">8.2 Implementation guides</a></li>
+                        <li><a href="#8_3_videos" class="subsection">8.3 Instructional videos</a></li>
                     </ul>
                 </li>
 
@@ -802,12 +813,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. If a plant manager observes that a particular unit/machine is spending an excessive amount of time 
-                            in HELD state, what should be his or her response?
-                        </p>
-                        <p class="para">
-                            <em>Alt.</em>   What actions could be taken if it is observed that over the course of a month a particular unit/machine is
-                            too often in HELD state?
+                            What strategic actions could be taken if it is observed that over a prolonged period 
+                            (e.g. a month) a particular unit/machine is frequently paused in HELD state?
                         </p>
                     </div>
 
@@ -866,12 +873,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. If a plant manager observes that a particular unit/machine is spending an excessive amount of time 
-                            in SUSPENDED state, what should be his or her response?
-                        </p>
-                        <p class="para">
-                            <em>a. Alt.</em>   What actions could be taken if it is observed that over the course of a month a particular 
-                            unit/machine is too often in SUSPENDED state?
+                            What strategic actions could be taken if it is observed that over an extended period (e.g. a 
+                            month) a particular unit/machine is frequently paused in SUSPENDED state?
                         </p>
                         <p class="para">
                             b. Give an example of a machine that might not implement the SUSPENDED state in Production
@@ -1402,8 +1405,16 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. Why is the SUSPENDED state typically not included in Maintenance mode?
+                            a. Why is SUSPENDED state typically not included in Maintenance mode?
                         </p>
+                        <p class="para">
+                            b. Why is COMPLETE state typically not included in Maintenance mode?
+                        </p>                        
+                        <p class="para">
+                            c. TODO: Consider adding questions re: product counters and/or OEE to clarify that product counters should be inactive
+                            in maintenance mode.
+                        </p>
+
                     </div>
 
                     <!-- -->
@@ -1436,7 +1447,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. A capping machine includes functionality to manually test the cap feed system.  Would it 
+                            a. A capping machine includes functionality to manually run the cap feed system.  Would it 
                             make sense to include the HELD state in Manual mode in this case?
                         </p>
                     </div>
@@ -1467,9 +1478,12 @@
                         </p>
                     </div>
 
-                    <p class="para">
-                        TODO: Add image here
-                    </p>
+                    <figure>
+                        <img id="packml_mode_management" src="images/packml_mode_management.png" />
+                        <figcaption>
+                            Figure X. Add comment here.  Image credit: Patrick Toohey. 
+                        </figcaption>
+                    </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
@@ -2041,14 +2055,43 @@
                     </p>
                 </div>
 
-
-                <!-- References -->
+                <!-- Minimum requirements -->
                 <div>
-                    <h2 id="7_references">7. References</h2>
+                    <h2 id="7_minimum_requirements">7. Minimum requirements</h2>
                     <hr class="black" />
 
                     <!-- -->
-                    <h3 id="7_1_standards">7.1 Standards</h3>
+                    <h3 id="7_1_minimum_mode">7.1 Minimum mode requirements</h3>
+                    <p class="para">
+                        TODO: Add content here.
+                    </p>
+
+                     <!-- -->
+                     <h3 id="7_2_minimum_state">7.2 Minimum state requirements</h3>
+                     <p class="para">
+                         TODO: Add content here.
+                     </p>
+
+                     <!-- -->
+                     <h3 id="7_3_minimum_tag">7.3 Minimum PackTag requirements</h3>
+                     <p class="para">
+                         TODO: Add content here.
+                     </p>                     
+
+                    <!-- -->
+                    <h3 id="7_4_minimum_use_case">7.4 Use case</h3>
+                    <p class="para">
+                        TODO: Add content here.
+                    </p>  
+                </div>
+
+                <!-- References -->
+                <div>
+                    <h2 id="8_references">8. References</h2>
+                    <hr class="black" />
+
+                    <!-- -->
+                    <h3 id="8_1_standards">8.1 Standards</h3>
                     <p class="para">
                         PackML is specified by standard ANSI/ISA-TR88.00.02-2015.  It is available for purchase 
                         at <a href="www.isa.org">www.isa.org</a>. 
@@ -2056,7 +2099,7 @@
                     </p>
 
                     <!-- --> 
-                    <h3 id="7_2_implementation_guides">7.2 Implementation guides</h3>
+                    <h3 id="8_2_implementation_guides">8.2 Implementation guides</h3>
                     <p class="para">
                         The OMAC Packaging Workgroup is an ongoing effort to maximize the value of PackML.  In
                         addition to maintaining the standard itself, they have sponsored a number of implementation
@@ -2069,7 +2112,7 @@
                     </p>
  
                     <!-- -->
-                    <h3 id="7_3_videos">7.3 Instructional videos</h3>
+                    <h3 id="8_3_videos">8.3 Instructional videos</h3>
                     <p class="para">
                         For a quick overview of the subject, see 
                         <a href="https://www.youtube.com/watch?v=CQS-R5COOLw">What is PackML?</a> 
@@ -2082,11 +2125,11 @@
 
                 <!-- Appendix -->
                 <div>
-                    <h2 id="8_appendix">Appendix</h2>
+                    <h2 id="9_appendix">Appendix</h2>
                     <hr class="black" />
 
                     <!-- -->
-                    <h3 id="7_1_standards">A.1 Color chart</h3>
+                    <h3 id="packml_state_model_color_chart">A.1 Color chart</h3>
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_color_chart.png" />
                         <figcaption>
@@ -2094,6 +2137,11 @@
                             black or white.  Note that the figures used in this document are non-normative.
                         </figcaption>
                     </figure>
+
+                    <h3 id="answers_to_suggested_questions">A.2 Answers to suggested questions</h3>    
+                    <p class="para">
+                        TODO: add content here.
+                    </p>               
                 </div>
 
 
@@ -2117,15 +2165,21 @@
                         <tr>
                             <td>2021-01-29</td>
                             <td>CPB</td>
-                            <td>Additional content (pre-release).</td>
+                            <td>Additional content (pre-release)</td>
                             <td>01B</td>
                         </tr>
+                        <tr>
+                            <td>2021-05-27</td>
+                            <td>CPB</td>
+                            <td>Addition content based on group feedback</td>
+                            <td>01C</td>
+                        </tr>                        
                     </table>
                 </div>
             </div>
         </div>
     </div>
-    <footer><a href="#contents">PackML Learn, Basic Course Syllabus (DRAFT) 01B</a></footer>
+    <footer><a href="#contents">PackML Learn, Basic Course Syllabus (DRAFT) 01C</a></footer>
 </body>
 
 </html>
