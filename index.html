@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="css/reset.css" />
     <link type="text/css" rel="stylesheet" href="css/main.css">
     <link type="text/css" rel="stylesheet" href="css/paragraph.css">
- 
+
 
     <script src="https://kit.fontawesome.com/62d0ecf911.js" crossorigin="anonymous"></script>
     <script src="js/packml.hmi.js"></script>
@@ -38,30 +38,35 @@
             <h4 class="summary">Summary</h4>
             <p class="para">
                 This document provides a framework for a basic course on PackML. It is meant as a resource
-                for instructors and aims to help harmonize courses on this topic currently being offered by 
+                for instructors and aims to help harmonize courses on this topic currently being offered by
                 various technology providers.
             </p>
 
             <p class="para">
-                The course outline covers the major points found in ANSI/ISA-TR88.00.02-2015, including the PackML 
-                state machine, PackML modes and PackTags.  Additional sections describing PackML's 
-                overarching goals and development history should serve to motivate students.  Throughout, 
-                instructors are encouraged to add content specific to their own technologies. 
+                The course outline covers the major points found in ANSI/ISA-TR88.00.02-2015, including the PackML
+                state machine, PackML modes and PackTags. Additional sections describing PackML's
+                overarching goals and development history should serve to motivate students. Throughout,
+                instructors are encouraged to add content specific to their own technologies.
             </p>
 
             <p class="para">
-                Most of the topics covered here will be easily understood by audiences familiar discrete manufacturing generally.  
-                Other than a broad familiarity with some common programming concepts (e.g. variable, user-defined type), there are 
-                no prerequisites per se.  However, this may change depending on technology-specific content added to an individual 
-                course.  Instructors must assess these added prerequisites and how to address them on a case by case basis.
-            </p>   
-
-            <p class="para">
-                TODO: Consider adding content specific to a non-technical audience (e.g end-users).
+                Most of the topics covered here will be easily understood by audiences familiar discrete manufacturing
+                generally.
+                Other than a broad familiarity with some common programming concepts (e.g. variable, user-defined type),
+                there are
+                no prerequisites per se. However, this may change depending on technology-specific content added to an
+                individual
+                course. Instructors must assess these added prerequisites and address them on a case by case basis.
             </p>
-         
 
-            <h5 class="author">Author: Pack<em>Learn</em></h5>
+
+            <h4 class="author">Authors: Dan Aardsma (Rockwell), Carl Bostrom (Bosch Rexroth), John Dart (Rockwell),
+                Jason Debruler (P&G),
+                Adam Griffen (Mettler-Toledo), Bryan Griffen (PMMI), Tom Jensen (Beckhoff), John Katsapsis (BW Packaging
+                Systems), Doug Meyer
+                (Yaskawa), Brett Mook (PREMIER System), Carsten Nøkleby (SESAM World), Mike Pieper (Siemens), Rob Rawlyk
+                (Beckhoff),
+                Malte Schlueter (Mitsubishi), Mark Will (ProMach)</h4>
         </div>
         <div>
             <h2 id="contents">Course outline</h2>
@@ -106,7 +111,8 @@
                         <li><a href="#3_7_aborted" class="subsection">3.7 ABORTED state</a></li>
                         <li><a href="#3_8_held_suspended" class="subsection">3.8 HELD vs. SUSPENDED</a></li>
                         <li><a href="#3_9_stopped_aborted" class="subsection">3.9 STOPPED vs. ABORTED</a></li>
-                        <li><a href="#3_10_transition_states" class="subsection">3.10 Acting or transition states</a></li>
+                        <li><a href="#3_10_transition_states" class="subsection">3.10 Acting or transition states</a>
+                        </li>
                         <li><a href="#3_11_clearing_resetting" class="subsection">3.11 CLEARING vs. RESETTING</a></li>
                         <li><a href="#3_12_state_commands" class="subsection">3.12 State commands</a></li>
                         <li><a href="#3_13_state_complete" class="subsection">3.13 State complete</a></li>
@@ -137,21 +143,23 @@
                         <li><a href="#5_4_subtypes" class="subsection">5.4 Structured data types</a></li>
                         <li><a href="#5_5_required_set" class="subsection">5.5 Required PackTags</a></li>
                         <li><a href="#5_6_vendor_specific_tools" class="subsection">5.6 Vendor-specific tools</a></li>
- 
+
                     </ul>
                 </li>
 
                 <li>
                     <a href="#6_implementation" class="section">6. Implementation strategies</a>
                     <ul>
-                        <li><a href="#6_1_alarm_handling" class="subsection">6.1 Alarm handling</a></li>
+                        <li><a href="#6_1_existing_resources" class="subsection">6.1 Existing resources</a></li>
 
-                        <li><a href="#6_2_code_structure" class="subsection">6.2 Code structure</a></li>
+                        <li><a href="#6_2_gateway_approach" class="subsection">6.2 Gateway approach</a></li>
+                        <li><a href="#6_3_full_integration" class="subsection">6.3 Full integration</a></li>
                         <ul>
-                            <li><a href="#6_2_1_gateway" class="subsubsection">6.2.1 Gateway approach</a></li>
-                            <li><a href="#6_2_2_full_integration" class="subsubsection">6.2.2 Full integration</a></li>
+                            <li><a href="#6_3_1_template_overview" class="subsubsection">6.3.1 Template overview</a>
+                            </li>
+                            <li><a href="#6_3_2_modularity" class="subsubsection">6.3.2 Modularity</a></li>
+                            <li><a href="#6_3_3_alarm_handling" class="subsubsection">6.3.3 Alarm handling</a></li>
                         </ul>
-                        <li><a href="#6_3_modularity" class="subsection">6.3 Modularity</a></li>
                     </ul>
                 </li>
 
@@ -172,6 +180,7 @@
                         <li><a href="#8_1_standards" class="subsection">8.1 Standards</a></li>
                         <li><a href="#8_2_implementation_guides" class="subsection">8.2 Implementation guides</a></li>
                         <li><a href="#8_3_videos" class="subsection">8.3 Instructional videos</a></li>
+                        <li><a href="#8_4_industry_publications" class="subsection">8.4 Industry publications</a></li>
                     </ul>
                 </li>
 
@@ -272,9 +281,9 @@
                         </p>
 
                         <p class="para">
-                            Chapter 1 is optional.  If students are sufficiently familiar with the topics described 
+                            Chapter 1 is optional. If students are sufficiently familiar with the topics described
                             in this chapter, or at the discretion of the instructor, this material may be skipped.
-                        </p>                        
+                        </p>
 
                     </div>
 
@@ -284,7 +293,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Present an overview of the goals and benefits of PackML. Some key ideas are listed
+                            Instructors: Present an overview of the goals and benefits of PackML. Some key ideas are
+                            listed
                             below.
                         </p>
                     </div>
@@ -317,9 +327,10 @@
                         </p>
 
                         <p class="para">
-                            c. PackML has found application beyond packaging to discrete manufacturing generally.  What is 
-                            discrete manufacturing? 
-                        </p>                        
+                            c. PackML has found application beyond packaging to discrete manufacturing generally. What
+                            is
+                            discrete manufacturing?
+                        </p>
                     </div>
 
                     <!-- 1.2 Development timeline -->
@@ -335,14 +346,14 @@
 
                         <p class="comment">
                             Stress that PackML is both well-established and currently active.
-                        </p>                       
+                        </p>
                     </div>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_development_timeline.png" />
                         <figcaption>
                             Figure X. PackML was released as an ANSI-ISA standard in 2008, but earlier versions
-                            were in use ca. 2002. The current version dates back to 2015.  The next release 
+                            were in use ca. 2002. The current version dates back to 2015. The next release
                             is expected in 2021.
                         </figcaption>
                     </figure>
@@ -366,14 +377,14 @@
                         </figcaption>
                     </figure>
 
-                     <!-- -->
+                    <!-- -->
                     <h3 id="1_4_data_interface">1.4 Data interface</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
                             Instructors: Introduce the idea that one of PackML's central roles is to function
-                            as a data interface between the machine and its supervisors and peers.  Clarify the 
+                            as a data interface between the machine and its supervisors and peers. Clarify the
                             terms <b>peer</b> and <b>supervisor</b>.
                         </p>
                     </div>
@@ -410,15 +421,17 @@
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
                             Instructors: Introduce the term "PackTags" and relate this term to the previous section:
-                            the set of PackTags form the complete data interface.  Preview the overall scope of the data set.
+                            the set of PackTags form the complete data interface. Preview the overall scope of the data
+                            set.
                         </p>
                     </div>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_general_scope.png" />
                         <figcaption>
-                            Figure X. PackTags form the data interface described in the previous section.  A partial listing 
-                            of the type of data included in the interface is shown. 
+                            Figure X. PackTags form the data interface described in the previous section. A partial
+                            listing
+                            of the type of data included in the interface is shown.
                         </figcaption>
                     </figure>
 
@@ -431,7 +444,7 @@
 
                         <p class="para">
                             b. What other conventions regarding the data interface are required?
-                        </p>                        
+                        </p>
                     </div>
 
                     <!-- -->
@@ -450,7 +463,8 @@
                         </p>
 
                         <p class="comment">
-                            Instructors may find an animated model (e.g. PackML_Trainer) useful in clarifying the workflow of 
+                            Instructors may find an animated model (e.g. PackML_Trainer) useful in clarifying the
+                            workflow of
                             the state model.
                         </p>
 
@@ -466,24 +480,34 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. In non-technical terms, give examples of common machine conditions or states (e.g. machine
+                            a. In non-technical terms, give examples of common machine conditions or states (e.g.
+                            machine
                             is running, error has occurred, etc.).
                         </p>
                         <p class="para">
-                            b. How does having a common understanding of machine state facilitate the creation of a standardized
+                            b. How does having a common understanding of machine state facilitate the creation of a
+                            standardized
                             calculation for overall equipment effectiveness (OEE)?
                         </p>
-                        
+
                     </div>
 
                     <!-- -->
                     <h3 id="1_7_coi">1.7 Cost of investment</h3>
-
-                    <p class="para">
-                        TODO: Add content here.  Reference existing whitepapers from Arla, Automation Conference (John Kowal?), 
-                        case studies by Jack/Brent. 
-                    </p>
-
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: The cost to implement PackML will depend on a variety of factors, including
+                            quality and structure of the existing code base, availability of a programming template
+                            for a given control platform, implementation scope, etc. General implementation strategies,
+                            for which the investment costs will vary, are discussed in Chapter 6.
+                        </p>
+                        <p class="comment">
+                            If the instructor has vendor-specific data describing the cost or time required to implement
+                            PackML, introduce it here.
+                            The references listed in &#167;8.4 provide some general information on this topic.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Terms -->
@@ -527,7 +551,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. Choose a machine and describe its states. For example, what are some states of an automobile?
+                            a. Choose a machine and describe its states. For example, what are some states of an
+                            automobile?
                         </p>
                     </div>
 
@@ -536,7 +561,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            State model (finite): an abstract model or machine that can be in exactly one of a finite number
+                            State model (finite): an abstract model or machine that can be in exactly one of a finite
+                            number
                             of states at any given time. The model may change or transition from one state to another
                             in response to some input.
                         </p>
@@ -556,13 +582,14 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. What happens if you push the turnstile barrier without inserting a coin? How is this feature
+                            a. What happens if you push the turnstile barrier without inserting a coin? How is this
+                            feature
                             represented in the diagram above?
                         </p>
                     </div>
 
 
-                     <!-- -->
+                    <!-- -->
                     <h3 id="2_4_isa88_physical_model">2.4 ISA-88 physical model</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
@@ -577,21 +604,22 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/isa88_physical_model.png" />
                         <figcaption>
-                            Figure X. The ISA-88 physical model describes the hierarchy of physical assets of a 
-                            commercial enterprise.  PackML essentially "lives" at the unit level and describes 
-                            the overall status of the unit/machine (and its submodules). 
+                            Figure X. The ISA-88 physical model describes the hierarchy of physical assets of a
+                            commercial enterprise. PackML essentially "lives" at the unit level and describes
+                            the overall status of the unit/machine (and its submodules).
                         </figcaption>
                     </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. One of the units shown in the figure above is the Filler.  Give an example of one of its 
-                            (possible) equipment modules.  Given an example of one of its control modules.  
+                            a. One of the units shown in the figure above is the Filler. Give an example of one of its
+                            (possible) equipment modules. Given an example of one of its control modules.
                         </p>
 
                         <p class="para">
-                            b. In the ISA-88 physical model, do the Enterprise and Site levels ever effectively coincide?
+                            b. In the ISA-88 physical model, do the Enterprise and Site levels ever effectively
+                            coincide?
                         </p>
                     </div>
 
@@ -600,7 +628,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            Mode (common meaning): a way or manner in which something occurs or is experienced, expressed or
+                            Mode (common meaning): a way or manner in which something occurs or is experienced,
+                            expressed or
                             done.
                         </p>
                         <p class="para">
@@ -615,10 +644,11 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. Give some examples of modes of a packaging machine.  In addition to packaging (or producing)
+                            a. Give some examples of modes of a packaging machine. In addition to packaging (or
+                            producing)
                             product, what other intended uses for a packaging machine are there?
                         </p>
-                    </div>                    
+                    </div>
 
                     <!-- -->
                     <h3 id="2_6_packtags">2.6 PackTags</h3>
@@ -627,7 +657,7 @@
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
                             PackTags: a set of naming conventions for software variables associated to data elements of
-                            the unit/machine.  Where appropriate, the unit of measurement associated with an individual
+                            the unit/machine. Where appropriate, the unit of measurement associated with an individual
                             data element is specified.
                         </p>
                     </div>
@@ -639,7 +669,7 @@
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
                             Alarm handler: software responsible for logging alarms or events occurring on the
-                            unit/machine.  Functionality for sorting or filtering the alarm history may also be present.
+                            unit/machine. Functionality for sorting or filtering the alarm history may also be present.
 
                             Some prefer the more general term <em>event handler</em>.
                         </p>
@@ -669,7 +699,7 @@
 
                     </div>
 
-                     <!-- -->
+                    <!-- -->
                     <h3 id="3_1_execute">3.1 EXECUTE state</h3>
 
                     <div class="key">
@@ -681,13 +711,14 @@
                         </p>
                         <p class="comment">
                             Reinforce the notion that PackML state is associated to specific machine behaviors;
-                            the machine's operational behavior (and not the programmer's whim) determines what the 
+                            the machine's operational behavior (and not the programmer's whim) determines what the
                             PackML state must be.
                         </p>
                         <p class="comment">
                             Throughout this chapter it is recommended to concentrate on the machine behavior associated
                             to each
-                            state in Production mode, as these are in some sense the most well-defined. PackML modes will
+                            state in Production mode, as these are in some sense the most well-defined. PackML modes
+                            will
                             be discussed
                             in the next chapter, but instructors may want to briefly review the concept of mode here.
                         </p>
@@ -708,11 +739,11 @@
                         <figcaption>
                             Figure X. In Production mode, Execute state indicates that the machine is running and
                             producing product.
-                            From Execute, it is possible to Hold, Complete, Suspend, Stop or Abort.  
-                            <br> <br> 
-                            In this figure and 
-                            the subsequent figures in this chapter, the active state is shown in bright yellow.  Possible 
-                            transition states are shown in pale yellow. 
+                            From Execute, it is possible to Hold, Complete, Suspend, Stop or Abort.
+                            <br> <br>
+                            In this figure and
+                            the subsequent figures in this chapter, the active state is shown in bright yellow. Possible
+                            transition states are shown in pale yellow.
                         </figcaption>
                     </figure>
 
@@ -731,15 +762,17 @@
                         </p>
                         <p class="tr88-ref">
                             ANSI/ISA-TR88.00.02-2015, Table 1 (p. 17)
-                        </p>                                              
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. Respond to this description of the PackML state machine: The PackML state tells you whether
-                            the machine is running (i.e. producing product) or not and, if not, why not.  (Alternative:
-                            The main function of the PackML state machine is to characterize what the machine is doing when
+                            a. Respond to this description of the PackML state machine: The PackML state tells you
+                            whether
+                            the machine is running (i.e. producing product) or not and, if not, why not. (Alternative:
+                            The main function of the PackML state machine is to characterize what the machine is doing
+                            when
                             it is not producing product.)
                         </p>
                     </div>
@@ -750,9 +783,10 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the HELD state. Stress that in HELD state, the machine has paused due to 
-                            internal or local process conditions, typically requiring immediate operator intervention.  
-                            "Low glue tank" or "Carton tray empty" would be examples of process conditions typically 
+                            Instructors: Introduce the HELD state. Stress that in HELD state, the machine has paused due
+                            to
+                            internal or local process conditions, typically requiring immediate operator intervention.
+                            "Low glue tank" or "Carton tray empty" would be examples of process conditions typically
                             associated with HELD state.
                         </p>
                     </div>
@@ -760,7 +794,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            In HELD state the unit/machine is paused, waiting for INTERNAL process conditions to clear. 
+                            In HELD state the unit/machine is paused, waiting for INTERNAL process conditions to clear.
                         </p>
                     </div>
 
@@ -778,13 +812,14 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            HELD: Refer to HOLDING for when this state is used. In this state the machine shall not produce
+                            HELD: Refer to HOLDING for when this state is used. In this state the machine shall not
+                            produce
                             product.
                             It will either stop running or continue to dry cycle. A transition to the UNHOLDING state
                             will
                             occur when INTERNAL machine conditions change or an UNHOLD command is initiated by an
                             operator.
-                        </p>  
+                        </p>
 
                         <p class="tr88">
                             HOLDING: This state shall be used when INTERNAL (inside this unit machine and not
@@ -794,17 +829,17 @@
                             machine conditions that requires minor operator servicing to continue
                             production...
                         </p>
-                      
+
                         <p class="tr88-ref">
                             ANSI/ISA-TR88.00.02-2015, Table 1 (p. 17)
-                        </p>                         
+                        </p>
                     </div>
 
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            What strategic actions could be taken if it is observed that over a prolonged period 
+                            What strategic actions could be taken if it is observed that over a prolonged period
                             (e.g. a month) a particular unit/machine is frequently paused in HELD state?
                         </p>
                     </div>
@@ -815,26 +850,32 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the SUSPENDED state. Stress that in SUSPENDED state, the machine has paused due to 
-                            external process conditions, typically requiring immediate operator intervention elsewhere (i.e. upstream 
-                            or downstream) in the process cell.  "Downstream blockage" or "Infeed conveyor empty" would be process 
+                            Instructors: Introduce the SUSPENDED state. Stress that in SUSPENDED state, the machine has
+                            paused due to
+                            external process conditions, typically requiring immediate operator intervention elsewhere
+                            (i.e. upstream
+                            or downstream) in the process cell. "Downstream blockage" or "Infeed conveyor empty" would
+                            be process
                             conditions typically associated with SUSPENDED state.
-                         </p>
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            In SUSPENDED state the unit/machine is paused, waiting for EXTERNAL process conditions to clear.
+                            In SUSPENDED state the unit/machine is paused, waiting for EXTERNAL process conditions to
+                            clear.
                         </p>
                     </div>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_suspended.png" />
                         <figcaption>
-                            Figure X. In the Suspended state, unit/machine production has paused due to an external process
+                            Figure X. In the Suspended state, unit/machine production has paused due to an external
+                            process
                             issue (e.g. downstream blockage).
-                            After the issue is addressed, unit/machine may transition to UNSUSPENDED state. Transitions to
+                            After the issue is addressed, unit/machine may transition to UNSUSPENDED state. Transitions
+                            to
                             Stopping or Aborting are also permitted.
                         </figcaption>
                     </figure>
@@ -842,9 +883,11 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            SUSPENDED: Refer to SUSPENDING for when this state is used. In this state the machine shall not produce
+                            SUSPENDED: Refer to SUSPENDING for when this state is used. In this state the machine shall
+                            not produce
                             product. It will either stop running or continue to cycle without producing until external
-                            process conditions return to normal, at which time, the SUSPENDED state will transition to the
+                            process conditions return to normal, at which time, the SUSPENDED state will transition to
+                            the
                             UNSUSPENDING state, typically without any operator intervention.
                         </p>
                         <p class="tr88">
@@ -855,16 +898,16 @@
                             typically due to a blocked or starved event. This condition may be detected
                             by a local machine sensor or based on a supervisory system external
                             command...
-                        </p>                        
+                        </p>
                         <p class="tr88-ref">
                             ANSI/ISA-TR88.00.02-2015, Table 1 (p. 17)
-                        </p>                          
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            What strategic actions could be taken if it is observed that over an extended period (e.g. a 
+                            What strategic actions could be taken if it is observed that over an extended period (e.g. a
                             month) a particular unit/machine is frequently paused in SUSPENDED state?
                         </p>
                         <p class="para">
@@ -873,15 +916,18 @@
                         </p>
                     </div>
 
-                    <!-- -->                    
+                    <!-- -->
                     <h3 id="3_4_complete">3.4 COMPLETE state</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the COMPLETE state. Stress that in COMPLETE state, the machine behavior specific
-                            to the given mode has come to its logical or assigned conclusion.  In production mode, COMPLETE  state 
-                            typically indicates that for a given batch, the required number of products has been produced.
+                            Instructors: Introduce the COMPLETE state. Stress that in COMPLETE state, the machine
+                            behavior specific
+                            to the given mode has come to its logical or assigned conclusion. In production mode,
+                            COMPLETE state
+                            typically indicates that for a given batch, the required number of products has been
+                            produced.
                         </p>
                     </div>
 
@@ -895,31 +941,34 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_complete.png" />
                         <figcaption>
-                            Figure X. In the Complete state, unit/machine production has ended, awaiting its next batch assignment.
+                            Figure X. In the Complete state, unit/machine production has ended, awaiting its next batch
+                            assignment.
                         </figcaption>
                     </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            COMPLETE: The machine has finished the COMPLETING state and is now waiting for a RESET command before
+                            COMPLETE: The machine has finished the COMPLETING state and is now waiting for a RESET
+                            command before
                             transitioning to the RESETTING state.
                         </p>
                         <p class="tr88">
                             COMPLETING: This state is an automatic response from the EXECUTE state. Normal
                             operation has run to completion, i.e. processing of material at the infeed
                             will stop.
-                        </p>                        
+                        </p>
                         <p class="tr88-ref">
                             ANSI/ISA-TR88.00.02-2015, Table 1 (p. 17)
-                        </p>                          
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            If a unit/machine is in COMPLETE state, what steps must be taken next in the production cycle? 
-                        </p>                        
+                            If a unit/machine is in COMPLETE state, what steps must be taken next in the production
+                            cycle?
+                        </p>
                     </div>
 
 
@@ -929,7 +978,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the IDLE state. Stress that in IDLE state, the unit/machine is ready to be 
+                            Instructors: Introduce the IDLE state. Stress that in IDLE state, the unit/machine is ready
+                            to be
                             started.
                         </p>
                     </div>
@@ -937,14 +987,14 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            In IDLE the unit/machine is in an error-free state, waiting to start. 
+                            In IDLE the unit/machine is in an error-free state, waiting to start.
                         </p>
                     </div>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_idle.png" />
                         <figcaption>
-                            Figure X. In the Idle state, the unit/machine is typically in an error-free state and is 
+                            Figure X. In the Idle state, the unit/machine is typically in an error-free state and is
                             waiting to start.
                         </figcaption>
                     </figure>
@@ -953,20 +1003,21 @@
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
                             This is the state which indicates that RESETTING is complete. The machine will maintain the
-                            conditions which were achieved during the RESETTING state, and perform operations required when the machine
+                            conditions which were achieved during the RESETTING state, and perform operations required
+                            when the machine
                             is in IDLE.
                         </p>
                         <p class="tr88-ref">
                             ANSI/ISA-TR88.00.02-2015, Table 1 (p. 17)
-                        </p>                          
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            If a unit/machine is in IDLE state, what steps must be taken next in the production cycle? 
-                        </p>   
-                     </div>
+                            If a unit/machine is in IDLE state, what steps must be taken next in the production cycle?
+                        </p>
+                    </div>
 
                     <!-- -->
                     <h3 id="3_6_stopped">3.6 STOPPED state</h3>
@@ -974,9 +1025,11 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the STOPPED state. Stress that in STOPPED state, unit/machine operation has stopped,
-                            typically due to a decision by an operator or supervisory system, or due to internal machine logic.  Point out
-                            that the STOPPED state is also reached after CLEARING.   
+                            Instructors: Introduce the STOPPED state. Stress that in STOPPED state, unit/machine
+                            operation has stopped,
+                            typically due to a decision by an operator or supervisory system, or due to internal machine
+                            logic. Point out
+                            that the STOPPED state is also reached after CLEARING.
                         </p>
                     </div>
 
@@ -984,16 +1037,19 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            The unit/machine is powered and stationary after either STOPPING or CLEARING. All communication with
-                            supervisory, user interface, peer or other systems is active and functioning. 
+                            The unit/machine is powered and stationary after either STOPPING or CLEARING. All
+                            communication with
+                            supervisory, user interface, peer or other systems is active and functioning.
                         </p>
                     </div>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_stopped.png" />
                         <figcaption>
-                            Figure X. In the STOPPED state, unit/machine operation has stopped due to a decision by an operator or 
-                            supervisory system, or due to internal machine logic.  The STOPPED state is also reached after the machine is   
+                            Figure X. In the STOPPED state, unit/machine operation has stopped due to a decision by an
+                            operator or
+                            supervisory system, or due to internal machine logic. The STOPPED state is also reached
+                            after the machine is
                             cleared.
                         </figcaption>
                     </figure>
@@ -1002,19 +1058,21 @@
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
                             The machine is powered and stationary after completing the STOPPING state. All
-                            communications with other systems are functioning (if applicable). A RESET command will cause an exit 
+                            communications with other systems are functioning (if applicable). A RESET command will
+                            cause an exit
                             from STOPPED to the RESETTING state.
                         </p>
                         <p class="tr88-ref">
                             ANSI/ISA-TR88.00.02-2015, Table 1 (p. 17)
-                        </p>                          
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. If a unit/machine is in STOPPED state, what steps must be taken next in the production cycle? 
-                        </p>                           
+                            a. If a unit/machine is in STOPPED state, what steps must be taken next in the production
+                            cycle?
+                        </p>
                     </div>
 
                     <!-- -->
@@ -1023,18 +1081,20 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the ABORTED state. Associate the ABORTED state with emergency stop, major hardware failures
-                            or other severe errors.  
+                            Instructors: Introduce the ABORTED state. Associate the ABORTED state with emergency stop,
+                            major hardware failures
+                            or other severe errors.
                         </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
-                            The ABORTED state generally indicates that an emergency stop, a major hardware failure or some other severe error
+                            The ABORTED state generally indicates that an emergency stop, a major hardware failure or
+                            some other severe error
                             has occurred.
                         </p>
-                    </div>                    
+                    </div>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_aborted.png" />
@@ -1046,21 +1106,24 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            The machine maintains status information relevant to the ABORT condition. The machine can only exit the
-                            ABORTED state after an explicit CLEAR command, subsequently to manual intervention to correct and reset
+                            The machine maintains status information relevant to the ABORT condition. The machine can
+                            only exit the
+                            ABORTED state after an explicit CLEAR command, subsequently to manual intervention to
+                            correct and reset
                             the detected machine faults.
                         </p>
                         <p class="tr88-ref">
                             ANSI/ISA-TR88.00.02-2015, Table 1 (p. 17)
-                        </p>  
+                        </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. Beyond clearing errors and restarting the machine, what additional steps might be required if a unit/machine 
+                            a. Beyond clearing errors and restarting the machine, what additional steps might be
+                            required if a unit/machine
                             is in ABORTED state?
-                        </p>                        
+                        </p>
                     </div>
 
                     <!-- -->
@@ -1069,12 +1132,15 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Clarify or review the differences between HELD and SUSPENDED states.  The distinction between 
-                            internal versus external process conditions is key here.  Point out that the process of unsuspending is 
-                            typically done automatically, whereas the process of unholding may (or may not) require operator intervention.   
+                            Instructors: Clarify or review the differences between HELD and SUSPENDED states. The
+                            distinction between
+                            internal versus external process conditions is key here. Point out that the process of
+                            unsuspending is
+                            typically done automatically, whereas the process of unholding may (or may not) require
+                            operator intervention.
                         </p>
                     </div>
- 
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
                         <p class="para">
@@ -1107,10 +1173,14 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Clarify or review the differences between STOPPED and ABORTED states.  Many view the difference
-                            as one of error or event severity, with the ABORTED state being reserved for the most severe errors (e.g. 
-                            emergency stop, major hardware failure, etc.)  One clear distinction provided by the standard is the stopping 
-                            action required in STOPPING versus ABORTING states: "controlled stop" versus "rapid, safe stop."
+                            Instructors: Clarify or review the differences between STOPPED and ABORTED states. Many view
+                            the difference
+                            as one of error or event severity, with the ABORTED state being reserved for the most severe
+                            errors (e.g.
+                            emergency stop, major hardware failure, etc.) One clear distinction provided by the standard
+                            is the stopping
+                            action required in STOPPING versus ABORTING states: "controlled stop" versus "rapid, safe
+                            stop."
                         </p>
                     </div>
 
@@ -1137,9 +1207,12 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Enumerate the acting or transition states: ABORTING, STOPPING, CLEARING, etc.  It is suggested 
-                            to describe them first in a generic or open-ended way: an acting state comprises all actions required 
-                            to bridge from one wait state to another.  Consider covering one or two acting states in some detail 
+                            Instructors: Enumerate the acting or transition states: ABORTING, STOPPING, CLEARING, etc.
+                            It is suggested
+                            to describe them first in a generic or open-ended way: an acting state comprises all actions
+                            required
+                            to bridge from one wait state to another. Consider covering one or two acting states in some
+                            detail
                             (e.g. Aborting, Starting).
                         </p>
                     </div>
@@ -1147,8 +1220,10 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_transition.png" />
                         <figcaption>
-                            Figure X. PackML states are divided into two types.  The wait states (EXECUTE, HELD, SUSPENDED,
-                            COMPLETE, IDLE, STOPPED, ABORTED) have been discussed in the preceding sections.  The remaining states, 
+                            Figure X. PackML states are divided into two types. The wait states (EXECUTE, HELD,
+                            SUSPENDED,
+                            COMPLETE, IDLE, STOPPED, ABORTED) have been discussed in the preceding sections. The
+                            remaining states,
                             shown here in yellow, are known as acting states.
                         </figcaption>
                     </figure>
@@ -1163,34 +1238,34 @@
                             b. Describe internal machine functions that might occur during Aborting state.
                         </p>
                     </div>
- 
-                   <!-- -->
-                   <h3 id="3_11_clearing_resetting">3.11 CLEARING vs. RESETTING</h3>
 
-                   <div class="key">
-                       <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
-                       <p class="comment">
-                           Instructors: Clarify or review the differences between CLEARING and RESETTING states.  
-                       </p>
-                   </div>
+                    <!-- -->
+                    <h3 id="3_11_clearing_resetting">3.11 CLEARING vs. RESETTING</h3>
 
-                   <div class="key">
-                       <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Clarify or review the differences between CLEARING and RESETTING states.
+                        </p>
+                    </div>
 
-                       <p class="para">
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+
+                        <p class="para">
                             CLEARING is initiated by a state command to clear faults that may have occurred when
                             ABORTING, and are present in the ABORTED state before proceeding to a
                             STOPPED state.
-                       </p>
+                        </p>
 
-                       <p class="para">
+                        <p class="para">
                             RESETTING is the result of a RESET command from the STOPPED or
                             COMPLETE state. Faults and stop causes are reset. RESETTING will
                             typically cause safety devices to be energized and place the machine in the
                             IDLE state where it will wait for a START command. No hazardous motion
                             should happen in this state.
-                       </p>
-                   </div>
+                        </p>
+                    </div>
 
                     <!-- -->
                     <h3 id="3_12_state_commands">3.12 State commands</h3>
@@ -1198,54 +1273,66 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Enumerate the PackML state commands: Abort, Stop, Clear, etc.  Point out the obvious 
+                            Instructors: Enumerate the PackML state commands: Abort, Stop, Clear, etc. Point out the
+                            obvious
                             correspondence between the acting states and the associated state commands.
                         </p>
-  
+
                         <p class="comment">
-                            Note: ANSI/ISA-TR88.00.02-2021 introduces the Complete command, which initiates a transition from EXECUTE to 
-                            COMPLETING.  It is suggested to introduce this command here, as it is already in wide use and it completes
+                            Note: ANSI/ISA-TR88.00.02-2021 introduces the Complete command, which initiates a transition
+                            from EXECUTE to
+                            COMPLETING. It is suggested to introduce this command here, as it is already in wide use and
+                            it completes
                             the correspondence between the transition states and state commands.
-                        </p>                        
+                        </p>
 
-                     </div>
+                    </div>
 
-                     <figure>
+                    <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_command.png" />
                         <figcaption>
-                            Figure X. Transition from a wait state to an acting state is initiated by an associated PackML state command.  
-                            Here the PackML state command "Start" is used to transition to state Starting. The same relationship exists 
+                            Figure X. Transition from a wait state to an acting state is initiated by an associated
+                            PackML state command.
+                            Here the PackML state command "Start" is used to transition to state Starting. The same
+                            relationship exists
                             between Hold and Holding, Complete and Completing, Abort and Aborting, etc.
-                            
+
                         </figcaption>
                     </figure>
- 
+
                     <!-- -->
                     <h3 id="3_13_state_complete">3.13 State complete</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: In the PackML state diagram, indicate how each the transition from an acting state to the 
-                            subsequent wait state is governed by SC or state complete.  Stress that state complete is a logical condition that, 
+                            Instructors: In the PackML state diagram, indicate how each the transition from an acting
+                            state to the
+                            subsequent wait state is governed by SC or state complete. Stress that state complete is a
+                            logical condition that,
                             once satisfied, initiates a transition to the next state automatically.
                         </p>
-                     </div>
+                    </div>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_complete.png" />
                         <figcaption>
-                            Figure X. Transition from an active state (here STARTING) to the subsequent wait state (here EXECUTE) is governed
-                            by an internal, logical condition known as state complete.  State complete simply means that all functional requirements 
-                            required for the given acting state have been met, so that transition to the next state may automatically occur.
+                            Figure X. Transition from an active state (here STARTING) to the subsequent wait state (here
+                            EXECUTE) is governed
+                            by an internal, logical condition known as state complete. State complete simply means that
+                            all functional requirements
+                            required for the given acting state have been met, so that transition to the next state may
+                            automatically occur.
                         </figcaption>
                     </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. On a given machine it is determined that while in STARTING state all servo axes should synchronize with the master axis 
-                            and all conveyors should begin to run.  In general terms, what would the associated state complete condition look like? 
+                            a. On a given machine it is determined that while in STARTING state all servo axes should
+                            synchronize with the master axis
+                            and all conveyors should begin to run. In general terms, what would the associated state
+                            complete condition look like?
                         </p>
                     </div>
 
@@ -1327,13 +1414,16 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce Production mode. Stress the idea that if the unit/machine is producing
-                            product, or attempting to produce product, then from a PackML perspective, it is in Production 
+                            Instructors: Introduce Production mode. Stress the idea that if the unit/machine is
+                            producing
+                            product, or attempting to produce product, then from a PackML perspective, it is in
+                            Production
                             mode.
                         </p>
                         <p class="comment">
-                            Reinforce the notion that, while not all PackML states need to be implemented in Production 
-                            mode, the decision to include a particular state or not is determined solely by the machine's 
+                            Reinforce the notion that, while not all PackML states need to be implemented in Production
+                            mode, the decision to include a particular state or not is determined solely by the
+                            machine's
                             operational behavior.
                         </p>
                     </div>
@@ -1341,7 +1431,7 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_production.png" />
                         <figcaption>
-                            Figure X. Production mode is used when the user is intending to produce product.  Often, all 
+                            Figure X. Production mode is used when the user is intending to produce product. Often, all
                             PackML states are supported in this mode.
                         </figcaption>
                     </figure>
@@ -1349,7 +1439,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. ANSI/ISA-TR88.00.02-2015 stipulates that Production mode always be supported in any PackML implementation.
+                            a. ANSI/ISA-TR88.00.02-2015 stipulates that Production mode always be supported in any
+                            PackML implementation.
                             Why is this stipulation natural and/or justified?
                         </p>
                     </div>
@@ -1359,11 +1450,14 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce Maintenance mode. Indicate that Maintenance is an optional mode, used to 
-                            allow authorized personnel to run the machine independent of other machines in the process cell.
+                            Instructors: Introduce Maintenance mode. Indicate that Maintenance is an optional mode, used
+                            to
+                            allow authorized personnel to run the machine independent of other machines in the process
+                            cell.
                         </p>
                         <p class="comment">
-                            Reiterate that while the machine is actively carrying out the behavior specified by Maintenance 
+                            Reiterate that while the machine is actively carrying out the behavior specified by
+                            Maintenance
                             mode, the machine is in EXECUTE state.
                         </p>
                     </div>
@@ -1371,11 +1465,14 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_maintenance.png" />
                         <figcaption>
-                            Figure X. Maintenance mode may be used for trouble-shooting or to test operational improvements.  
-                            Because Maintenance mode allows the unit/machine to be run independent of the other machines in 
+                            Figure X. Maintenance mode may be used for trouble-shooting or to test operational
+                            improvements.
+                            Because Maintenance mode allows the unit/machine to be run independent of the other machines
+                            in
                             the process cell, SUSPENDED state is often not implemented.
                             <br></br>
-                            ANSI/ISA-TR88.00.02-2015 suggests that the state model shown would be typical for Maintenance mode, but this is not 
+                            ANSI/ISA-TR88.00.02-2015 suggests that the state model shown would be typical for
+                            Maintenance mode, but this is not
                             a requirement.
                         </figcaption>
                     </figure>
@@ -1387,9 +1484,10 @@
                         </p>
                         <p class="para">
                             b. Why is COMPLETE state typically not included in Maintenance mode?
-                        </p>                        
+                        </p>
                         <p class="para">
-                            c. TODO: Consider adding questions re: product counters and/or OEE to clarify that product counters should be inactive
+                            c. TODO: Consider adding questions re: product counters and/or OEE to clarify that product
+                            counters should be inactive
                             in maintenance mode.
                         </p>
 
@@ -1400,11 +1498,11 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce Manual mode. Indicate that Manual is an optional mode, used to 
+                            Instructors: Introduce Manual mode. Indicate that Manual is an optional mode, used to
                             provide direct control of individual machine modules.
                         </p>
                         <p class="comment">
-                            Reiterate that while the machine is actively carrying out the behavior specified by Manual 
+                            Reiterate that while the machine is actively carrying out the behavior specified by Manual
                             mode, the machine is in EXECUTE state.
                         </p>
                     </div>
@@ -1414,10 +1512,11 @@
                         <img id="summary-packml-state-model" src="images/packml_state_model_manual.png" />
                         <figcaption>
                             Figure X. Manual mode may be used for the commissioning of individual drives, verifying
-                            the operation of machine subsystems, or similar.  Typically direct operator control over 
+                            the operation of machine subsystems, or similar. Typically direct operator control over
                             the active module is used (e.g. via jog button).
                             <br></br>
-                            ANSI/ISA-TR88.00.02-2015 suggests that the state model shown would be typical for Manual mode, but this is not 
+                            ANSI/ISA-TR88.00.02-2015 suggests that the state model shown would be typical for Manual
+                            mode, but this is not
                             a requirement.
                         </figcaption>
                     </figure>
@@ -1425,7 +1524,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. A capping machine includes functionality to manually run the cap feed system.  Would it 
+                            a. A capping machine includes functionality to manually run the cap feed system. Would it
                             make sense to include the HELD state in Manual mode in this case?
                         </p>
                     </div>
@@ -1435,23 +1534,28 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Provide examples of additional modes that might be present on a packaging machine.  In each
-                            case, describe the associated PackML state model (or subset thereof) and justify why this set of sub-states 
+                            Instructors: Provide examples of additional modes that might be present on a packaging
+                            machine. In each
+                            case, describe the associated PackML state model (or subset thereof) and justify why this
+                            set of sub-states
                             was implemented.
                         </p>
                     </div>
 
-                     <!-- -->
+                    <!-- -->
                     <h3 id="4_5_mode_management">4.5 Mode management</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the concept of Mode management, the software or logical rules that control the 
+                            Instructors: Introduce the concept of Mode management, the software or logical rules that
+                            control the
                             transition from one mode to another.
                         </p>
                         <p class="comment">
-                            Stress that when transitioning from one mode to another, PackML stipulates that a simultaneous state 
-                            change may not occur.  A consequence of this rule is that a mode change is only allowed while the machine
+                            Stress that when transitioning from one mode to another, PackML stipulates that a
+                            simultaneous state
+                            change may not occur. A consequence of this rule is that a mode change is only allowed while
+                            the machine
                             is in a state common to both modes.
                         </p>
                     </div>
@@ -1459,21 +1563,23 @@
                     <figure>
                         <img id="packml_mode_management" src="images/packml_mode_management.png" />
                         <figcaption>
-                            Figure X. Add comment here.  Image credit: Patrick Toohey. 
+                            Figure X. Add comment here. Image credit: Patrick Toohey.
                         </figcaption>
                     </figure>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. A packaging machine includes a Cleaning mode cycle that should be executed automatically once per hour during
-                            a production run. How would you suggest managing this mode transition?  Would it make sense to allow such a 
+                            a. A packaging machine includes a Cleaning mode cycle that should be executed automatically
+                            once per hour during
+                            a production run. How would you suggest managing this mode transition? Would it make sense
+                            to allow such a
                             mode transition to occur while in Execute state?
                         </p>
                     </div>
 
                 </div>
-  
+
 
                 <!-- PackTags -->
                 <div>
@@ -1489,8 +1595,8 @@
                             After completing the chapter, students should be able to identify the
                             minimal subset of PackTags required for standard compliance. They should
                             understand how the three tag types (Command, Status and Admin) are classified
-                            and used.  In this basic course, the intention is not to examine each tag in 
-                            detail, but rather to give a broad overview of the type of information 
+                            and used. In this basic course, the intention is not to examine each tag in
+                            detail, but rather to give a broad overview of the type of information
                             available.
                         </p>
 
@@ -1515,18 +1621,18 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            PackTags are broken out into three groups: command, status and administration. 
-                            Command and status tags contain data required for interfacing between machines 
-                            and line control for coordination, or for recipe/parameter download. Command 
-                            tags are "written" to and consumed by the machine program, as the "information 
-                            receiver", while status tags are produced by and read from the machine program. 
-                            Administration tags contain data collected by higher level systems for machine 
-                            performance analysis, or operator information. Generally informational data 
+                            PackTags are broken out into three groups: command, status and administration.
+                            Command and status tags contain data required for interfacing between machines
+                            and line control for coordination, or for recipe/parameter download. Command
+                            tags are "written" to and consumed by the machine program, as the "information
+                            receiver", while status tags are produced by and read from the machine program.
+                            Administration tags contain data collected by higher level systems for machine
+                            performance analysis, or operator information. Generally informational data
                             is passed using OPC on an Ethernet-based communication network.
-                         </p>
-                         <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.2 Tag types (p. 31) 
-                        </p>  
+                        </p>
+                        <p class="tr88-ref">
+                            ANSI/ISA-TR88.00.02-2015, 7.2 Tag types (p. 31)
+                        </p>
                     </div>
 
                     <!-- -->
@@ -1534,8 +1640,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the top-level Command tags.  Note that, where appropriate, a specific
-                            unit of measure (e.g. primary packages/min) is assumed.  Clarify that the Command tags are 
+                            Instructors: Introduce the top-level Command tags. Note that, where appropriate, a specific
+                            unit of measure (e.g. primary packages/min) is assumed. Clarify that the Command tags are
                             grouped into a structured data type named PMLc.
                         </p>
                         <p class="comment">
@@ -1546,87 +1652,91 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Command tags are used to control the operation of the unit machine. Command tags include unit
+                            Command tags are used to control the operation of the unit machine. Command tags include
+                            unit
                             state commands which control the state transitions in the base state model. The command tags
                             also include parameters and process variables which control how the machine ope rates.
                             Command tags generally originate from the machine user or a remote system. The originator of
-                            the command in this report is defined as the "requestor" or "information sender". The unit machine
+                            the command in this report is defined as the "requestor" or "information sender". The unit
+                            machine
                             in this report is known as the "execution system".
-                         </p>
-                         <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.5.1 Command tags (p. 45) 
-                        </p>                           
+                        </p>
+                        <p class="tr88-ref">
+                            ANSI/ISA-TR88.00.02-2015, 7.5.1 Command tags (p. 45)
+                        </p>
                     </div>
 
                     <table id="table-type-pmlc">
                         <caption>Table X: Components of the Command structure: PMLc</caption>
                         <tr>
-                            <th colspan=2 >Tag</th>
+                            <th colspan=2>Tag</th>
                             <th>Type</th>
                             <th>Description</th>
                         </tr>
                         <tr>
                             <td>Command</td>
                             <td></td>
-                            <td>PMLc</td>                    
+                            <td>PMLc</td>
                             <td></td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td></td>
                             <td>UnitMode</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>Numeric representation of the commanded unit mode</td>
-                        </tr>                        
+                        </tr>
                         <tr>
                             <td></td>
                             <td>UnitModeChangeRequest</td>
-                            <td>BOOL</td>                    
+                            <td>BOOL</td>
                             <td>Request activation of current value of Command.UnitMode</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>MachSpeed</td>
-                            <td>REAL</td>                    
+                            <td>REAL</td>
                             <td>Machine speed setpoint [primary packages/min]</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>MaterialInterlock[32]</td>
-                            <td>BOOL</td>                    
+                            <td>BOOL</td>
                             <td>Bitwise indication that materials are ready for processing</td>
-                        </tr>      
+                        </tr>
                         <tr>
                             <td></td>
                             <td>CntrlCmd</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>Numeric representation of the commanded state (1=Reset, 2=Start, etc.)</td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td></td>
                             <td>RemoteInterface[#]</td>
-                            <td>Interface structure</td>                    
+                            <td>Interface structure</td>
                             <td>Coordination of activities between peers</td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td></td>
                             <td>Parameter[#]</td>
-                            <td>Descriptor structure</td>                    
+                            <td>Descriptor structure</td>
                             <td>Machine parameterization values</td>
-                        </tr>       
+                        </tr>
                         <tr>
                             <td></td>
                             <td>Product[#]</td>
-                            <td>Product structure</td>                    
+                            <td>Product structure</td>
                             <td>Recipe or process data associated to produced goods</td>
-                        </tr>                           
+                        </tr>
                     </table>
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_command.png" />
                         <figcaption>
-                            Figure X.  The top-level Command tags are listed.  Note that the associated structured data type 
-                            is PMLc.  (The STRUCT notation shown is specified in IEC 61131-3; structured data types in non-PLC
-                            languages are defined similarly.)  See also the definition for PACKMLV30 in &#167;5.2.
+                            Figure X. The top-level Command tags are listed. Note that the associated structured data
+                            type
+                            is PMLc. (The STRUCT notation shown is specified in IEC 61131-3; structured data types in
+                            non-PLC
+                            languages are defined similarly.) See also the definition for PACKMLV30 in &#167;5.2.
                         </figcaption>
                     </figure>
 
@@ -1635,8 +1745,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the top-level Status tags.  Note that, where appropriate, a specific
-                            unit of measure (e.g. primary packages/min) is assumed.  Clarify that the Status tags are 
+                            Instructors: Introduce the top-level Status tags. Note that, where appropriate, a specific
+                            unit of measure (e.g. primary packages/min) is assumed. Clarify that the Status tags are
                             grouped into a structured data type named PMLs.
                         </p>
                         <p class="comment">
@@ -1647,116 +1757,120 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Status tags are used to describe the operation of the unit machine. Status tags include state
+                            Status tags are used to describe the operation of the unit machine. Status tags include
+                            state
                             commands which describe the state transitions in the base state model. The status tags also
-                            include parameters and process variables which describe how the machine operate s. Status tags
-                            generally originate from the unit machine user and can be used on a remote system. The originator
+                            include parameters and process variables which describe how the machine operate s. Status
+                            tags
+                            generally originate from the unit machine user and can be used on a remote system. The
+                            originator
                             of the status tags in this report is defined as the "execution system".
-                         </p>
-                         <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.5.2 Status tags (p. 53) 
-                        </p>     
-                        </div>
+                        </p>
+                        <p class="tr88-ref">
+                            ANSI/ISA-TR88.00.02-2015, 7.5.2 Status tags (p. 53)
+                        </p>
+                    </div>
 
-                        <table id="table-type-pmls">
-                            <caption>Table X: Components of the Status structure: PMLs</caption>
-                            <tr>
-                                <th colspan=2 >Tag</th>
-                                <th>Type</th>
-                                <th>Description</th>
-                            </tr>
-                            <tr>
-                                <td>Status</td>
-                                <td></td>
-                                <td>PMLs</td>                    
-                                <td></td>
-                            </tr> 
-                            <tr>
-                                <td></td>
-                                <td>UnitModeCurrent</td>
-                                <td>DINT</td>                    
-                                <td>Numeric representation of the active unit mode</td>
-                            </tr>                        
-                            <tr>
-                                <td></td>
-                                <td>UnitModeRequested</td>
-                                <td>BOOL</td>                    
-                                <td>Handshaking bit acknowledging unit mode change request</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>UnitModeChangeInProgress</td>
-                                <td>BOOL</td>                    
-                                <td>Unit mode change request has been accepted; switching is in progress</td>
-                            </tr>                            
-                            <tr>
-                                <td></td>
-                                <td>StateCurrent</td>
-                                <td>DINT</td>                    
-                                <td>Numeric representation of active state</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>StateRequested</td>
-                                <td>DINT</td>                    
-                                <td>Handshaking value acknowledging that state change request has been make</td>
-                            </tr>      
-                            <tr>
-                                <td></td>
-                                <td>StateChangeInProgress</td>
-                                <td>BOOL</td>                    
-                                <td>State change request has been accepted; switching is in progress</td>
-                            </tr> 
-                            <tr>
-                                <td></td>
-                                <td>MachSpeed</td>
-                                <td>REAL</td>                    
-                                <td>Active machine speed setpoint</td>
-                            </tr> 
-                            <tr>
-                                <td></td>
-                                <td>CurMachSpeed</td>
-                                <td>REAL</td>                    
-                                <td>Current/actual machine speed [primary products/min]</td>
-                            </tr>       
-                            <tr>
-                                <td></td>
-                                <td>MaterialInterlock[32]</td>
-                                <td>BOOL</td>                    
-                                <td>Bitwise indication that materials are ready for processing</td>
-                            </tr>      
-                            <tr>
-                                <td></td>
-                                <td>EquipmentInterlock</td>
-                                <td>Equipment interlock structure</td>                    
-                                <td>Signals that the machine is blocked or starved</td>
-                            </tr> 
-                            <tr>
-                                <td></td>
-                                <td>RemoteInterface[#]</td>
-                                <td>Interface structure</td>                    
-                                <td>Coordination of activities between peers</td>
-                            </tr> 
-                            <tr>
-                                <td></td>
-                                <td>Parameter[#]</td>
-                                <td>Descriptor structure</td>                    
-                                <td>Current machine parameterization values</td>
-                            </tr> 
-                            <tr>
-                                <td></td>
-                                <td>Product[#]</td>
-                                <td>Product structure</td>                    
-                                <td>Current recipe or process data associated to produced goods</td>
-                            </tr>                                                                                                                                  
-                        </table>
+                    <table id="table-type-pmls">
+                        <caption>Table X: Components of the Status structure: PMLs</caption>
+                        <tr>
+                            <th colspan=2>Tag</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td></td>
+                            <td>PMLs</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>UnitModeCurrent</td>
+                            <td>DINT</td>
+                            <td>Numeric representation of the active unit mode</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>UnitModeRequested</td>
+                            <td>BOOL</td>
+                            <td>Handshaking bit acknowledging unit mode change request</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>UnitModeChangeInProgress</td>
+                            <td>BOOL</td>
+                            <td>Unit mode change request has been accepted; switching is in progress</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>StateCurrent</td>
+                            <td>DINT</td>
+                            <td>Numeric representation of active state</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>StateRequested</td>
+                            <td>DINT</td>
+                            <td>Handshaking value acknowledging that state change request has been make</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>StateChangeInProgress</td>
+                            <td>BOOL</td>
+                            <td>State change request has been accepted; switching is in progress</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>MachSpeed</td>
+                            <td>REAL</td>
+                            <td>Active machine speed setpoint</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>CurMachSpeed</td>
+                            <td>REAL</td>
+                            <td>Current/actual machine speed [primary products/min]</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>MaterialInterlock[32]</td>
+                            <td>BOOL</td>
+                            <td>Bitwise indication that materials are ready for processing</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>EquipmentInterlock</td>
+                            <td>Equipment interlock structure</td>
+                            <td>Signals that the machine is blocked or starved</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>RemoteInterface[#]</td>
+                            <td>Interface structure</td>
+                            <td>Coordination of activities between peers</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Parameter[#]</td>
+                            <td>Descriptor structure</td>
+                            <td>Current machine parameterization values</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Product[#]</td>
+                            <td>Product structure</td>
+                            <td>Current recipe or process data associated to produced goods</td>
+                        </tr>
+                    </table>
 
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_status.png" />
                         <figcaption>
-                            Figure X. The top-level Status tags are listed.  Note that the associated structured data type 
-                            is PMLs.  See also the definition for PACKMLV30 in &#167;5.2.
+                            Figure X. The top-level Status tags are listed. Note that the associated structured data
+                            type
+                            is PMLs. See also the definition for PACKMLV30 in &#167;5.2.
                         </figcaption>
                     </figure>
 
@@ -1765,8 +1879,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Introduce the top-level Admin tags.  Note that, where appropriate, a specific
-                            unit of measure (e.g. primary packages/min) is assumed.  Clarify that the Admin tags are 
+                            Instructors: Introduce the top-level Admin tags. Note that, where appropriate, a specific
+                            unit of measure (e.g. primary packages/min) is assumed. Clarify that the Admin tags are
                             grouped into a structured data type named PMLa.
                         </p>
                         <p class="comment">
@@ -1777,160 +1891,166 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Administration tags are used to describe the quality and alarm information of the unit machine.
-                            Administration tags include alarm parameters which describe the conditions within the base state
-                            model typically for production data acquisition (PDA) systems. The administration tags also include
+                            Administration tags are used to describe the quality and alarm information of the unit
+                            machine.
+                            Administration tags include alarm parameters which describe the conditions within the base
+                            state
+                            model typically for production data acquisition (PDA) systems. The administration tags also
+                            include
                             parameters which can describe how well the machine operates, or specific information on the
-                            product quality produced by the machine. Administration tags generally originate from the unit
+                            product quality produced by the machine. Administration tags generally originate from the
+                            unit
                             machine and can be used on the HMI or a remote system.
-                         </p>
-                         <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.5.3 Administration tags (p. 62) 
-                        </p>                          
+                        </p>
+                        <p class="tr88-ref">
+                            ANSI/ISA-TR88.00.02-2015, 7.5.3 Administration tags (p. 62)
+                        </p>
                     </div>
 
                     <table id="table-type-pmls">
                         <caption>Table X: Components of the Admin structure: PMLa</caption>
                         <tr>
-                            <th colspan=2 >Tag</th>
+                            <th colspan=2>Tag</th>
                             <th>Type</th>
                             <th>Description</th>
                         </tr>
                         <tr>
                             <td>Admin</td>
                             <td></td>
-                            <td>PMLa</td>                    
+                            <td>PMLa</td>
                             <td></td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td></td>
                             <td>Parameter[#]</td>
-                            <td>Descriptor structure</td>                    
+                            <td>Descriptor structure</td>
                             <td>Parameters associated to the local interface (e.g. HMI)</td>
-                        </tr> 
+                        </tr>
 
                         <tr>
                             <td></td>
                             <td>Alarm[#]</td>
-                            <td>Alarm structure</td>                    
+                            <td>Alarm structure</td>
                             <td>Listing of all currently active alarms</td>
-                        </tr>                        
+                        </tr>
                         <tr>
                             <td></td>
                             <td>AlarmExtent</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>Extent of the Alarm array</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>AlarmHistory[#]</td>
-                            <td>Alarm structure</td>                    
+                            <td>Alarm structure</td>
                             <td>Chronological alarm history, typically with the most recent alarm listed first</td>
-                        </tr>                            
+                        </tr>
                         <tr>
                             <td></td>
                             <td>AlarmHistoryExtent</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>Extent of the AlarmHistory array</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>StopReason[#]</td>
-                            <td>Alarm struct</td>                    
+                            <td>Alarm struct</td>
                             <td>Alarm(s) associated to last machine stoppage; used in "first out fault" reporting</td>
-                        </tr>      
+                        </tr>
                         <tr>
                             <td></td>
                             <td>StopReasonExtent</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>Extent of the StopReason array</td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td></td>
                             <td>Warning</td>
-                            <td>Alarm structure</td>                    
+                            <td>Alarm structure</td>
                             <td>Listing of all currently active warnings</td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td></td>
                             <td>WarningExtent</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>Warning array extent</td>
-                        </tr>       
+                        </tr>
                         <tr>
                             <td></td>
                             <td>ModeCurrentTime[#]</td>
-                            <td>DINT</td>                    
-                            <td>Elapsed time in seconds of current mode; array index is associated to mode value (1=Production, etc.)</td>
-                        </tr>      
+                            <td>DINT</td>
+                            <td>Elapsed time in seconds of current mode; array index is associated to mode value
+                                (1=Production, etc.)</td>
+                        </tr>
                         <tr>
                             <td></td>
                             <td>ModeCumulativeTime[#]</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>Cumulative time in seconds per mode</td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td></td>
                             <td>StateCurrentTime[#,#]</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>Elapsed time in seconds per [mode, state] pair</td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td></td>
                             <td>StateCumulativeTime[#,#]</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>Cumulative time in seconds per [mode, state] pair</td>
-                        </tr>       
+                        </tr>
                         <tr>
                             <td></td>
                             <td>ProdConsumedCount[#]</td>
-                            <td>Count structure</td>                    
+                            <td>Count structure</td>
                             <td>Count of materials used or consumed during production</td>
-                        </tr>                            
+                        </tr>
                         <tr>
                             <td></td>
                             <td>ProdProcessedCount[#]</td>
-                            <td>Count structure</td>                    
+                            <td>Count structure</td>
                             <td>Count of total products (incl. defects) made during production</td>
-                        </tr>   
+                        </tr>
                         <tr>
                             <td></td>
                             <td>ProdDefectiveCount[#]</td>
-                            <td>Count structure</td>                    
+                            <td>Count structure</td>
                             <td>Count of defective products made during production</td>
-                        </tr>                           
+                        </tr>
                         <tr>
                             <td></td>
                             <td>AccTimeSinceReset</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>Elapsed time since last reset of mode/state timers or counters</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td></td>
                             <td>MachDesignSpeed</td>
-                            <td>DINT</td>                    
-                            <td>Maximum design speed in primary packages per minute for a given product or package configuration</td>
-                        </tr>  
+                            <td>DINT</td>
+                            <td>Maximum design speed in primary packages per minute for a given product or package
+                                configuration</td>
+                        </tr>
                         <tr>
                             <td></td>
                             <td>StatesDisabled</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>Bitwise indication of the states disabled in the current mode</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td></td>
                             <td>PlcDateTime[7]</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>Current time of the PLC clock [yr, mon, day, hr, min, sec, &mu;sec]</td>
-                        </tr>                          
+                        </tr>
                     </table>
 
 
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_admin.png" />
                         <figcaption>
-                            Figure X. The top-level Admin tags are listed.  Note that the associated structured data type 
-                            is PMLa.  See also the definition for PACKMLV30 in &#167;5.2.
+                            Figure X. The top-level Admin tags are listed. Note that the associated structured data type
+                            is PMLa. See also the definition for PACKMLV30 in &#167;5.2.
                         </figcaption>
                     </figure>
 
@@ -1939,12 +2059,14 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Structured data type PACKMLV30 comprises the Command, Status and Admin types described
-                            previously. Note that ANSI/ISA-TR88.00.02-2015 does not specify the name associated with the instance 
+                            Instructors: Structured data type PACKMLV30 comprises the Command, Status and Admin types
+                            described
+                            previously. Note that ANSI/ISA-TR88.00.02-2015 does not specify the name associated with the
+                            instance
                             of this type.
                         </p>
                         <p class="comment">
-                            Throughout this document we will use UnitName as a placeholder for the actual instance name.  
+                            Throughout this document we will use UnitName as a placeholder for the actual instance name.
                         </p>
                     </div>
                     <div class="key">
@@ -1952,41 +2074,41 @@
                         <p class="tr88">
                             PACKMLV30 – is a placeholder for the machine unit name, and is the top level in the
                             PackTag structure.
-                         </p>
-                         <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32) 
-                        </p>                          
+                        </p>
+                        <p class="tr88-ref">
+                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
+                        </p>
                     </div>
 
                     <table id="table-type-packmlv30">
-                        <caption>Table X.  Components of the top-level PackTags structure: PACKMLV30</caption>
+                        <caption>Table X. Components of the top-level PackTags structure: PACKMLV30</caption>
                         <tr>
-                            <th colspan=2 >Tag</th>
+                            <th colspan=2>Tag</th>
                             <th>Type</th>
                             <th>Description</th>
                         </tr>
                         <tr>
                             <td style="font-style: italic;">UnitName</td>
                             <td></td>
-                            <td>PACKMLV30</td>                    
+                            <td>PACKMLV30</td>
                             <td></td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td></td>
                             <td>Command</td>
-                            <td>PMLc</td>                    
+                            <td>PMLc</td>
                             <td>Command data produced by 'information sender' (e.g machine peers, etc.)</td>
-                        </tr>                        
+                        </tr>
                         <tr>
                             <td></td>
                             <td>Status</td>
-                            <td>PMLs</td>                    
+                            <td>PMLs</td>
                             <td>Status data produced for 'information sender'</td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>Admin</td>
-                            <td>PMLa</td>                    
+                            <td>PMLa</td>
                             <td>Administration data produced for higher level supervisory systems</td>
                         </tr>
                     </table>
@@ -1994,15 +2116,17 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_packmlv30.png" />
                         <figcaption>
-                            Figure X. Type PACKMLV30, the top level PackTag type, consists of the Command, Status and Admin tags described
-                            in the previous sections.  The instance name of this type is not specified by ANSI/ISA-TR88.00.02-2015.
+                            Figure X. Type PACKMLV30, the top level PackTag type, consists of the Command, Status and
+                            Admin tags described
+                            in the previous sections. The instance name of this type is not specified by
+                            ANSI/ISA-TR88.00.02-2015.
                         </figcaption>
                     </figure>
 
                     <!-- -->
                     <h3 id="5_3_elementary_types">5.3 Elementary types</h3>
                     <table id="table-summary-navigation-contexts">
-                        <caption>Table X.  Listing of elementary data types</caption>
+                        <caption>Table X. Listing of elementary data types</caption>
                         <tr>
                             <th>Type</th>
                             <th>IEC 61161-3</th>
@@ -2010,40 +2134,41 @@
                         </tr>
                         <tr>
                             <td>Boolean</td>
-                            <td>BOOL</td>                    
+                            <td>BOOL</td>
                             <td>1-bit (1 byte memory typical)</td>
-                        </tr>                        
+                        </tr>
                         <tr>
                             <td>Integer</td>
-                            <td>DINT</td>                    
+                            <td>DINT</td>
                             <td>32-bit, signed decimal format</td>
                         </tr>
                         <tr>
                             <td>Real</td>
-                            <td>REAL</td>                    
+                            <td>REAL</td>
                             <td>32-bit IEEE 754 standard floating point format</td>
                         </tr>
                         <tr>
                             <td>String</td>
-                            <td>STRING</td>                    
+                            <td>STRING</td>
                             <td>null-terminated ASCII, 80 characters maximum</td>
                         </tr>
                         <tr>
                             <td>Date and time</td>
-                            <td>DINT[0..6]</td>                    
+                            <td>DINT[0..6]</td>
                             <td>[year, month, day, hour, min, sec, &mu;sec]</td>
-                        </tr>                                              
+                        </tr>
                     </table>
 
-                     <!-- -->
-                    <h3 id="5_4_subtypes">5.4  Structured data types</h3>
+                    <!-- -->
+                    <h3 id="5_4_subtypes">5.4 Structured data types</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: The structure data types that comprise the rest of the PackTags definition are listed in 
-                            Appendix A.3.  In a basic course, instructors may wish to skip these details.
+                            Instructors: The structure data types that comprise the rest of the PackTags definition are
+                            listed in
+                            Appendix A.3. In a basic course, instructors may wish to skip these details.
                         </p>
-                    </div> 
+                    </div>
 
 
                     <!-- -->
@@ -2051,97 +2176,98 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: Review the complete list of required PackTags in detail.  Correct implementation of the 
-                            full set of these tags is critical for PackML compliance.  
+                            Instructors: Review the complete list of required PackTags in detail. Correct implementation
+                            of the
+                            full set of these tags is critical for PackML compliance.
                         </p>
-                        <p>                            
+                        <p>
                             This list is repeated in &#167;7.3, there with an emphasis on the data structure hierarchy.
-                        </p>    
+                        </p>
 
-                    </div> 
+                    </div>
 
                     <table id="table-summary-navigation-contexts">
-                        <caption>Table X.  Listing of required PackTags </caption>
+                        <caption>Table X. Listing of required PackTags </caption>
                         <tr>
                             <th>Tag</th>
                             <th>IEC 61161-3</th>
                             <th>Description</th>
                         </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Status.UnitModeCurrent</b></td>
-                            <td>DINT</td>                    
+                            <td> <em>UnitName.</em><br /><b>Status.UnitModeCurrent</b></td>
+                            <td>DINT</td>
                             <td>0 Invalid, 1 Production, 2 Maintenance, 3 Manual, 4-31 User-defined</td>
-                        </tr>                        
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Status.StateCurrent</b></td>
-                            <td>DINT</td>                    
+                            <td> <em>UnitName.</em><br /><b>Status.StateCurrent</b></td>
+                            <td>DINT</td>
                             <td>0 Undefined, 1 Clearing, 2 Stopped, 3 Starting, 4 Idle, 5 Suspended,
-                            6 Execute, 7 Stopping, 8 Aborting, 9 Aborted, 10 Holding, 11 Held,
-                            12 Unholding, 13 Suspending, 14 Unsuspending, 15 Resetting, 16 Completing,
-                            17 Complete
+                                6 Execute, 7 Stopping, 8 Aborting, 9 Aborted, 10 Holding, 11 Held,
+                                12 Unholding, 13 Suspending, 14 Unsuspending, 15 Resetting, 16 Completing,
+                                17 Complete
                             </td>
-                        </tr>   
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Status.MachSeed</b></td>
-                            <td>REAL</td>                    
+                            <td> <em>UnitName.</em><br /><b>Status.MachSeed</b></td>
+                            <td>REAL</td>
                             <td>Current set speed [prim. pkg/min]</td>
-                        </tr>    
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Status.CurMachSeed</b></td>
-                            <td>REAL</td>                    
+                            <td> <em>UnitName.</em><br /><b>Status.CurMachSeed</b></td>
+                            <td>REAL</td>
                             <td>Current actual speed [prim. pkg/min]</td>
-                        </tr>       
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Status.EquipmentInterlock.Blocked</b></td>
-                            <td>BOOL</td>                    
+                            <td> <em>UnitName.</em><br /><b>Status.EquipmentInterlock.Blocked</b></td>
+                            <td>BOOL</td>
                             <td>Indicates downstream blocked condition</td>
-                        </tr>   
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Status.EquipmentInterlock.Starved</b></td>
-                            <td>BOOL</td>                    
+                            <td> <em>UnitName.</em><br /><b>Status.EquipmentInterlock.Starved</b></td>
+                            <td>BOOL</td>
                             <td>Indicates upstream starved condition</td>
-                        </tr>                                                                             
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Admin.StopReason.ID</b></td>
-                            <td>DINT</td>                    
+                            <td> <em>UnitName.</em><br /><b>Admin.StopReason.ID</b></td>
+                            <td>DINT</td>
                             <td>Unique value assigned to stop reason</td>
-                        </tr> 
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Admin.ProdProcessedCount[#].Count</b></td>
-                            <td>DINT</td>                    
+                            <td> <em>UnitName.</em><br /><b>Admin.ProdProcessedCount[#].Count</b></td>
+                            <td>DINT</td>
                             <td>Total processed count</td>
-                        </tr> 
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Admin.ProdDefectiveCount[#].Count</b></td>
-                            <td>DINT</td>                    
+                            <td> <em>UnitName.</em><br /><b>Admin.ProdDefectiveCount[#].Count</b></td>
+                            <td>DINT</td>
                             <td>Total bad count</td>
-                        </tr> 
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Command.MachSpeed</b></td>
-                            <td>REAL</td>                    
+                            <td> <em>UnitName.</em><br /><b>Command.MachSpeed</b></td>
+                            <td>REAL</td>
                             <td>Machine throughput set point [prim. pkg/min]</td>
-                        </tr> 
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Command.UnitMode</b></td>
-                            <td>DINT</td>                    
+                            <td> <em>UnitName.</em><br /><b>Command.UnitMode</b></td>
+                            <td>DINT</td>
                             <td>Integer value associated to commanded unit mode</td>
-                        </tr>   
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Command.UnitModeChangeRequest</b></td>
-                            <td>BOOL</td>                    
+                            <td> <em>UnitName.</em><br /><b>Command.UnitModeChangeRequest</b></td>
+                            <td>BOOL</td>
                             <td>Unit mode change request trigger</td>
-                        </tr>   
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Command.CntrlCmd</b></td>
-                            <td>DINT</td>                    
-                            <td>Integer value associated to state command: 1 Reset, 2 Start, 3 Stop, 
+                            <td> <em>UnitName.</em><br /><b>Command.CntrlCmd</b></td>
+                            <td>DINT</td>
+                            <td>Integer value associated to state command: 1 Reset, 2 Start, 3 Stop,
                                 4 Hold, 5 Unhold, 6 Suspend, 7 Unsuspend, 8 Abort, 9 Clear, 10 Complete</td>
-                        </tr>   
+                        </tr>
                         <tr>
-                            <td> <em>UnitName.</em><br/><b>Command.CmdChangeRequest</b></td>
-                            <td>BOOL</td>                    
+                            <td> <em>UnitName.</em><br /><b>Command.CmdChangeRequest</b></td>
+                            <td>BOOL</td>
                             <td>State change request trigger</td>
-                        </tr>                                                                    
+                        </tr>
                     </table>
 
                     <!-- -->
@@ -2149,15 +2275,15 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: If the vendor provides software that may aid the student in declaring the set of 
+                            Instructors: If the vendor provides software that may aid the student in declaring the set
+                            of
                             PackTags in his or her code, introduce it here.
                         </p>
-                    </div>                 
+                    </div>
 
 
- 
+
                 </div>
-
 
                 <!-- Implementation strategies -->
                 <div>
@@ -2177,69 +2303,148 @@
                         </p>
 
                         <p class="para">
-                            Two specific subjects should be included. The first, alarm handling,
-                            should include a description of how this handler interacts with the PackML state
-                            machine. The second, code structure, should include instruction on both gateway
-                            (adding PackML to an existing code base) and full integration (PackML from the
-                            ground up) approaches.
+                            Prior to presenting any vendor-specific templates or toolsets, introduce the idea
+                            of adding a PackML interface layer to an existing code base - the so-cold gateway
+                            approach. Discuss use cases when such an approach is feasible or even preferable.
+                            Afterwards, when presenting the full template, present all available tools,
+                            design patterns, documentation, etc.
+                        </p>
+
+                        <p class="para">
+                            Chapter 6 is optional. The material here is mainly geared towards programmers and may
+                            be skipped for general audiences.
                         </p>
                     </div>
 
                     <!-- -->
-                    <h3 id="6_1_alarm_handling">6.1 Alarm handling</h3>
+                    <h3 id="6_1_existing_resources">6.1 Existing resources</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Please highlight some of the existing resources that are available from OMAC.
+                            Most pertinent to this chapter is PackML Unit/Machine Implementation Guide, Part 1:
+                            PackML Interface State Manager, but guides describing best practices for HMI design,
+                            OPC UA, etc. are also available. See &#167;8.2 for more information.
+                        </p>
+                    </div>
+
+
+                    <!-- -->
+                    <h3 id="6_2_gateway_approach">6.2 Gateway approach</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Describe the so-called "gateway" approach to PackML implementation. In
+                            this approach, the states of a proprietary state manager are associated or "mapped"
+                            to the PackML states. Note that this mapping may not be one-to-one. For example,
+                            the proprietary state machine may have a single error state, which, depending on the
+                            context, would need to be mapped to the ABORTED, STOPPED, HELD or SUSPENDED state.
+                        </p>
+                        <P class="comment">
+                            In this approach, PackML acts as a kind of interface layer, with minimal impact on the
+                            existing code.
+                        </P>
+                    </div>
+
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            When PackML is implemented using the gateway approach, the states of a user-defined or
+                            proprietary state manager are "mapped" to the PackML states. For example, a user-defined
+                            error state may, depending on the context, be associated with ABORTED, STOPPED, HELD or
+                            SUSPENDED state.
+                        </p>
+                        <p class="para">
+                            This approach may not be feasible in all cases. Success depends to some extent on how
+                            closely
+                            the user-defined state machine resembles the PackML state machine. Further, when evaluating
+                            whether
+                            the gateway approach is suitable for a particular application, consider also the PackML
+                            workflow.
+                            Strictly speaking, it is not sufficient to develop a simple mapping of the states. Rather,
+                            it is
+                            required to map the states in such a way that the PackML workflow is followed. For example,
+                            PackML state machine does not allow a transition directly from STOPPED state to HELD state.
+                            Care must be taken to avoid such transitions.
+                        </p>
+                        <p class="para">
+                            The gateway approach has successfully been applied to legacy equipment and in some
+                            situations
+                            where controller memory is limited. On the other hand, if the underlying code base does not
+                            employ any state machine at all, or if internal machine states are not clearly identifiable,
+                            then a
+                            full reworking of the code base is warranted in most cases.
+                        </p>
+                    </div>
+
+                    <!-- -->
+                    <h3 id="6_3_full_integration">6.3 Full integration</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Describe the so-called "full integration" approach to PackML implementation. In
+                            this case,
+                            PackML is integrated into the code from the ground up, often based on a template provided by
+                            the vendor.
+                        </p>
+                    </div>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-key"></i> </div>
+                        <p class="para">
+                            When PackML is fully integrated into the code base, the PackML state machine plays a central
+                            role in the
+                            machine logic. Often such machines are based on a vendor-specific template, but this is not
+                            a requirement.
+                        </p>
+
+                        <p class="para">
+                            Note that some vendors provide multiple PackML templates to cover the full range of their
+                            controllers.
+                        </p>
+                        <p class="para">
+                            The term "full integration" is not meant to imply a greater measure of compliance. Projects
+                            fully compliant with
+                            ANSI-ISA-TR88.00.02-2015 may be based on the gateway approach. In terms of compliance, both
+                            approaches are
+                            acceptable.
+
+                        </p>
+                    </div>
+
+                    <!-- -->
+                    <h3 id="6_3_1_template_overview">6.3.1 Template overview</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: Add vendor-specific content to provide an overview your system's PackML
+                            template. Describe any
+                            available libraries and their associated documentation. Describe any additional tools. If a
+                            given template
+                            is not universally applicable, describe any hardware requirements/limitations in detail.
+                        </p>
+                    </div>
+
+                    <!-- -->
+                    <h3 id="6_3_2_modularity">6.3.2 Modularity</h3>
+                    <div class="key">
+                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                        <p class="comment">
+                            Instructors: If your system has a mechanism or toolset to support code modularity, introduce
+                            it here. In
+                            particular, describe how each module reports to the unit/machine that it is state complete.
+                        </p>
+                    </div>
+
+                    <!-- -->
+                    <h3 id="6_3_3_alarm_handling">6.3.3 Alarm handling</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
                             Instructors: Add content describing your system's alarm handler. Describe in detail
-                            how the alarm handler interfaces with the state machine and, in particular, how 
+                            how the alarm handler interfaces with the state machine and, in particular, how
                             transitions to Aborted, Stopped, Held or Suspended states are triggered.
                         </p>
                     </div>
-
-                    <!-- -->
-                    <h3 id="6_2_code_structure">6.2 Code structure</h3>
-                    <div class="key">
-                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
-                        <p class="comment">
-                            Instructors: Introduce the two basic approaches to PackML implementation. The first, the
-                            so-called gateway approach, adds a PackML interface layer to an existing code base. The
-                            second, full integration, builds PackML into the code from the ground up. Recommend
-                            how to implement both approaches on your chosen platform.
-                        </p>
-                        <p class="comment">
-                            For general information on these two approaches, see PackML Unit/Machine Implementation 
-                            Guide, Part 1: PackML Interface State Manager.
-                        </p>
-
-                    </div>
-
-                    <!-- -->
-                    <h3 id="6_2_1_gateway">6.2.1 Gateway approach</h3>
-                    <div class="key">
-                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
-                        <p class="comment">
-                            Instructors: Add vendor-specific content here.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- --> 
-                <h3 id="6_2_2_full_integration">6.2.2 Full integration</h3>
-                <div class="key">
-                    <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
-                    <p class="comment">
-                        Instructors: Add vendor-specific content here.
-                    </p>
-                </div>
-
-                <!-- -->
-                <h3 id="6_3_modularity">6.3 Modularity</h3>
-                <div class="key">
-                    <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
-                    <p class="comment">
-                        Instructors: If your system has a mechanism or toolset to support code modularity, introduce it here.  In
-                        particular, describe how each module reports to the unit/machine that it is state complete.
-                    </p>
                 </div>
 
                 <!-- Minimum requirements -->
@@ -2250,12 +2455,15 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-bullseye"></i> </div>
                         <p class="para">
-                            The purpose of Chapter 7 is to give students clear direction on the minimal requirements for a conformant
+                            The purpose of Chapter 7 is to give students clear direction on the minimal requirements for
+                            a conformant
                             PackML implementation.
                         </p>
                         <p class="para">
-                            Some instructors may wish to incorporate this information into the earlier sections.  The minimum requirements
-                            are presented here as a separate chapter mainly to serve as a reference.  In this form there is the additional 
+                            Some instructors may wish to incorporate this information into the earlier sections. The
+                            minimum requirements
+                            are presented here as a separate chapter mainly to serve as a reference. In this form there
+                            is the additional
                             benefit of providing a review of some of the basic concepts (e.g. mode, state, PackTags).
                         </p>
                     </div>
@@ -2266,393 +2474,404 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: ANSI-ISA-TR88.00.02-2015 does not have any explicit requirements with respect to machine mode.  
-                            However, it is tacitly assumed that the machine will have at least a production mode.  See below. 
+                            Instructors: ANSI-ISA-TR88.00.02-2015 does not have any explicit requirements with respect
+                            to machine mode.
+                            However, it is tacitly assumed that the machine will have at least a production mode. See
+                            below.
                         </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Production mode - This represents the mode which is utilized for routine production. The machine
-                            executes relevant logic in response to commands which are either entered directly by the operator
+                            Production mode - This represents the mode which is utilized for routine production. The
+                            machine
+                            executes relevant logic in response to commands which are either entered directly by the
+                            operator
                             or issued by another supervisory system.
-                         </p>
-                         <p class="tr88-ref">
+                        </p>
+                        <p class="tr88-ref">
                             ANSI/ISA-TR88.00.02-2015, 5.1 Unit/Machine control modes (p. 23)
-                        </p>                          
-                    </div>                   
+                        </p>
+                    </div>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
- 
+
                         <p class="para">
-                             It is assumed that a unt/machine will always have a Production mode; whenever a unit/machine is producing goods,
-                             it is Production mode.  In this case, <em>UnitMachine</em>.Status.UnitModeCurrent is assigned a value of 1.
+                            It is assumed that a unt/machine will always have a Production mode; whenever a unit/machine
+                            is producing goods,
+                            it is Production mode. In this case, <em>UnitMachine</em>.Status.UnitModeCurrent is assigned
+                            a value of 1.
                         </p>
- 
+
                         <p class="para">
-                             Additional modes are optional.  If Maintenance mode is present and active, <em>UnitMachine</em>.Status.UnitModeCurrent=2.
-                             If Manual mode is present and active, <em>UnitMachine</em>.Status.UnitModeCurrent=3.  Any user-defined modes must be assigned 
-                             a number greater than 3.
+                            Additional modes are optional. If Maintenance mode is present and active,
+                            <em>UnitMachine</em>.Status.UnitModeCurrent=2.
+                            If Manual mode is present and active, <em>UnitMachine</em>.Status.UnitModeCurrent=3. Any
+                            user-defined modes must be assigned
+                            a number greater than 3.
                         </p>
                     </div>
 
 
-                    
-                     <!-- -->
-                     <h3 id="7_2_minimum_state">7.2 Minimum state requirements</h3>
-                     <div class="key">
+
+                    <!-- -->
+                    <h3 id="7_2_minimum_state">7.2 Minimum state requirements</h3>
+                    <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: ANSI-ISA-TR88.00.02-2015 requires any mode to include states Aborted, Stopped, Idle and Execute.  Remind students
-                            that this requirement is not meant as a way for them to simplify their code, just that some modes may not required all states in 
-                            order to be modeled in a way that is consistent with the state definitions described previously.  See additional comments below.
+                            Instructors: ANSI-ISA-TR88.00.02-2015 requires any mode to include states Aborted, Stopped,
+                            Idle and Execute. Remind students
+                            that this requirement is not meant as a way for them to simplify their code, just that some
+                            modes may not require all states in
+                            order to be modeled in a way that is consistent with the state definitions described
+                            previously. See additional comments below.
                         </p>
                     </div>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-key"></i> </div>
- 
+
                         <p class="para">
-                            The minimum state requirements are not meant to convey that the additional states are optional in any broad sense.  States must be 
-                            included whenever the machine or system behavior warrants it.  For example, if during a production run a downstream blockage occurs,
-                            it is expected that the machine will transition to Suspended state.  Any other behavior would be considered non-conformant and cannot 
+                            The minimum state requirements are not meant to convey that the additional states are
+                            optional in any broad sense. States must be
+                            included whenever the machine or system behavior warrants it. For example, if during a
+                            production run a downstream blockage is detected,
+                            it is expected that the machine will transition to Suspended state. Any other behavior would
+                            be considered non-conformant and cannot
                             be justified simply by pointing out that Suspended state is not <em>required</em>.
                         </p>
                     </div>
                     <table id="table-minimum-state-requirements">
-                        <caption>Table X.  Minimum state requirements.  See ANSI-ISA-TR88.00.02-2015, Figure 2 (p. 16) </caption>
+                        <caption>Table X. Minimum state requirements. See ANSI-ISA-TR88.00.02-2015, Figure 2 (p. 16)
+                        </caption>
                         <tr>
                             <th>Value</th>
                             <th>State</th>
-                            <th>Required</th>                               
+                            <th>Required</th>
                         </tr>
-                         <tr>
+                        <tr>
                             <td>1</td>
-                            <td>CLEARING</td>                    
+                            <td>CLEARING</td>
                             <td></td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td>2</td>
-                            <td><b>STOPPED</b></td>                    
+                            <td><b>STOPPED</b></td>
                             <td>X</td>
-                        </tr>        
+                        </tr>
                         <tr>
                             <td>3</td>
-                            <td>STARTING</td>                    
+                            <td>STARTING</td>
                             <td></td>
-                        </tr>    
+                        </tr>
                         <tr>
                             <td>4</td>
-                            <td><b>IDLE</b></td>                    
+                            <td><b>IDLE</b></td>
                             <td>X</td>
-                        </tr>    
+                        </tr>
                         <tr>
                             <td>5</td>
-                            <td>SUSPENDED</td>                    
+                            <td>SUSPENDED</td>
                             <td></td>
-                        </tr>    
+                        </tr>
                         <tr>
                             <td>6</td>
-                            <td><b>EXECUTE</b></td>                    
+                            <td><b>EXECUTE</b></td>
                             <td>X</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td>7</td>
-                            <td>STOPPING</td>                    
+                            <td>STOPPING</td>
                             <td></td>
-                        </tr>   
+                        </tr>
                         <tr>
                             <td>8</td>
-                            <td>ABORTING</td>                    
+                            <td>ABORTING</td>
                             <td></td>
-                        </tr>   
+                        </tr>
                         <tr>
                             <td>9</td>
-                            <td><b>ABORTED</b></td>                    
+                            <td><b>ABORTED</b></td>
                             <td>X</td>
-                        </tr>   
+                        </tr>
                         <tr>
                             <td>10</td>
-                            <td>HOLDING</td>                    
+                            <td>HOLDING</td>
                             <td></td>
-                        </tr>   
+                        </tr>
                         <tr>
                             <td>11</td>
-                            <td>HELD</td>                    
+                            <td>HELD</td>
                             <td></td>
-                        </tr>    
+                        </tr>
                         <tr>
                             <td>12</td>
-                            <td>UNHOLDING</td>                    
+                            <td>UNHOLDING</td>
                             <td></td>
-                        </tr>   
+                        </tr>
                         <tr>
                             <td>13</td>
-                            <td>SUSPENDING</td>                    
+                            <td>SUSPENDING</td>
                             <td></td>
-                        </tr>                   
+                        </tr>
                         <tr>
                             <td>14</td>
-                            <td>UNSUSPENDING</td>                    
+                            <td>UNSUSPENDING</td>
                             <td></td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td>15</td>
-                            <td>RESETTING</td>                    
+                            <td>RESETTING</td>
                             <td></td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td>16</td>
-                            <td>COMPLETING</td>                    
+                            <td>COMPLETING</td>
                             <td></td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td>17</td>
-                            <td>COMPLETE</td>                    
+                            <td>COMPLETE</td>
                             <td></td>
-                        </tr>                         
+                        </tr>
 
                     </table>
 
-                     <!-- -->
-                     <h3 id="7_3_minimum_tag">7.3 Minimum PackTag requirements</h3>
-                     <div class="key">
+                    <!-- -->
+                    <h3 id="7_3_minimum_tag">7.3 Minimum PackTag requirements</h3>
+                    <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
                             Instructors: The minimum required PackTags were introduced in &#167;5.5.
-                            They are listed here again (with emphasis on the data structure hierarchy) 
+                            They are listed here again (with emphasis on the data structure hierarchy)
                             for completeness.
                         </p>
                     </div>
 
 
-                     <table id="table-required-packtags">
+                    <table id="table-required-packtags">
                         <tr>
-                            <th colspan=4 >Tag</th>
+                            <th colspan=4>Tag</th>
                             <th>Path</th>
                             <th>Type</th>
                         </tr>
                         <tr>
                             <td> <em>UnitName</em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>PACKMLV30</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td>Status</td>                    
+                            <td>Status</td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>PMLs</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td>UnitModeCurrent</td>
                             <td></td>
-                            <td> <em>UnitName.</em><br/><b>Status.UnitModeCurrent</b></td>
+                            <td> <em>UnitName.</em><br /><b>Status.UnitModeCurrent</b></td>
                             <td>DINT</td>
-                        </tr>  
+                        </tr>
 
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td>StateCurrent</td>
                             <td></td>
-                            <td> <em>UnitName.</em><br/><b>Status.StateCurrent</b></td>
+                            <td> <em>UnitName.</em><br /><b>Status.StateCurrent</b></td>
                             <td>DINT</td>
-                        </tr>  
- 
+                        </tr>
+
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td>MachSeed</td>
                             <td></td>
-                            <td> <em>UnitName.</em><br/><b>Status.MachSeed</b></td>
+                            <td> <em>UnitName.</em><br /><b>Status.MachSeed</b></td>
                             <td>REAL</td>
-                        </tr>                       
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td>CurMachSeed</td>
                             <td></td>
-                            <td> <em>UnitName.</em><br/><b>Status.CurMachSeed</b></td>
+                            <td> <em>UnitName.</em><br /><b>Status.CurMachSeed</b></td>
                             <td>REAL</td>
-                        </tr>    
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td>EquipmentInterlock</td>
                             <td></td>
                             <td></td>
                             <td>EquipmentInterlock structure</td>
-                        </tr>   
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td>Blocked</td>
-                            <td> <em>UnitName.</em><br/><b>Status.EquipmentInterlock.Blocked</b></td>
+                            <td> <em>UnitName.</em><br /><b>Status.EquipmentInterlock.Blocked</b></td>
                             <td>BOOL</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td>Starved</td>
-                            <td> <em>UnitName.</em><br/><b>Status.EquipmentInterlock.Starved</b></td>
+                            <td> <em>UnitName.</em><br /><b>Status.EquipmentInterlock.Starved</b></td>
                             <td>BOOL</td>
-                        </tr>                             
-                    </table>   
-                    
+                        </tr>
+                    </table>
+
                     <table id="table-required-packtags-admin">
                         <tr>
-                            <th colspan=4 >Tag</th>
+                            <th colspan=4>Tag</th>
                             <th>Path</th>
                             <th>Type</th>
                         </tr>
                         <tr>
                             <td> <em>UnitName</em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>PACKMLV30</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td>Admin</td>                    
+                            <td>Admin</td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>PMLa</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td>ProdProcessedCount[#]</td>
                             <td></td>
                             <td> </td>
                             <td>Count structure</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td>Count</td>
-                            <td> <em>UnitName.</em><br/><b>Admin.ProdProcessedCount[#].Count</b></td>
+                            <td> <em>UnitName.</em><br /><b>Admin.ProdProcessedCount[#].Count</b></td>
                             <td>DINT</td>
-                        </tr> 
+                        </tr>
 
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td>ProdDefectiveCount[#]</td>
                             <td></td>
                             <td> </td>
                             <td>Count structure</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td>Count</td>
-                            <td> <em>UnitName.</em><br/><b>Admin.ProdDefectiveCount[#].Count</b></td>
+                            <td> <em>UnitName.</em><br /><b>Admin.ProdDefectiveCount[#].Count</b></td>
                             <td>DINT</td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td>StopReason[#]</td>
                             <td></td>
                             <td> </td>
                             <td>Alarm structure</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td>ID</td>
-                            <td> <em>UnitName.</em><br/><b>Admin.StopReason.ID</b></td>
+                            <td> <em>UnitName.</em><br /><b>Admin.StopReason.ID</b></td>
                             <td>DINT</td>
-                        </tr>                        
+                        </tr>
 
-                    </table>                      
+                    </table>
 
                     <table id="table-required-packtags-command">
                         <tr>
-                            <th colspan=4 >Tag</th>
+                            <th colspan=4>Tag</th>
                             <th>Path</th>
                             <th>Type</th>
                         </tr>
                         <tr>
                             <td> <em>UnitName</em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>PACKMLV30</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td>Command</td>                    
+                            <td>Command</td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>PMLc</td>
-                        </tr>  
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td>MachSpeed</td>
-                            <td> <em>UnitName.</em><br/><b>Command.MachSpeed</b></td>
+                            <td> <em>UnitName.</em><br /><b>Command.MachSpeed</b></td>
                             <td>REAL</td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td>UnitMode</td>
-                            <td> <em>UnitName.</em><br/><b>Command.UnitMode</b></td>
+                            <td> <em>UnitName.</em><br /><b>Command.UnitMode</b></td>
                             <td>DINT</td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td>UnitModeChangeRequest</td>
-                            <td> <em>UnitName.</em><br/><b>Command.UnitModeChangeRequest</b></td>
+                            <td> <em>UnitName.</em><br /><b>Command.UnitModeChangeRequest</b></td>
                             <td>BOOL</td>
-                        </tr>   
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td>CntrlCmd</td>
-                            <td> <em>UnitName.</em><br/><b>Command.CntrlCmd</b></td>
+                            <td> <em>UnitName.</em><br /><b>Command.CntrlCmd</b></td>
                             <td>DINT</td>
-                        </tr> 
+                        </tr>
                         <tr>
                             <td> <em></em></td>
-                            <td></td>                    
+                            <td></td>
                             <td></td>
                             <td>CmdChangeRequest</td>
-                            <td> <em>UnitName.</em><br/><b>Command.CmdChangeRequest</b></td>
+                            <td> <em>UnitName.</em><br /><b>Command.CmdChangeRequest</b></td>
                             <td>BOOL</td>
-                        </tr> 
-                    </table>                      
+                        </tr>
+                    </table>
 
-                    <!-- -->
-                    <h3 id="7_4_minimum_use_case">7.4 Use case</h3>
-                    <p class="para">
-                        TODO: Add content here.
-                    </p>  
                 </div>
+
 
                 <!-- References -->
                 <div>
@@ -2662,32 +2881,72 @@
                     <!-- -->
                     <h3 id="8_1_standards">8.1 Standards</h3>
                     <p class="para">
-                        PackML is specified by standard ANSI/ISA-TR88.00.02-2015.  It is available for purchase 
-                        at <a href="www.isa.org">www.isa.org</a>. 
-                        
+                        PackML is specified by standard ANSI/ISA-TR88.00.02-2015. It is available for purchase
+                        at <a href="www.isa.org">www.isa.org</a>.
+
                     </p>
 
-                    <!-- --> 
+                    <!-- -->
                     <h3 id="8_2_implementation_guides">8.2 Implementation guides</h3>
                     <p class="para">
-                        The OMAC Packaging Workgroup is an ongoing effort to maximize the value of PackML.  In
+                        The OMAC Packaging Workgroup is an ongoing effort to maximize the value of PackML. In
                         addition to maintaining the standard itself, they have sponsored a number of implementation
-                        guides and whitepapers available here: <a href="https://omac.org/workgroups/packaging-workgroup/">
-                        omac.org/workgroups/packaging-workgroup/</a>.  
+                        guides and whitepapers available here: <a
+                            href="https://omac.org/workgroups/packaging-workgroup/">
+                            omac.org/workgroups/packaging-workgroup/</a>.
                     </p>
                     <p class="para">
-                        In particular, for general advice on PackML implementation, see PackML Unit/Machine Implementation
-                        Guide. 
+                        In particular, for general advice on PackML implementation, see <b>PackML Unit/Machine
+                            Implementation
+                            Guide, <em>Part 1: PackML Interface State Manager</em></b>.
                     </p>
- 
+
+                    <p class="para">
+                        For a discussion of focusing on the design of human-machine interfaces, as well as an overview
+                        of the
+                        PackML stacklight standard, see <b>PackML Unit/Machine Implementation Guide, <em>Part 6: PackML
+                                HMIs -
+                                User Interfaces, Stacklights and Push-Button Controls</em></b>.
+                    </p>
+
+                    <p class="para">
+                        New for 2021 is the <b>Practical Guide for Remote Access to Plant Equipment</b>. Here readers
+                        will find
+                        practical advice on a wide range of topics critical to IIoT and Industry 4.0: implementing a
+                        remote
+                        access plan, bridging the worlds of IT and OT, cyber-security and much more.
+                    </p>
+
+                    <p class="para">
+                        Additional training guides are also planned. Advanced topics such as recipe management,
+                        peer-to-peer
+                        communication, the PackML stacklight standard, as well as best practices described by the
+                        various
+                        implementation guides, will be covered.
+                    </p>
+
+
                     <!-- -->
                     <h3 id="8_3_videos">8.3 Instructional videos</h3>
                     <p class="para">
-                        For a quick overview of the subject, see 
-                        <a href="https://www.youtube.com/watch?v=CQS-R5COOLw">What is PackML?</a> 
+                        For a quick overview of the subject, see
+                        <a href="https://www.youtube.com/watch?v=CQS-R5COOLw">What is PackML?</a>
                     </p>
                     <p class="para">
-                        Individual technology providers or consultants may provide additional resources. 
+                        Individual technology providers or consultants may provide additional resources.
+                    </p>
+
+                    <!-- -->
+                    <h3 id="8_4_industry_publications">8.3 Industry publications</h3>
+                    <p class="para">
+                        Arla Foods Reduces Packing Machine Integration Costs Using PackML, Valentijn de Leeuw:
+                        <a
+                            href="https://www.arcweb.com/blog/arla-foods-reduces-packing-machine-integration-costs-using-packml">Link</a>
+                    </p>
+                    <p class="para">
+                        Companies make the Case for PackML as industry standard, Al Presher:
+                        <a
+                            href="https://www.packagingdigest.com/automation/companies-make-case-packml-industry-standard">Link</a>
                     </p>
 
                 </div>
@@ -2702,38 +2961,40 @@
                     <figure>
                         <img id="summary-packml-state-model" src="images/packml_state_model_color_chart.png" />
                         <figcaption>
-                            Figure X. For reference the colors used in the figures from Chapter 3 are shown.  Colors not marked are
-                            black or white.  Note that the figures used in this document are non-normative.
+                            Figure X. For reference the colors used in the figures from Chapter 3 are shown. Colors not
+                            marked are
+                            black or white. Note that the figures used in this document are non-normative.
                         </figcaption>
                     </figure>
 
-                    <h3 id="answers_to_suggested_questions">A.2 Answers to suggested questions</h3>    
+                    <h3 id="answers_to_suggested_questions">A.2 Answers to suggested questions</h3>
                     <p class="para">
                         TODO: add content here.
-                    </p>               
+                    </p>
 
-                    <h3 id="answers_to_suggested_questions">A.3 Structured data types</h3>    
+                    <h3 id="answers_to_suggested_questions">A.3 Structured data types</h3>
 
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
                         <p class="comment">
-                            Instructors: The structure data types that comprise the rest of the PackTags definition are listed here 
+                            Instructors: The structure data types that comprise the rest of the PackTags definition are
+                            listed here
                             for reference.
                         </p>
-                    </div> 
+                    </div>
 
 
                     <h3 id="A_3_1_interface">A.3.1 Interface</h3>
- 
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Interface – is a collection of tags that are used to describe communication command values 
+                            Interface – is a collection of tags that are used to describe communication command values
                             between machines using the PackTag structure.
-                         </p>
-                         <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32) 
-                        </p>                          
+                        </p>
+                        <p class="tr88-ref">
+                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
+                        </p>
                     </div>
 
                     <figure>
@@ -2743,18 +3004,18 @@
                         </figcaption>
                     </figure>
 
-                     <!-- -->
+                    <!-- -->
                     <h3 id="A_3_2_descriptor">A.3.2 Descriptor</h3>
- 
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Descriptor structure – is a collection of tags that are used to describe parameters in the 
+                            Descriptor structure – is a collection of tags that are used to describe parameters in the
                             machine unit.
-                         </p>
-                         <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32) 
-                        </p>                          
+                        </p>
+                        <p class="tr88-ref">
+                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
+                        </p>
                     </div>
 
                     <figure>
@@ -2763,20 +3024,20 @@
                             Figure X. Sample definition of Descriptor data type.
                         </figcaption>
                     </figure>
- 
-                     <!-- -->
+
+                    <!-- -->
                     <h3 id="A_3_3_product">A.3.3 Product</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Product structure – is a collection of tags used to describe the product that the machine is 
+                            Product structure – is a collection of tags used to describe the product that the machine is
                             making.
-                         </p>
-                         <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32) 
-                        </p>                          
+                        </p>
+                        <p class="tr88-ref">
+                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
+                        </p>
                     </div>
- 
+
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_product_type.png" />
                         <figcaption>
@@ -2786,16 +3047,16 @@
 
                     <!-- -->
                     <h3 id="A_3_4_ingredient">A.3.4 Ingredient</h3>
- 
+
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
                         <p class="tr88">
-                            Ingredient – is a collection of tags used to describe the raw materials that are needed for 
+                            Ingredient – is a collection of tags used to describe the raw materials that are needed for
                             the product.
-                         </p>
-                         <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32) 
-                        </p>                          
+                        </p>
+                        <p class="tr88-ref">
+                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
+                        </p>
                     </div>
 
                     <figure>
@@ -2814,8 +3075,8 @@
                             Alarm – is the collection tags needed to describe alarm events.
                         </p>
                         <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32) 
-                        </p>                            
+                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
+                        </p>
                     </div>
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_alarm_type.png" />
@@ -2824,7 +3085,7 @@
                         </figcaption>
                     </figure>
 
-                     <!-- -->
+                    <!-- -->
                     <h3 id="A_3_6_count">A.3.6 Count</h3>
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-file"></i> </div>
@@ -2833,7 +3094,7 @@
                         </p>
                         <p class="tr88-ref">
                             ANSI/ISA-TR88.00.02-2015, 7.5.3.14 Admin.ProdConsumedCount (p. 70)
-                        </p> 
+                        </p>
                     </div>
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_count_type.png" />
@@ -2851,7 +3112,7 @@
                         </p>
                         <p class="tr88-ref">
                             ANSI/ISA-TR88.00.02-2015, 7.5.2.10 Status.EquipmentInterlock.Blocked (p. 56)
-                        </p>                       
+                        </p>
                     </div>
                     <figure>
                         <img id="summary-packml-state-model" src="images/packtags_equipmentinterlock_type.png" />
@@ -2891,7 +3152,7 @@
                             <td>CPB</td>
                             <td>Addition content based on group feedback</td>
                             <td>01C</td>
-                        </tr>                        
+                        </tr>
                     </table>
                 </div>
             </div>
