@@ -328,8 +328,7 @@
 
                         <p class="para">
                             c. PackML has found application beyond packaging to discrete manufacturing generally. What
-                            is
-                            discrete manufacturing?
+                            is discrete manufacturing?
                         </p>
                     </div>
 
@@ -503,7 +502,7 @@
                             for which the investment costs will vary, are discussed in Chapter 6.
                         </p>
                         <p class="comment">
-                            If the instructor has vendor-specific data describing the cost or time required to implement
+                            If the instructor has vendor-specific data estimating the cost or time required to implement
                             PackML, introduce it here.
                             The references listed in &#167;8.4 provide some general information on this topic.
                         </p>
@@ -644,9 +643,8 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. Give some examples of modes of a packaging machine. In addition to packaging (or
-                            producing)
-                            product, what other intended uses for a packaging machine are there?
+                            a. Give some examples of packaging machine modes. In addition to packaging (or
+                            producing) product, what other intended uses for a packaging machine are there?
                         </p>
                     </div>
 
@@ -839,7 +837,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            What strategic actions could be taken if it is observed that over a prolonged period
+                            a. What strategic actions could be taken if it is observed that over a prolonged period
                             (e.g. a month) a particular unit/machine is frequently paused in HELD state?
                         </p>
                     </div>
@@ -907,7 +905,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            What strategic actions could be taken if it is observed that over an extended period (e.g. a
+                            a. What strategic actions could be taken if it is observed that over an extended period (e.g. a
                             month) a particular unit/machine is frequently paused in SUSPENDED state?
                         </p>
                         <p class="para">
@@ -966,7 +964,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            If a unit/machine is in COMPLETE state, what steps must be taken next in the production
+                            a. If a unit/machine is in COMPLETE state, what steps must be taken next in the production
                             cycle?
                         </p>
                     </div>
@@ -1015,7 +1013,7 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            If a unit/machine is in IDLE state, what steps must be taken next in the production cycle?
+                            a. If a unit/machine is in IDLE state, what steps must be taken next in the production cycle?
                         </p>
                     </div>
 
@@ -1439,9 +1437,9 @@
                     <div class="key">
                         <div class='key-highlight'><i class="fas fa-question"></i> </div>
                         <p class="para">
-                            a. ANSI/ISA-TR88.00.02-2015 stipulates that Production mode always be supported in any
+                            a. ANSI/ISA-TR88.00.02-2015 tacitly assumes that Production mode always be supported in any
                             PackML implementation.
-                            Why is this stipulation natural and/or justified?
+                            Why is this assumption natural and/or justified?
                         </p>
                     </div>
 
@@ -1573,8 +1571,7 @@
                             a. A packaging machine includes a Cleaning mode cycle that should be executed automatically
                             once per hour during
                             a production run. How would you suggest managing this mode transition? Would it make sense
-                            to allow such a
-                            mode transition to occur while in Execute state?
+                            to allow such a mode transition to occur while in Execute state?
                         </p>
                     </div>
 
@@ -2939,12 +2936,12 @@
                     <!-- -->
                     <h3 id="8_4_industry_publications">8.3 Industry publications</h3>
                     <p class="para">
-                        Arla Foods Reduces Packing Machine Integration Costs Using PackML, Valentijn de Leeuw:
+                        <b>Arla Foods Reduces Packing Machine Integration Costs Using PackML</b>, Valentijn de Leeuw:
                         <a
                             href="https://www.arcweb.com/blog/arla-foods-reduces-packing-machine-integration-costs-using-packml">Link</a>
                     </p>
                     <p class="para">
-                        Companies make the Case for PackML as industry standard, Al Presher:
+                        <b>Companies make the Case for PackML as industry standard</b>, Al Presher:
                         <a
                             href="https://www.packagingdigest.com/automation/companies-make-case-packml-industry-standard">Link</a>
                     </p>
@@ -2968,195 +2965,482 @@
                     </figure>
 
                     <h3 id="answers_to_suggested_questions">A.2 Answers to suggested questions</h3>
+
                     <p class="para">
-                        TODO: add content here.
+                        1.1.a. What does it mean for machines to have a common "look and feel"?
+                    </p>
+                    <p class="comment">
+                        Here "look and feel" has no specific meaning. The long term goal is for human-machine interfaces
+                        to
+                        have enough points in common (e.g. navigation menus) so that users will be able to operate new
+                        machinery
+                        without an excessively steep learning curve.
                     </p>
 
-                    <h3 id="answers_to_suggested_questions">A.3 Structured data types</h3>
-
-                    <div class="key">
-                        <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
-                        <p class="comment">
-                            Instructors: The structure data types that comprise the rest of the PackTags definition are
-                            listed here
-                            for reference.
-                        </p>
-                    </div>
+                    <p class="para">
+                        1.1.b. Give an example of operational consistency.
+                    </p>
+                    <p class="comment">
+                        The machine starts when the Start button is pushed. PackML assigns to Start a specific meaning
+                        in terms
+                        of its effect on the PackML state model.
+                    </p>
 
 
-                    <h3 id="A_3_1_interface">A.3.1 Interface</h3>
-
-                    <div class="key">
-                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
-                        <p class="tr88">
-                            Interface – is a collection of tags that are used to describe communication command values
-                            between machines using the PackTag structure.
-                        </p>
-                        <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
-                        </p>
-                    </div>
-
-                    <figure>
-                        <img id="summary-packml-state-model" src="images/packtags_interface_type.png" />
-                        <figcaption>
-                            Figure X. Sample definition of Interface data type.
-                        </figcaption>
-                    </figure>
-
-                    <!-- -->
-                    <h3 id="A_3_2_descriptor">A.3.2 Descriptor</h3>
-
-                    <div class="key">
-                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
-                        <p class="tr88">
-                            Descriptor structure – is a collection of tags that are used to describe parameters in the
-                            machine unit.
-                        </p>
-                        <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
-                        </p>
-                    </div>
-
-                    <figure>
-                        <img id="summary-packml-state-model" src="images/packtags_descriptor_type.png" />
-                        <figcaption>
-                            Figure X. Sample definition of Descriptor data type.
-                        </figcaption>
-                    </figure>
-
-                    <!-- -->
-                    <h3 id="A_3_3_product">A.3.3 Product</h3>
-                    <div class="key">
-                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
-                        <p class="tr88">
-                            Product structure – is a collection of tags used to describe the product that the machine is
-                            making.
-                        </p>
-                        <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
-                        </p>
-                    </div>
-
-                    <figure>
-                        <img id="summary-packml-state-model" src="images/packtags_product_type.png" />
-                        <figcaption>
-                            Figure X. Sample definition of the Product data type.
-                        </figcaption>
-                    </figure>
-
-                    <!-- -->
-                    <h3 id="A_3_4_ingredient">A.3.4 Ingredient</h3>
-
-                    <div class="key">
-                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
-                        <p class="tr88">
-                            Ingredient – is a collection of tags used to describe the raw materials that are needed for
-                            the product.
-                        </p>
-                        <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
-                        </p>
-                    </div>
-
-                    <figure>
-                        <img id="summary-packml-state-model" src="images/packtags_ingredient_type.png" />
-                        <figcaption>
-                            Figure X. Sample definition of the Ingredient data type.
-                        </figcaption>
-                    </figure>
+                    <p class="para">
+                        1.1.c. PackML has found application beyond packaging to discrete manufacturing generally. What
+                        is discrete manufacturing?
+                    </p>
+                    <p class="comment">
+                        Discrete manufacturing is the production of distinct items.
+                    </p>
 
 
-                    <!-- -->
-                    <h3 id="A_3_5_alarm">A.3.5 Alarm</h3>
-                    <div class="key">
-                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
-                        <p class="tr88">
-                            Alarm – is the collection tags needed to describe alarm events.
-                        </p>
-                        <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
-                        </p>
-                    </div>
-                    <figure>
-                        <img id="summary-packml-state-model" src="images/packtags_alarm_type.png" />
-                        <figcaption>
-                            Figure X. Sample definition of the Alarm data type.
-                        </figcaption>
-                    </figure>
 
-                    <!-- -->
-                    <h3 id="A_3_6_count">A.3.6 Count</h3>
-                    <div class="key">
-                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
-                        <p class="tr88">
-                            See examples Admin.ProdProcessedCount, Admin.ProdDefectiveCount, Admin.ProdConsumedCount.
-                        </p>
-                        <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.5.3.14 Admin.ProdConsumedCount (p. 70)
-                        </p>
-                    </div>
-                    <figure>
-                        <img id="summary-packml-state-model" src="images/packtags_count_type.png" />
-                        <figcaption>
-                            Figure X. Sample definition of the Count data type.
-                        </figcaption>
-                    </figure>
+                    <p class="para">
+                        1.4.a. Give examples of data that might be passed from a machine to its supervisor.
+                    </p>
+                    <p class="comment">
+                        Current machine state, current speed, good/bad counts, alarm history, etc.
+                    </p>
 
-                    <!-- -->
-                    <h3 id="A_3_7_equipment_interlock">A.3.7 Equipment interlock</h3>
-                    <div class="key">
-                        <div class='key-highlight'><i class="fas fa-file"></i> </div>
-                        <p class="tr88">
-                            See example Status.EquipmentInterlock.
-                        </p>
-                        <p class="tr88-ref">
-                            ANSI/ISA-TR88.00.02-2015, 7.5.2.10 Status.EquipmentInterlock.Blocked (p. 56)
-                        </p>
-                    </div>
-                    <figure>
-                        <img id="summary-packml-state-model" src="images/packtags_equipmentinterlock_type.png" />
-                        <figcaption>
-                            Figure X. Sample definition of the EquipmentInterlock data type.
-                        </figcaption>
-                    </figure>
+                    <p class="para">
+                        1.4.b. Give examples of data that might be passed between machine peers.
+                    </p>
+                    <p class="comment">
+                        Same answer as above, but perhaps with more emphasis on current machine state, speed or other
+                        data required to coordinate line activities.
+                    </p>
 
+
+                    <p class="para">
+                        1.5.a. Why is it critical to have naming conventions for the data included in the PackML
+                        data interface?
+                    </p>
+                    <p class="comment">
+                        The data must be identifiable and searchable. Identifying the data by tagname was a logical
+                        choice.
+                    </p>
+
+
+                    <p class="para">
+                        1.5.b. What other conventions regarding the data interface are required?
+                    </p>
+                    <p class="comment">
+                        All measured data (e.g. speed) must be associated with a unit a measure. Additional conventions
+                        regarding machine state are discussed further below.
+                    </p>
+
+                    <p class="para">
+                        1.6.a. In non-technical terms, give examples of common machine conditions or states (e.g.
+                        machine is running, error has occurred, etc.).
+                    </p>
+                    <p class="comment">
+                        Stopped, waiting to start, recipe complete, etc.
+                    </p>
+
+                    <p class="para">
+                        1.6.b. How does having a common understanding of machine state facilitate the creation of a
+                        standardized calculation for overall equipment effectiveness (OEE)?
+                    </p>
+                    <p class="comment">
+                        The calculation of availability requires us to distinguish between running and
+                        non-running conditions. Note that PackTags includes additional required data.
+                    </p>
+
+                    <p class="para">
+                        2.2.a. Choose a machine and describe its states. For example, what are some states of an 
+                        automobile?
+                    </p>
+                    <p class="comment">
+                        Possible states would include parked, inoperable due to engine failure or other mechanical
+                        issue, stopped with engine idling, normal operation (moving at speed), etc.
+                    </p>
+
+                    <p class="para">
+                        2.3.a. What happens if you push the turnstile barrier without inserting a coin? How is this
+                        feature represented in the diagram above?
+                    </p>
+                    <p class="comment">
+                        Pushing on the turnstile barrier in the locked state has no effect. See the arc on the
+                        left side of the diagram.
+                    </p>
+
+
+                    <p class="para">
+                        2.4.a. One of the units shown in the figure above is the Filler. Give an example of one of its
+                        (possible) equipment modules. Given an example of one of its control modules.
+                    </p>
+                    <p class="comment">
+                        Filler equipment modules might be infeed, outfeed, pump bank, etc. A control module of
+                        the infeed might be the servo motor that drives the infeed starwheel, for example.
+                    </p>
+
+                    <p class="para">
+                        2.4.b. In the ISA-88 physical model, do the Enterprise and Site levels ever effectively
+                        coincide?
+                    </p>
+                    <p class="comment">
+                        If the corporation or enterprise has a single site, then perhaps the Enterprise and
+                        Site levels would coincide, but remember that off-site servers, for example, would
+                        be considered enterprise assets.
+                    </p>
+
+                    <p class="para">
+                        2.5.a. Give some examples of packaging machine modes. In addition to packaging (or
+                        producing)
+                        product, what other intended uses for a packaging machine are there?
+                    </p>
+                    <p class="comment">
+                        Additional possible modes would include maintenance or manual modes, cleaning modes
+                        or modes designed to execute specific testing or calibration.
+                    </p>
+
+
+                    <p class="para">
+                        3.1.a. Respond to this description of the PackML state machine: The PackML state tells you
+                        whether
+                        the machine is running (i.e. producing product) or not and, if not, why not. (Alternative:
+                        The main function of the PackML state machine is to characterize what the machine is doing
+                        when
+                        it is not producing product.)
+                    </p>
+                    <p class="comment">
+                        Question meant for open-ended discussion only.
+                    </p>
+
+
+                    <p class="para">
+                        3.2.a What strategic actions could be taken if it is observed that over a prolonged period
+                        (e.g. a month) a particular unit/machine is frequently paused in HELD state?
+                    </p>
+                    <p class="comment">
+                        Internal process conditions such as "low glue tank" or "carton tray low" cause the
+                        machine to stop in HELD state. Often such conditions require operator attention. If the
+                        machine is chronically in HELD state, additional training or supervision might be
+                        required. After evaluation, it might be determined that additional operators are
+                        required or that other logistical problems exist in the workflow.
+                    </p>
+
+
+                    <p class="para">
+                        3.3.a What strategic actions could be taken if it is observed that over an extended period (e.g. a
+                        month) a particular unit/machine is frequently paused in SUSPENDED state?
+                    </p>
+                    <p class="comment">
+                        SUSPENDED state indicates that the fault lies either with upstream or downstream equipment,
+                        or with the conveyance between them.
+                    </p>
+
+                    <p class="para">
+                        3.3.b. Give an example of a machine that might not implement the SUSPENDED state in Production
+                        mode.
+                    </p>
+                    <p class="comment">
+                        If starvation or blocked conditions cannot occur, then the SUSPENDED state may be omitted.
+
+                    </p>
+
+                    <p class="para">
+                        3.4.a If a unit/machine is in COMPLETE state, what steps must be taken next in the production
+                        cycle?
+                    </p>
+                    <p class="comment">
+                        Here COMPLETE would indicate that the recipe or batch process finished. Choose the next
+                        recipe/batch, reset and start.
+                    </p>
+
+                    <p class="para">
+                        3.5.a If a unit/machine is in IDLE state, what steps must be taken next in the production cycle?
+                    </p>
+                    <p class="comment">
+                        Start the machine.
+                    </p>
+
+                    <p class="para">
+                        3.6.a. If a unit/machine is in STOPPED state, what steps must be taken next in the production
+                        cycle?
+                    </p>
+                    <p class="comment">
+                        Reset, then start.
+                    </p>
+
+                    <p class="para">
+                        3.7.a. Beyond clearing errors and restarting the machine, what additional steps might be
+                        required if a unit/machine is in ABORTED state?
+                    </p>
+                    <p class="comment">
+                        Make sure that no hardware error has occurred. Possibly contact engineering or maintenance
+                        personnel.
+                    </p>
+
+                    <p class="para">
+                        3.10.a. Describe internal machine functions that might occur during Starting state.
+                    </p>
+                    <p class="comment">
+                        Machine synchronization, waiting for conveyors to come up to speed, alarm may sound, etc.
+                    </p>
+
+                    <p class="para">
+                        3.10.b. Describe internal machine functions that might occur during Aborting state.
+                    </p>
+                    <p class="comment">
+                        Moving components come to rest, remove air supply from pneumatic actuators, etc.
+                    </p>
+
+                    <p class="para">
+                        3.13.a. On a given machine it is determined that while in STARTING state all servo axes
+                        should synchronize with the master axis and all conveyors should begin to run.
+                        In general terms, what would the associated state complete condition look like?
+                    </p>
+                    <p class="comment">
+                        State complete would be set to true once all axes had successfully moved to their
+                        synchronous position and once all conveyors had achieved an appropriate speed.
+                    </p>
+
+                    <p class="para">
+                        4.1.a. ANSI/ISA-TR88.00.02-2015 tacitly assumes that Production mode always be supported
+                        in any
+                        PackML implementation.
+                        Why is this assumption natural and/or justified?
+                    </p>
+                    <p class="comment">
+                        Machines use for discrete manufacturing produce something. While producing, then
+                        are in production mode.
+                    </p>
+
+                    <p class="para">
+                        4.2.a. Why is SUSPENDED state typically not included in Maintenance mode?
+                    </p>
+                    <p class="comment">
+                        In Maintenance mode the machine is typically working independent of upstream or
+                        downstream conditions or equipment.
+                    </p>
+
+                    <p class="para">
+                        4.2.b. Why is COMPLETE state typically not included in Maintenance mode?
+                    </p>
+                    <p class="comment">
+                        The troubleshooting activities often associated with Maintenance mode do not typically
+                        have a pre-defined point of completion. (Note that product counters associated
+                        with a given recipe or batch should not be active while in Maintenance mode.)
+                    </p>
+
+
+                    <p class="para">
+                        4.3.a. A capping machine includes functionality to manually run the cap feed system.
+                        Would it make sense to include the HELD state in Manual mode in this case?
+                    </p>
+                    <p class="comment">
+                        Possibly, especially if the loss of caps in the feed path would cause physical damage.
+                    </p>
+
+                    <p class="para">
+                        4.5.a. A packaging machine includes a Cleaning mode cycle that should be executed
+                        automatically
+                        once per hour during
+                        a production run. How would you suggest managing this mode transition? Would it make
+                        sense
+                        to allow such a
+                        mode transition to occur while in Execute state?
+                    </p>
+                    <p class="comment">
+                        A mode transition in Execute state is allowed and in this case may make sense.
+                    </p>
                 </div>
 
 
-                <div>
-                    <h2 id="VersionHistory">Version History</h2>
-                    <hr class="black" />
-                    <table id="version-log">
-                        <caption>Table 4: Version Log</caption>
-                        <tr class="grey">
-                            <th width="20%">Date<br>[YYYY-MM-DD]</th>
-                            <th>Initials</th>
-                            <th>Description</th>
-                            <th>Version</th>
-                        </tr>
-                        <tr>
-                            <td>2020-11-16</td>
-                            <td>CPB</td>
-                            <td>Preliminary draft.</td>
-                            <td>01A</td>
-                        </tr>
-                        <tr>
-                            <td>2021-01-29</td>
-                            <td>CPB</td>
-                            <td>Additional content (pre-release)</td>
-                            <td>01B</td>
-                        </tr>
-                        <tr>
-                            <td>2021-05-27</td>
-                            <td>CPB</td>
-                            <td>Addition content based on group feedback</td>
-                            <td>01C</td>
-                        </tr>
-                    </table>
+                <h3 id="A_3_structured_data_types">A.3 Structured data types</h3>
+
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-chalkboard-teacher"></i> </div>
+                    <p class="comment">
+                        Instructors: The structure data types that comprise the rest of the PackTags
+                        definition are
+                        listed here
+                        for reference.
+                    </p>
                 </div>
+
+
+                <h3 id="A_3_1_interface">A.3.1 Interface</h3>
+
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                    <p class="tr88">
+                        Interface – is a collection of tags that are used to describe communication command
+                        values
+                        between machines using the PackTag structure.
+                    </p>
+                    <p class="tr88-ref">
+                        ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
+                    </p>
+                </div>
+
+                <figure>
+                    <img id="summary-packml-state-model" src="images/packtags_interface_type.png" />
+                    <figcaption>
+                        Figure X. Sample definition of Interface data type.
+                    </figcaption>
+                </figure>
+
+                <!-- -->
+                <h3 id="A_3_2_descriptor">A.3.2 Descriptor</h3>
+
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                    <p class="tr88">
+                        Descriptor structure – is a collection of tags that are used to describe parameters
+                        in the
+                        machine unit.
+                    </p>
+                    <p class="tr88-ref">
+                        ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
+                    </p>
+                </div>
+
+                <figure>
+                    <img id="summary-packml-state-model" src="images/packtags_descriptor_type.png" />
+                    <figcaption>
+                        Figure X. Sample definition of Descriptor data type.
+                    </figcaption>
+                </figure>
+
+                <!-- -->
+                <h3 id="A_3_3_product">A.3.3 Product</h3>
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                    <p class="tr88">
+                        Product structure – is a collection of tags used to describe the product that the
+                        machine is
+                        making.
+                    </p>
+                    <p class="tr88-ref">
+                        ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
+                    </p>
+                </div>
+
+                <figure>
+                    <img id="summary-packml-state-model" src="images/packtags_product_type.png" />
+                    <figcaption>
+                        Figure X. Sample definition of the Product data type.
+                    </figcaption>
+                </figure>
+
+                <!-- -->
+                <h3 id="A_3_4_ingredient">A.3.4 Ingredient</h3>
+
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                    <p class="tr88">
+                        Ingredient – is a collection of tags used to describe the raw materials that are
+                        needed for
+                        the product.
+                    </p>
+                    <p class="tr88-ref">
+                        ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
+                    </p>
+                </div>
+
+                <figure>
+                    <img id="summary-packml-state-model" src="images/packtags_ingredient_type.png" />
+                    <figcaption>
+                        Figure X. Sample definition of the Ingredient data type.
+                    </figcaption>
+                </figure>
+
+
+                <!-- -->
+                <h3 id="A_3_5_alarm">A.3.5 Alarm</h3>
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                    <p class="tr88">
+                        Alarm – is the collection tags needed to describe alarm events.
+                    </p>
+                    <p class="tr88-ref">
+                        ANSI/ISA-TR88.00.02-2015, 7.4.1 Structured data types (p. 32)
+                    </p>
+                </div>
+                <figure>
+                    <img id="summary-packml-state-model" src="images/packtags_alarm_type.png" />
+                    <figcaption>
+                        Figure X. Sample definition of the Alarm data type.
+                    </figcaption>
+                </figure>
+
+                <!-- -->
+                <h3 id="A_3_6_count">A.3.6 Count</h3>
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                    <p class="tr88">
+                        See examples Admin.ProdProcessedCount, Admin.ProdDefectiveCount,
+                        Admin.ProdConsumedCount.
+                    </p>
+                    <p class="tr88-ref">
+                        ANSI/ISA-TR88.00.02-2015, 7.5.3.14 Admin.ProdConsumedCount (p. 70)
+                    </p>
+                </div>
+                <figure>
+                    <img id="summary-packml-state-model" src="images/packtags_count_type.png" />
+                    <figcaption>
+                        Figure X. Sample definition of the Count data type.
+                    </figcaption>
+                </figure>
+
+                <!-- -->
+                <h3 id="A_3_7_equipment_interlock">A.3.7 Equipment interlock</h3>
+                <div class="key">
+                    <div class='key-highlight'><i class="fas fa-file"></i> </div>
+                    <p class="tr88">
+                        See example Status.EquipmentInterlock.
+                    </p>
+                    <p class="tr88-ref">
+                        ANSI/ISA-TR88.00.02-2015, 7.5.2.10 Status.EquipmentInterlock.Blocked (p. 56)
+                    </p>
+                </div>
+                <figure>
+                    <img id="summary-packml-state-model" src="images/packtags_equipmentinterlock_type.png" />
+                    <figcaption>
+                        Figure X. Sample definition of the EquipmentInterlock data type.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+
+            <div>
+                <h2 id="VersionHistory">Version History</h2>
+                <hr class="black" />
+                <table id="version-log">
+                    <caption>Table 4: Version Log</caption>
+                    <tr class="grey">
+                        <th width="20%">Date<br>[YYYY-MM-DD]</th>
+                        <th>Initials</th>
+                        <th>Description</th>
+                        <th>Version</th>
+                    </tr>
+                    <tr>
+                        <td>2020-11-16</td>
+                        <td>CPB</td>
+                        <td>Preliminary draft.</td>
+                        <td>01A</td>
+                    </tr>
+                    <tr>
+                        <td>2021-01-29</td>
+                        <td>CPB</td>
+                        <td>Additional content (pre-release)</td>
+                        <td>01B</td>
+                    </tr>
+                    <tr>
+                        <td>2021-05-27</td>
+                        <td>CPB</td>
+                        <td>Addition content based on group feedback</td>
+                        <td>01C</td>
+                    </tr>
+                </table>
             </div>
         </div>
+    </div>
     </div>
     <footer><a href="#contents">PackML Learn, Basic Course Syllabus (DRAFT) 01C</a></footer>
 </body>
